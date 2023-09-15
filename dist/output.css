@@ -584,15 +584,8 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
-.font-semibold {
-  font-weight: 600;
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
