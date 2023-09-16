@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
 
 *{
   box-sizing: border-box;
@@ -12,9 +13,15 @@
   background-image: url("./assets/movieCollage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 
 #overlay{
-  background-color: rgba( 0, 0, 0, .75)
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: inherit;
+  width: inherit;
+  background-color: rgba( 0, 0, 0, .75);
 }

@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <main className="">
+    <div>
       <AllRoutes />
-    </main>
+    </div>
   );
 }
 
