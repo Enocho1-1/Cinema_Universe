@@ -6,15 +6,15 @@ export const InitialHeader = () => {
     const [isHidden, setIsHidden] = useState(false)
     const [language, setLanguage] = useState("English")
   return (
-    <header className="relative z-10 m-auto max-w-7xl px-2">
-        <div className="my-8 flex justify-between px-24">
+    <header className="relative z-10 max-[480px]:flex max-[480px]:justify-center m-auto max-w-7xl px-2">
+        <div className="my-8 flex justify-between tablet:px-24">
             <span>
-                <h1 className="font-teko text-5xl text-primary">Cinema Universe</h1>
+                <h1 className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary">Cinema-U</h1>
             </span>
-            <span className="flex">
+            <span className="flex w-fit">
                 {/* Language Dropdown */}
                 <div className="relative ">
-                    <button onClick={() => setIsHidden(!isHidden)} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white font-teko border border-white font-medium rounded-lg text-md mx-6 px-8 py-1.5 text-center inline-flex items-center" type="button">{language} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <button onClick={() => setIsHidden(!isHidden)} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white font-teko border border-white font-medium rounded-lg text-md mr-3 px-8 max-md:px-4 py-1.5 text-center inline-flex items-center" type="button">{language} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                     </svg></button>
 
@@ -33,7 +33,7 @@ export const InitialHeader = () => {
 
                 {/* Sign In Button */}
                 <div className="mt-1">
-                    <Link to={"/login"} type="button" className="text-white bg-primary hover:bg-red-800 font-medium font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
+                    <Link to={"/login"} type="button" className="text-white bg-primary hover:bg-red-800  font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
                 </div>
               
             </span>

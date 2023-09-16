@@ -4,7 +4,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        'teko': ['Teko', 'sans-serif']
+        'teko': ['Teko', 'sans-serif'],
+        'sans':['Open Sans', 'sans-serif']
       },
       colors:{
         'primary':'#FF0037',
