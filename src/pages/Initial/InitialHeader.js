@@ -11,14 +11,14 @@ export const InitialHeader = () => {
             <span>
                 <h1 className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary">Cinema-U</h1>
             </span>
-            <span className="flex w-fit">
+            <span className="flex">
                 {/* Language Dropdown */}
-                <div className="relative ">
+                <div className="relative">
                     <button onClick={() => setIsHidden(!isHidden)} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white font-teko border border-white font-medium rounded-lg text-md mr-3 px-8 max-md:px-4 py-1.5 text-center inline-flex items-center" type="button">{language} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                     </svg></button>
 
-                    <div id="dropdown" className={ isHidden ? ("z-10 bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"): ("z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700")}>
+                    <div id="dropdown" className={ isHidden ? ("z-10 absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"): ("z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700")}>
                         <ul className="py-2 text-md  dark:text-gray-200" aria-labelledby="dropdownDefaultButton">
                             <li>
                                 <a href="# " onClick={() => {setLanguage("English"); setIsHidden(false)}} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">English</a>

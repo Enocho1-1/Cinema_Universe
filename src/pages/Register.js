@@ -2,6 +2,9 @@
 
 export const Register = () => {
   return (
-    <div>Register</div>
+    <main className="relative initial h-screen w-screen">
+    <div id="overlay"></div>
+  
+    </main>
   )
 }
