@@ -1,19 +1,13 @@
 import { Link } from "react-router-dom"
+import { InitialSecondHead } from "./Initial/InitialSecondHead"
 
 export const Login = () => {
 
 
   return (
     <main className="relative initial h-screen w-screen">
-       <header className="relative z-10 m-auto max-w-7xl px-2 my-6">
-        <span>
-          <Link to="/">
-            <h1 className="font-teko  text-5xl max-md:text-4xl text-primary hover:cursor-pointer">Cinema-U</h1>
-          </Link>
-        </span>
-      </header>
-
-      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px]">
+      <InitialSecondHead />
+      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px] min-xl:mt-[120px]">
         <span className="text-white font-sans mt-6 px-4">
           <h1 className="font-semibold text-2xl">Sign In</h1>
         </span>
@@ -45,7 +39,7 @@ export const Login = () => {
 
         <div className="mt-10 px-4">
           <h1 className="text-md font-sans text-gray-400">
-            New to Cinema-Uni? 
+            New to Cinema-U? 
             <Link to={"/register"} className="ml-2 text-white">Sign Up Now</Link>
           </h1>
         </div>

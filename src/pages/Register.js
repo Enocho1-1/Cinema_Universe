@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
+import { InitialSecondHead } from "./Initial/InitialSecondHead"
+
 
 export const Register = () => {
 
@@ -27,16 +28,10 @@ export const Register = () => {
 
   return (
     <main className="relative initial h-screen w-screen">
-      <header className="relative z-10 m-auto max-w-7xl px-2 my-6">
-        <span>
-          <Link to="/">
-            <h1 className="font-teko  text-5xl max-md:text-4xl text-primary hover:cursor-pointer">Cinema-U</h1>
-          </Link>
-        </span>
-      </header>
+      <InitialSecondHead/>
 
-      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px]">
-        <span className="text-white font-sans mt-6">
+      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px] min-xl:mt-[120px]">
+        <span className="text-white font-sans mt-6 px-4">
           <h1 className="font-semibold text-2xl">Create a password to start your membership</h1>
           <p className="text-lg mt-4">One step closer to entering the Cinema Universe 🚀</p>
         </span>

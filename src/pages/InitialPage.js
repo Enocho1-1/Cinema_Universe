@@ -18,7 +18,7 @@ export const InitialPage = () => {
     <main className="initial h-screen w-screen">
         < InitialHeader/>
 
-        <section className="relative z-10 mt-[175px] max-md:mt-[100px] flex flex-col items-center justify-center max-md:text-center">
+        <section className="relative z-10 mt-[125px] min-xl:mt-[175px] flex flex-col items-center justify-center max-md:text-center">
           <h1 className=" font-teko text-white text-6xl max-[812px]:text-4xl">Unlimited movies, TV shows, and more</h1>
           <p className="text-white mt-4 font-semibold font-sans text-xl max-[812px]:text-lg">Watch Anywhere. Cancel anytime.</p>
           <p className="text-white mt-4 font-semibold font-sans text-xl max-[812px]:text-lg">Ready to watch? Enter your email to create or restart your membership.</p>
