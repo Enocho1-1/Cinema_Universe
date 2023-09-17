@@ -6,7 +6,7 @@ import user from "../../assets/account.png"
 export const Header = () => {
   return (
     <header className="relative mainHead z-10 w-full px-2">
-        <div className=" flex justify-between px-12 py-4">
+        <div className=" flex justify-between px-4 py-4">
             <span className="flex">
                 <aside className="hover:cursor-pointer mr-2">
                     <img src={menu} className="h-12 w-12" alt="" />
@@ -24,7 +24,7 @@ export const Header = () => {
                             <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
                         </svg>
                     </div>
-                    <input type="search" id="search" className="block w-[450px] p-4 pl-10 text-sm border border-gray-900 rounded-lg bg-black text-white" placeholder="Search Movies" require />
+                    <input type="search" id="search" className="block w-[475px] p-4 pl-10 text-sm border border-gray-900 rounded-xl bg-black text-white" placeholder="Search Movies" require />
                     <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-primary hover:bg-red-800 font-medium rounded-lg text-sm px-4 py-2">
                         <img src={arrow} className="h-4 w-4" alt="" />
                     </button>

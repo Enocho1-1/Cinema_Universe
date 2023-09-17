@@ -25,7 +25,6 @@ export const Login = () => {
  
       const response = await fetch("http://localhost:24000/signin", UserPost)
       const data = await response.json()
-      console.log(data)
    
     if(data.accessToken){
       sessionStorage.setItem("username", JSON.stringify(data.user.email))
