@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom"
 
 export const Login = () => {
+
+
   return (
     <main className="relative initial h-screen w-screen">
        <header className="relative z-10 m-auto max-w-7xl px-2 my-6">
@@ -16,7 +18,7 @@ export const Login = () => {
           <h1 className="font-semibold text-2xl">Sign In</h1>
         </span>
         
-        <form className="mt-6 px-3">
+        <form  className="mt-6 px-3">
           <div className="mb-6">
           <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
           <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" required/>
