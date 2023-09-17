@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Loader } from "../../components/index"
+import { InitialSecondHead } from "../Initial/components/InitialSecondHead"
 
 export const HomePage = () => {
 
@@ -8,14 +9,16 @@ export const HomePage = () => {
   useEffect(() => {
     setTimeout(()=>{
       setLoad(!load);
-    },4000)
+    },5000)
   },[])
 
 
   return (
-    <main className="relative h-screen w-screen">
+    <main className="overflow-x-hidden h-screen w-screen">
         { load && <Loader/>}
-        <div>HomePage</div>
+        <div >
+          <InitialSecondHead/>
+        </div>
     </main>
   
   )
