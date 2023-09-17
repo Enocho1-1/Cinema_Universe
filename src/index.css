@@ -11,6 +11,7 @@
   padding: 0;
 }
 
+
 .initial{
   background-image: url("./assets/movieCollage.jpg");
   background-repeat: no-repeat;
@@ -26,14 +27,13 @@
   position: relative;
   z-index: 10;
   margin: auto;
-  /* margin-top: 120px; */
-  padding: 10px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   background: rgba( 7, 7, 7, 0.25 );
   backdrop-filter: blur( 6px );
   -webkit-backdrop-filter: blur( 6px );
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 

@@ -25,6 +25,11 @@
       "email": "jane@example.com",
       "password": "$2a$10$tbsF/gB7Oxj/gj6hgdLc.OfZBuH7Xp.bqKoCrxA3Fxzei6RE0FwQC",
       "id": 5
+    },
+    {
+      "email": "asta@hage.com",
+      "password": "$2a$10$pBda5rF4LmJj/CFk227AI.wf2XHvBgCWiyP/7D9.uiTfiKd8E26Ou",
+      "id": 6
     }
   ]
 }

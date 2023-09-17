@@ -46,7 +46,7 @@ export const Login = () => {
       <InitialSecondHead />
       <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px] min-xl:mt-[120px]">
         <span className="text-white font-sans mt-6 px-4">
-          <h1 className="font-semibold text-2xl">Sign In</h1>
+          <h1 className="font-semibold text-3xl">Sign In</h1>
         </span>
         
         <form  onSubmit={handleSignIn} className="mt-6 px-3">
