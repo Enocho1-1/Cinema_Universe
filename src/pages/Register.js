@@ -13,7 +13,7 @@ export const Register = () => {
 
   return (
     <main className="relative initial h-screen w-screen">
-      <header className="relative z-10 m-auto max-w-7xl px-2 my-4">
+      <header className="relative z-10 m-auto max-w-7xl px-2 my-6">
         <span>
           <Link to="/">
             <h1 className="font-teko  text-5xl max-md:text-4xl text-primary hover:cursor-pointer">Cinema-U</h1>
@@ -21,7 +21,7 @@ export const Register = () => {
         </span>
       </header>
 
-      <div className="inputFieldContain h-[500px] w-[500px]">
+      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px]">
         <span className="text-white font-sans mt-6">
           <h1 className="font-semibold text-2xl">Create a password to start your membership</h1>
           <p className="text-lg mt-4">One step closer to entering the Cinema Universe 🚀</p>
