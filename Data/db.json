@@ -1,0 +1,30 @@
+{
+  "orders": [],
+  "users": [
+    {
+      "email": "janeDoe@example.com",
+      "password": "$2a$10$ed7NQGb3bK9cIZZ3jflzh.2kTARxLOLp4622VEgU969RKrOv6qgJm",
+      "id": 1
+    },
+    {
+      "email": "MikeDoe@example.com",
+      "password": "$2a$10$Lz5z5B2jaqJL37lz8ayuXOEv7RYNMFOGuSkPYMoskf7XoTpxzJW5K",
+      "id": 2
+    },
+    {
+      "email": "JamesBond@example.com",
+      "password": "$2a$10$Q7QJmReo9YIFHdChYl4WNO6w2faPTEl4IairlR7h4kI2ISpVZhf5G",
+      "id": 3
+    },
+    {
+      "email": "Okyeree@wmpenn.edu",
+      "password": "$2a$10$GtRZjIqJPQWNiPsIY1JsJe4nuZHPLsGYLdufnVaE3kj9AJm2aLWnW",
+      "id": 4
+    },
+    {
+      "email": "jane@example.com",
+      "password": "$2a$10$tbsF/gB7Oxj/gj6hgdLc.OfZBuH7Xp.bqKoCrxA3Fxzei6RE0FwQC",
+      "id": 5
+    }
+  ]
+}

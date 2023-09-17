@@ -1,11 +1,13 @@
 
 import { useState, useEffect } from "react"
-import { InitialSecondHead } from "./Initial/InitialSecondHead"
+import { useNavigate } from "react-router"
+import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 
 
 export const Register = () => {
 
   const [username, setUsername] = useState("")
+  const navigate = useNavigate()
 
   useEffect(() => {
     const user = JSON.parse(sessionStorage.getItem("user"))
@@ -21,8 +23,25 @@ export const Register = () => {
       password: event.target.password.value
     }
 
-    sessionStorage.clear()
-    console.log(authDetail)
+    const UserPost = {
+      method: "POST",
+      headers: {"Content-Type": 'application/json'},
+      body: JSON.stringify(authDetail)
+    }
+
+ 
+      const response = await fetch("http://localhost:24000/register", UserPost)
+      const data = await response.json()
+      console.log(data)
+   
+    if(data.accessToken){
+      sessionStorage.setItem("username", JSON.stringify(data.user.email))
+      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+    }
+
+    // sessionStorage.clear()
+    navigate("/home")
+
   }
 
 

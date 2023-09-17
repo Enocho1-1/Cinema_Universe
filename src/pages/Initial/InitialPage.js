@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router"
-import { InitialHeader } from "./Initial/InitialHeader"
-import arrow from "../assets/right-arrow.png"
+import { InitialHeader } from "./components/InitialHeader"
+import arrow from "../../assets/right-arrow.png"
 
 export const InitialPage = () => {
 

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import { InitialSecondHead } from "./Initial/InitialSecondHead"
+import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 
 export const Login = () => {
 
