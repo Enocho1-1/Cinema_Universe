@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
-import { Loader } from "../../components/index"
-import { InitialSecondHead } from "../Initial/components/InitialSecondHead"
+import { Loader,Header } from "../../components/index"
+
+
 
 export const HomePage = () => {
 
@@ -17,7 +18,7 @@ export const HomePage = () => {
     <main className="overflow-x-hidden h-screen w-screen">
         { load && <Loader/>}
         <div >
-          <InitialSecondHead/>
+          <Header/>
         </div>
     </main>
   
