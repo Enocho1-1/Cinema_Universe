@@ -1,7 +1,44 @@
+import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 
+import { toast } from 'react-toastify';
+
 export const Login = () => {
+
+  const navigate = useNavigate()
+
+  const handleSignIn  = async (event) => {
+    event.preventDefault()
+
+    const authDetail = {
+      email: event.target.email.value,
+      password: event.target.password.value
+    }
+
+    const UserPost = {
+      method: "POST",
+      headers: {"Content-Type": 'application/json'},
+      body: JSON.stringify(authDetail)
+    }
+
+ 
+      const response = await fetch("http://localhost:24000/signin", UserPost)
+      const data = await response.json()
+      console.log(data)
+   
+    if(data.accessToken){
+      sessionStorage.setItem("username", JSON.stringify(data.user.email))
+      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+      navigate("/home")
+    } else{
+      toast.error("Check Email or Password")
+    }
+
+    // sessionStorage.clear()
+
+
+  }
 
 
   return (
@@ -12,14 +49,14 @@ export const Login = () => {
           <h1 className="font-semibold text-2xl">Sign In</h1>
         </span>
         
-        <form  className="mt-6 px-3">
+        <form  onSubmit={handleSignIn} className="mt-6 px-3">
           <div className="mb-6">
           <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
           <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" required/>
           </div> 
           <div className="mb-6">
               <label htmlFor="password" className="block mb-2 text-lg font-teko font-medium text-white">Password</label>
-              <input type="password" id="password" className="bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" placeholder="•••••••••" required/>
+              <input type="password" id="password" className="bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" name="password" placeholder="•••••••••" required/>
           </div> 
 
           <button  className="flex justify-center px-6 py-2 ml-2 font-medium text-white bg-primary hover:bg-red-800 font-teko rounded-lg w-full"type="submit">

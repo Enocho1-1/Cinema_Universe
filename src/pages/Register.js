@@ -32,15 +32,16 @@ export const Register = () => {
  
       const response = await fetch("http://localhost:24000/register", UserPost)
       const data = await response.json()
-      console.log(data)
+
    
     if(data.accessToken){
       sessionStorage.setItem("username", JSON.stringify(data.user.email))
       sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+      navigate("/home")
     }
 
     // sessionStorage.clear()
-    navigate("/home")
+
 
   }
 
