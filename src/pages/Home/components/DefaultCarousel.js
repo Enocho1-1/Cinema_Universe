@@ -10,7 +10,7 @@ export const DefaultCarousel = () => {
         <Carousel>
             <div className=" relative h-fit w-[100%]">
                 <img  className="w-[100%]" src="https://www.slashfilm.com/img/gallery/al-pacino-was-almost-fired-two-weeks-into-filming-the-godfather/l-intro-1670452428.jpg" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-12 px-4 ">
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
@@ -47,7 +47,7 @@ export const DefaultCarousel = () => {
             </div>
             <div className=" relative h-fit w-[100%]">
                 <img  className="w-[100%]" src="https://raisingworldchildren.com/wp-content/uploads/2018/11/the-pursuit-of-happyness.jpg" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-12 px-4 ">
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
@@ -84,7 +84,7 @@ export const DefaultCarousel = () => {
             </div>
             <div className=" relative h-fit w-[100%]">
                 <img  className="w-[100%]" src="https://m.media-amazon.com/images/M/MV5BMTgyMDUzMDYxNl5BMl5BanBnXkFtZTcwMzAzNDQyNw@@._V1_.jpg" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-12 px-4 ">
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
@@ -121,7 +121,7 @@ export const DefaultCarousel = () => {
             </div>
             <div className=" relative h-fit w-[100%]">
                 <img  className="w-[100%]" src="https://a.ltrbxd.com/resized/sm/upload/ho/gl/t1/5p/ex%20machina-1200-1200-675-675-crop-000000.jpg?v=ae03cd4b51" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-12 px-4 ">
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
@@ -158,7 +158,7 @@ export const DefaultCarousel = () => {
             </div>
             <div className=" relative h-fit w-[100%]">
                 <img  className="w-[100%]" src="https://m.media-amazon.com/images/S/pv-target-images/86dfd3549f93ed320fa617005385b59dbcb9fa801fc78cf4752c479a0a1e936c.jpg" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-12 px-4 ">
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
