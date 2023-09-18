@@ -30,7 +30,7 @@ export const Register = () => {
     }
 
  
-      const response = await fetch("http://localhost:24000/register", UserPost)
+      const response = await fetch("http://localhost:26000/register", UserPost)
       const data = await response.json()
 
    
