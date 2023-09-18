@@ -29,7 +29,7 @@ export const InitialPage = () => {
                     <input type="email" name="email" id="voice-search" className="initialInput border border-gray-300 text-white text-sm rounded-sm block pl-10 py-3 px-24 w-[450px]" placeholder="Email Address" required/>
                 </div>
                 <div className="w-full max-md:w-[50%] max-md:mt-4">
-                  <button  className="flex items-center px-6 py-2 ml-2 font-medium text-white bg-primary hover:bg-red-800 font-teko rounded-lg"type="submit">
+                  <button  className="flex items-center px-6 py-2 ml-2 font-medium text-white bg-primary-blue hover:bg-secondary-blue font-teko rounded-lg"type="submit">
                     <h1 className="inline text-xl">Get Started</h1>
                     <img src={arrow} className="h-6 ml-4" alt="" />
                   </button>

@@ -8,7 +8,8 @@ module.exports = {
         'sans':['Open Sans', 'sans-serif']
       },
       colors:{
-        'primary':'#FF0037',
+        'primary-blue':'#0D6EFD',
+        'secondary-blue':'#0000cc',
       }
     },
   },

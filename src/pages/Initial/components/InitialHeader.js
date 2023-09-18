@@ -9,7 +9,7 @@ export const InitialHeader = () => {
     <header className="relative z-10 max-[480px]:flex max-[480px]:justify-center m-auto max-w-7xl px-2">
         <div className="my-8 flex justify-between tablet:px-24">
             <span>
-                <h1 className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary">Cinema-U</h1>
+                <h1 className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary-blue">Cinema-U</h1>
             </span>
             <span className="flex">
                 {/* Language Dropdown */}
@@ -33,7 +33,7 @@ export const InitialHeader = () => {
 
                 {/* Sign In Button */}
                 <div className="mt-1">
-                    <Link to={"/login"} type="button" className="text-white bg-primary hover:bg-red-800  font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
+                    <Link to={"/login"} type="button" className="text-white bg-primary-blue hover:bg-secondary-blue  font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
                 </div>
               
             </span>

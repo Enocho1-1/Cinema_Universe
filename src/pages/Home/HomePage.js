@@ -11,7 +11,7 @@ export const HomePage = () => {
   useEffect(() => {
     setTimeout(()=>{
       setLoad(!load);
-    },5000)
+    },4000)
   },[])
 
 
