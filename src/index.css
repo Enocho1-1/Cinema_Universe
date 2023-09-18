@@ -25,6 +25,7 @@
 
 .carouselCaption{
   background-color: rgba( 0, 0, 0, .50);
+  height: 100%;
 }
 
 .inputFieldContain{
@@ -42,7 +43,7 @@
 }
 
 .mainHead{
-  background: rgba( 7, 7, 7, 0.85 );
+  background: rgba( 7, 7, 7, 0.75 );
 }
 
 

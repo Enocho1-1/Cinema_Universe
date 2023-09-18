@@ -17,12 +17,10 @@ export const HomePage = () => {
 
 
   return (
-    <main className="overflow-x-hidden h-screen w-screen">
+    <main className="reltive overflow-x-hidden h-screen w-screen">
         { load && <Loader/>}
-        <div >
           <Header/>
-          < DefaultCarousel/>
-        </div>
+        < DefaultCarousel/>
     </main>
   
   )

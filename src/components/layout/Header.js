@@ -9,7 +9,7 @@ export const Header = () => {
 
     const [isHidden, setIsHidden] = useState(false)
   return (
-    <header className="relative mainHead z-10 w-full px-2">
+    <header className="absolute top-0 mainHead z-10 w-full px-2">
         <div className=" flex justify-between px-8 py-4">
             <span className="flex">
                 <aside className="hover:cursor-pointer mr-2">
