@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useState, useEffect } from "react"
 import { Loader,Header } from "../../components/index"
 

@@ -35,6 +35,11 @@
       "email": "yuno@hage.com",
       "password": "$2a$10$ngWjh7vFe.PZDLFdNlfktuCO4frxYm4ss8qzCcLHoP6WYqJixYGb2",
       "id": 7
+    },
+    {
+      "email": "noelleS@example.com",
+      "password": "$2a$10$j5IYRm8NBvqEOs.E9nk4kOCi/zyZa6dMxMfO7qDsm5WFbIXobzri2",
+      "id": 8
     }
   ]
 }
