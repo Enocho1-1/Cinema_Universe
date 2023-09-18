@@ -19,8 +19,12 @@
   overflow: hidden;
 }
 
-.initialInput, .loginMenu{
+.initialInput, .loginMenu,.carouselCaption{
   background-color: rgba( 0, 0, 0, .75);
+}
+
+.carouselCaption{
+  background-color: rgba( 0, 0, 0, .50);
 }
 
 .inputFieldContain{

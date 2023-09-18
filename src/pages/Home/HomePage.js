@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useState, useEffect } from "react"
+import { DefaultCarousel } from "./components/DefaultCarousel"
 import { Loader,Header } from "../../components/index"
 
 
@@ -20,6 +21,7 @@ export const HomePage = () => {
         { load && <Loader/>}
         <div >
           <Header/>
+          < DefaultCarousel/>
         </div>
     </main>
   

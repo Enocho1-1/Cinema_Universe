@@ -25,7 +25,7 @@ export const Header = () => {
                 <div className="relative">
                     <input type="search" id="search" className="block w-[600px] p-3 pl-10 text-sm border border-gray-900 rounded-xl bg-black text-white" placeholder="Search Movies" require />
                     <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
-                        <img src={arrow} className="h-4 w-4" alt="" />
+                        <img src={arrow} className="h-3 w-3" alt="" />
                     </button>
                 </div>
             </form>

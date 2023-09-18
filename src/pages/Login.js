@@ -58,7 +58,7 @@ export const Login = () => {
               <input type="password" id="password" className="bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" name="password" placeholder="•••••••••" required/>
           </div> 
 
-          <button  className="flex justify-center px-6 py-2 ml-2 font-medium text-white bg-primary hover:bg-red-800 font-teko rounded-lg w-full"type="submit">
+          <button  className="flex justify-center px-6 py-2 ml-2 font-medium text-white bg-primary-blue hover:bg-secondary-blue font-teko rounded-lg w-full"type="submit">
             <h1 className="inline text-xl">Sign In</h1>
           </button>
 
