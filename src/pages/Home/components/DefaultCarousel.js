@@ -8,9 +8,9 @@ export const DefaultCarousel = () => {
   return (
     <div className=" relative h-[875px]">
         <Carousel>
-            <div className=" relative object-cover w-[100%]">
-                <img  className="w-[100%]" src="https://www.slashfilm.com/img/gallery/al-pacino-was-almost-fired-two-weeks-into-filming-the-godfather/l-intro-1670452428.jpg" alt="..."/>
-                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 ">
+            <div className=" relative w-[100%]">
+                <img  className=" h-[800px]  w-[100%]" src="https://www.slashfilm.com/img/gallery/al-pacino-was-almost-fired-two-weeks-into-filming-the-godfather/l-intro-1670452428.jpg" alt="..."/>
+                <span className="carouselCaption font-sans absolute top-[60%] left-0 w-[100%] pt-10 px-4 max-[988px]:flex max-[988px]:justify-center">
                     <h1 className="font-semibold text-gray-200 text-6xl ">Movie Title</h1>
                     <aside className="text-md mt-4 max-w-4xl flex ">
                         <span className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</span>
@@ -27,8 +27,8 @@ export const DefaultCarousel = () => {
                             <p className="ml-2 text-sm text-gray-200">action</p>
                         </span>
                     </aside>
-                    <aside className="max-w-4xl mt-4">
-                        <p className="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, amet. Ullam nisi totam tenetur rerum a maiores in illo blanditiis unde tempora omnis quisquam soluta repellendus provident quidem alias, id deserunt suscipit sunt voluptatibus veritatis quod aut asperiores quia. Voluptatem totam est commodi, enim magni ea. Quibusdam, itaque explicabo. Deleniti!</p>
+                    <aside className="max-w-4xl mt-4 ">
+                        <p className="text-gray-200 max-tablet:hidden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, amet. Ullam nisi totam tenetur rerum a maiores in illo blanditiis unde tempora omnis quisquam soluta repellendus provident quidem alias, id deserunt suscipit sunt voluptatibus veritatis quod aut asperiores quia. Voluptatem totam est commodi, enim magni ea. Quibusdam, itaque explicabo. Deleniti!</p>
                     </aside>
 
                     {/* Buttons */}
