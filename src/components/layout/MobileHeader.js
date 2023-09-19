@@ -3,26 +3,30 @@ import { Link } from "react-router-dom"
 import { LoginDropDown } from "../../components/index"
 import menu from "../../assets/menu.png"
 import arrow from "../../assets/right-arrow.png"
+import search from "../../assets/search.png"
 import user from "../../assets/account.png"
 
 
 export const MobileHeader = () => {
     const [isHidden, setIsHidden] = useState(false)
+    const [showSearch, setShowSearch] = useState(false)
   return (
-    <header className="absolute top-0 mainHead z-10 w-full px-2">
-        <div className=" flex justify-between px-8 py-4">
+    <header className="relative">
+        <div className="absolute top-0 mainHead z-10 w-full flex justify-between px-6 py-4">
             <span className="flex">
-                <aside className="hover:cursor-pointer mr-2">
-                    <img src={menu} className="h-12 w-12" alt="" />
+                <aside className="self-center hover:cursor-pointer mr-2">
+                    <img src={menu} className="h-8 w-8" alt="" />
                 </aside>
                 <Link to="/home">
-                    <h1 className="font-teko  text-3xl max-md:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
+                    <h1 className="font-teko  text-3xl mt-2 ml-8 max-md:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
                 </Link>
             </span>
 
             {/* Search Movies */}
 
-            <i className="bi bi-search"></i>
+            <button onClick={() => setShowSearch(!showSearch)}>
+                <img src={search}  className="h-6 w-6 hover:cursor-pointer" alt="" />
+            </button>
             {/* <form>   
                 <div className="relative">
                     <input type="search" id="search" className="block w-[600px] p-3 pl-10 text-sm border border-gray-900 rounded-xl bg-black text-white" placeholder="Search Movies" require />
@@ -36,8 +40,19 @@ export const MobileHeader = () => {
                 <img src={user} className="hover:cursor-pointer" alt="" />
             </button>
             { isHidden &&  <LoginDropDown /> }
+          
         </div>
-
+        {showSearch && 
+            <form className="absolute top-20">   
+                <div className="relative">
+                    <input type="search" id="search" className="headerInput block w-[400px] p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
+                    <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
+                        <img src={arrow} className="h-3 w-3" alt="" />
+                    </button>
+                </div>
+            </form>
+        }
+          
     </header>
   )
 }
