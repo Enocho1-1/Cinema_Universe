@@ -31,14 +31,14 @@ export const DefaultCarousel = () => {
                             <p className="ml-2 text-sm text-gray-200">action</p>
                         </span>
                     </aside>
-                    <aside className="max-w-6xl mt-4 ">
+                    <aside className="max-w-4xl mt-4 ">
                         <p className="text-gray-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, amet. Ullam nisi totam tenetur rerum a maiores in illo blanditiis unde tempora omnis quisquam soluta repellendus provident quidem alias, id deserunt suscipit sunt voluptatibus veritatis quod aut asperiores quia. Voluptatem totam est commodi, enim magni ea. Quibusdam, itaque explicabo. Deleniti!</p>
                     </aside>
 
                     {/* Buttons */}
-                    <aside className="mt-2 max-w-2xl max-lg:max-w-8xl flex">
+                    <aside className="mt-2 max-w-2xl flex">
                         <button className="bg-primary-blue rounded-xl p-2 flex items-center"> 
-                            <img src={play} className="max-h-6" alt="" />
+                            <img src={play} className="h-6" alt="" />
                             <p className="font-semibold text-md ml-2">Watch Now</p> 
                         </button>
                         <button className="ml-3 rounded-xl p-2 flex items-center"> 
