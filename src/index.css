@@ -14,12 +14,30 @@
   padding: 0;
 }
 
+body {
+  overflow-anchor: none;
+}
+
 
 header  input::placeholder {
   font-weight: bold;
   opacity: 0.7;
   color: white;
 }
+
+figcaption{
+  position: absolute;
+  bottom:0;
+  left: 0;
+  height: 45%;
+  width: 100%;
+  padding-top: 1.563rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgba( 0, 0, 0, .35);
+}
+
+
 .initial{
   background-image: url("./assets/movieCollage.jpg");
   background-repeat: no-repeat;
@@ -31,10 +49,10 @@ header  input::placeholder {
   background-color: rgba( 0, 0, 0, .65);
 }
 
-.carouselCaption{
-  background-color: rgba( 0, 0, 0, .50);
+/* .carouselCaption{
+
   height: 100%;
-}
+} */
 
 .inputFieldContain{
   position: relative;
@@ -59,6 +77,10 @@ header  input::placeholder {
 }
 
 
+.CarouselContain img {
+  max-height: 90vh;
+}
+
 #overlay{
   position: absolute;
   top: 0;
@@ -76,11 +98,37 @@ header  input::placeholder {
   } */
 }
 
+
+@media  (max-width: 991px) {
+  
+  figcaption aside:nth-child(3){
+    display: none;
+   }
+   
+}
+
+@media  (max-width: 1280px) {
+  
+  figure img {
+    min-height: 90vh ;
+  }
+
+  /* figcaption{
+    position: absolute;
+    bottom:0;
+    left: 0;
+    height: 45%;
+    width: 100%;
+    padding-top: 1.563rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: rgba( 0, 0, 0, .35);
+  } */
+
+}
 /* Media Query for low resolution  Tablets, Ipads */
 @media  (max-width: 1350px) {
-  /* body {
-      background-color: yellow;
-  } */
+  
   .inputFieldContain{
     margin-top: 10px;
   }
