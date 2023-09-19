@@ -37,8 +37,8 @@ export const MobileHeader = () => {
             {showSearch && 
                 <form className="absolute top-20">   
                     <div className="relative">
-                        <input type="search" id="search" className="headerInput block max-extraSm:w-[350px] extraSm:max-[414px]:w-[370px] min-extraSm:max-[414px]:ml-3 min-[414px]:max-mobile:w-[400px] p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
-                        <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
+                        <input type="search" id="search" className="headerInput block min-w-[90vw] mx-4 p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
+                        <button type="submit" className="text-white absolute right-[8%] bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
                             <img src={arrow} className="h-3 w-3" alt="" />
                         </button>
                     </div>
