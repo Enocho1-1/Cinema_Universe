@@ -10,6 +10,11 @@ module.exports = {
       colors:{
         'primary-blue':'#0D6EFD',
         'secondary-blue':'#0000cc',
+      },
+      screens:{
+        'extraSm': '375px',
+        'mobile': '480px',
+        'tablet': '769px',
       }
     },
   },

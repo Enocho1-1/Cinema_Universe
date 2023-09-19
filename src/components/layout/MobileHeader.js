@@ -12,13 +12,13 @@ export const MobileHeader = () => {
     const [showSearch, setShowSearch] = useState(false)
   return (
     <header className="relative">
-        <div className="absolute top-0 mainHead z-10 w-full flex justify-between px-6 py-4">
+        <div className="absolute top-0 mainHead z-10 w-full flex justify-evenly  py-4">
             <span className="flex">
                 <aside className="self-center hover:cursor-pointer mr-2">
                     <img src={menu} className="h-8 w-8" alt="" />
                 </aside>
                 <Link to="/home">
-                    <h1 className="font-teko  text-3xl mt-2 ml-8 max-md:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
+                    <h1 className="font-teko  text-3xl mt-2 mx-4 max-md:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
                 </Link>
             </span>
 
@@ -27,14 +27,6 @@ export const MobileHeader = () => {
             <button onClick={() => setShowSearch(!showSearch)}>
                 <img src={search}  className="h-6 w-6 hover:cursor-pointer" alt="" />
             </button>
-            {/* <form>   
-                <div className="relative">
-                    <input type="search" id="search" className="block w-[600px] p-3 pl-10 text-sm border border-gray-900 rounded-xl bg-black text-white" placeholder="Search Movies" require />
-                    <button type="submit" className="text-white absolute right-2.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
-                        <img src={arrow} className="h-3 w-3" alt="" />
-                    </button>
-                </div>
-            </form> */}
 
             <button onClick={() => setIsHidden(!isHidden)} className="self-center">
                 <img src={user} className="hover:cursor-pointer" alt="" />
@@ -42,16 +34,16 @@ export const MobileHeader = () => {
             { isHidden &&  <LoginDropDown /> }
           
         </div>
-        {showSearch && 
-            <form className="absolute top-20">   
-                <div className="relative">
-                    <input type="search" id="search" className="headerInput block w-[400px] p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
-                    <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
-                        <img src={arrow} className="h-3 w-3" alt="" />
-                    </button>
-                </div>
-            </form>
-        }
+            {showSearch && 
+                <form className="absolute top-20">   
+                    <div className="relative">
+                        <input type="search" id="search" className="headerInput block max-extraSm:w-[350px] extraSm:max-[414px]:w-[370px] min-extraSm:max-[414px]:ml-3 min-[414px]:max-mobile:w-[400px] min-[414px]:max-mobile: mobile:max-tablet:w-[470px]  p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
+                        <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
+                            <img src={arrow} className="h-3 w-3" alt="" />
+                        </button>
+                    </div>
+                </form>
+            }
           
     </header>
   )
