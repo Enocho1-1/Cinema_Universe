@@ -40,6 +40,11 @@
       "email": "noelleS@example.com",
       "password": "$2a$10$j5IYRm8NBvqEOs.E9nk4kOCi/zyZa6dMxMfO7qDsm5WFbIXobzri2",
       "id": 8
+    },
+    {
+      "email": "rillPaint@example.com",
+      "password": "$2a$10$6xWlGH/9gyZzM4/RbNJpn.ED6SWUlvXGin.W46KkEeFKlFwCy.eXG",
+      "id": 9
     }
   ]
 }

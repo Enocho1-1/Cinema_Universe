@@ -1,5 +1,6 @@
 
 export { Header } from "./layout/Header"
+export { MobileHeader } from "./layout/MobileHeader"
 
 
 export { Loader } from "./elements/Loader"
