@@ -2,9 +2,6 @@ import { useEffect,useState } from "react"
 import { Carousel } from "flowbite-react"
 import { CarouselSlide } from "./CarouselSlide"
 
-
-
-
 export const DefaultCarousel = () => {
 
     const [data, setData] = useState([])

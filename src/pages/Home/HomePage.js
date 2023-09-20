@@ -25,10 +25,15 @@ export const HomePage = () => {
 
 
   return (
-    <main className="reltive overflow-x-hidden h-screen w-screen">
+    <main className="reltive overflow-x-hidden h-screen w-screen bg-gray-900">
         { load && <Loader/>}
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
+        {/* Carousel */}
         < DefaultCarousel/>
+
+        <section className="mt-8 h-[200px]">
+          <h1 className="text-4xl text-white">Trending Now</h1>
+        </section>
     </main>
   
   )
