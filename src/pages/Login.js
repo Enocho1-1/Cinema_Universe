@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
-
 import { toast } from 'react-toastify';
 
 export const Login = () => {

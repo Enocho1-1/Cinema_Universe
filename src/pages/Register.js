@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
+import { toast } from 'react-toastify';
 
 
 export const Register = () => {
@@ -38,10 +39,9 @@ export const Register = () => {
       sessionStorage.setItem("username", JSON.stringify(data.user.email))
       sessionStorage.setItem("userID", JSON.stringify(data.user.id))
       navigate("/home")
+    } else {
+      toast.error("Existing Email")
     }
-
-    // sessionStorage.clear()
-
 
   }
 
