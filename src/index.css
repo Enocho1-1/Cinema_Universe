@@ -25,15 +25,25 @@ header  input::placeholder {
   color: white;
 }
 
+  
+figure{
+  position: relative;
+  max-height: 65vh;
+}
+
+.mainImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
 figcaption{
   position: absolute;
   bottom:0;
   left: 0;
   height: 45%;
   width: 100%;
-  padding-top: 1.563rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding: 1rem;
   background-color: rgba( 0, 0, 0, .35);
 }
 
@@ -49,10 +59,6 @@ figcaption{
   background-color: rgba( 0, 0, 0, .65);
 }
 
-/* .carouselCaption{
-
-  height: 100%;
-} */
 
 .inputFieldContain{
   position: relative;
@@ -77,10 +83,6 @@ figcaption{
 }
 
 
-.CarouselContain img:nth-child(1) {
-  max-height: 90vh;
-}
-
 #overlay{
   position: absolute;
   top: 0;
@@ -93,37 +95,40 @@ figcaption{
 
 /* Media Query for Mobile Devices */
 @media (max-width: 480px) {
-  /* body {
-      background-color: red;
-  } */
-}
 
-
-@media  (max-width: 991px) {
+  figcaption h1 {
+    text-align: center;
+  }
   
-  figcaption aside:nth-child(3){
-    display: none;
-   }
-   
-}
-
-@media  (max-width: 1280px) {
-  
-  .CarouselContain img:nth-child(1) {
-    min-height: 90vh;
+  figure{
+    height: 70vh;
   }
 
-  /* figcaption{
-    position: absolute;
-    bottom:0;
-    left: 0;
-    height: 45%;
-    width: 100%;
-    padding-top: 1.563rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    background-color: rgba( 0, 0, 0, .35);
-  } */
+}
+
+
+@media (min-width: 480px) and (max-width: 769px) {
+
+  figcaption h1 {
+    text-align: center;
+  }
+
+  figure{
+    height: 70vh;
+  }
+  
+}
+/* @media  (max-width: 991px) {
+  
+   
+} */
+
+@media (min-width: 1280px) {
+  
+  figure{
+    max-height: 90vh;
+  }
+
 
 }
 /* Media Query for low resolution  Tablets, Ipads */
