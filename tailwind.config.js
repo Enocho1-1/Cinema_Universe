@@ -10,6 +10,7 @@ module.exports = {
       colors:{
         'primary-blue':'#0D6EFD',
         'secondary-blue':'#0000cc',
+        'primary-black': '#070707'
       },
       screens:{
         'extraSm': '375px',

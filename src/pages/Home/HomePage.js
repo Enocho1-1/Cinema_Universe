@@ -25,7 +25,7 @@ export const HomePage = () => {
 
 
   return (
-    <main className="reltive overflow-x-hidden h-screen w-screen bg-gray-900">
+    <main className="reltive overflow-x-hidden h-screen w-screen bg-primary-black">
         { load && <Loader/>}
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
         {/* Carousel */}
