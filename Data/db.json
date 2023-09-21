@@ -45,6 +45,16 @@
       "email": "rillPaint@example.com",
       "password": "$2a$10$6xWlGH/9gyZzM4/RbNJpn.ED6SWUlvXGin.W46KkEeFKlFwCy.eXG",
       "id": 9
+    },
+    {
+      "email": "licht@example.com",
+      "password": "$2a$10$1uEWYivChBvT3DVskMkzl.fQBiw2Vb.8k2Koy1epuu8vJnghPoX1u",
+      "id": 10
+    },
+    {
+      "email": "prince@example.com",
+      "password": "$2a$10$sXiWVvwUYuonxbhztQfIyuMPuF1XbBP7gynSh9hkBFLMwLgGPEy6e",
+      "id": 11
     }
   ]
 }

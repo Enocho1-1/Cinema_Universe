@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
-import play from "../../../assets/play-button.png"
+import play from "../../../assets/play-button(1).png"
 import bookmark from "../../../assets/bookmark-white.png"
 
 export const CarouselSlide = ({item}) => {

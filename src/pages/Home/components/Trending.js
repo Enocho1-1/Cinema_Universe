@@ -23,7 +23,7 @@ export const Trending = () => {
     },[])
 
   return (
-    <div className="trendingBtn my-[30px] px-2 flex justify-evenly flex-wrap">
+    <div className="trendingBtn my-[30px] px-2 flex justify-between flex-wrap">
     { data.map( (item,index) => (
            <TrendingBtn key={index} item={item}/>
     ))}

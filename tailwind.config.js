@@ -5,7 +5,8 @@ module.exports = {
     extend: {
       fontFamily:{
         'teko': ['Teko', 'sans-serif'],
-        'sans':['Open Sans', 'sans-serif']
+        'sans':['Open Sans', 'sans-serif'],
+        'bold':['Open Sans', 'sans-serif']
       },
       colors:{
         'primary-blue':'#0D6EFD',
