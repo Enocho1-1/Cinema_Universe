@@ -82,6 +82,20 @@ figcaption{
   background: rgba( 7, 7, 7, 0.60 );
 }
 
+.home{
+  background-color: rgba( 0, 0, 0, .35);
+}
+
+.trendingBtn button:hover::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 185px;
+  width: inherit;
+  background: rgba(13,110,253,0.15);
+  border-radius: 0.75rem;
+}
 
 #overlay{
   position: absolute;

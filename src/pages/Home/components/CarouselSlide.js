@@ -1,10 +1,11 @@
+/* eslint-disable */
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button.png"
 import bookmark from "../../../assets/bookmark-white.png"
 
 export const CarouselSlide = ({item}) => {
 
-    const { title, release_date, backdrop_path,vote_average, adult, overview, runtime} = item
+    const { title, release_date, backdrop_path,vote_average, adult, overview} = item
 
   return (
     <figure>
