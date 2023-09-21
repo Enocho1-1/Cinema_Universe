@@ -6,6 +6,7 @@ export const DefaultCarousel = () => {
 
     const [data, setData] = useState([])
 
+    
 
     useEffect(() => {
         try{
