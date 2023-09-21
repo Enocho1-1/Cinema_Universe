@@ -1,10 +1,11 @@
 
+import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
 
 export const TrendingBtn = ({item}) => {
-    const { title, release_date, backdrop_path,vote_average} = item
+    const { id, title, release_date, backdrop_path,vote_average} = item
   return (
-    <button className=" relative h-[165px] w-[350px] rounded-xl mx-4">
+    <Link to={`/${id}`} className=" relative h-[165px] w-[350px] rounded-xl mx-4 mt-8">
         <img className="h-fit w-fit  rounded-xl z-[-10]" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
         <span className="absolute px-2 top-[60%] left-0">
             <h1 className="font-sans text-md font-bold text-white">{title}</h1>
@@ -15,6 +16,6 @@ export const TrendingBtn = ({item}) => {
             </aside>
             
         </span>
-    </button>
+    </Link>
   )
 }

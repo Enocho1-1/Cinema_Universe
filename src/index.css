@@ -48,6 +48,7 @@ figcaption{
 }
 
 
+
 .initial{
   background-image: url("./assets/movieCollage.jpg");
   background-repeat: no-repeat;
@@ -86,15 +87,19 @@ figcaption{
   background-color: rgba( 0, 0, 0, .35);
 }
 
-.trendingBtn button:hover::after{
-  content: "";
+.trendingBtn a:hover::after{
+  content: url("./assets/play-button-arrowhead.png");
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0;
   left: 0;
   height: 200px;
   width: inherit;
-  background: rgba(13,110,253,0.15);
+  background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;
+  transition: ease-in-out 2ms;
 }
 
 #overlay{

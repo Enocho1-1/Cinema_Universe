@@ -1,11 +1,12 @@
 /* eslint-disable */
+import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button.png"
 import bookmark from "../../../assets/bookmark-white.png"
 
 export const CarouselSlide = ({item}) => {
 
-    const { title, release_date, backdrop_path,vote_average, adult, overview} = item
+    const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
 
   return (
     <figure>
@@ -29,10 +30,11 @@ export const CarouselSlide = ({item}) => {
 
             {/* Buttons */}
             <aside className="mt-6 max-w-2xl flex max-tablet:justify-center">
-                <button className="bg-primary-blue rounded-xl p-2 flex items-center"> 
+                <Link to={`/${id}`} className="bg-primary-blue rounded-xl p-2 flex items-center">
                     <img src={play} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
-                </button>
+                </Link>
+          
                 <button className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 

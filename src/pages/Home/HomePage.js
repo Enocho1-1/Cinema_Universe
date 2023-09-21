@@ -1,5 +1,5 @@
 /* eslint-disable */
-import { useState, useEffect } from "react"
+import { useMatchMedia } from "../../hooks/useMatchMedia"
 import { DefaultCarousel } from "./components/DefaultCarousel"
 import { Trending } from "./components/Trending"
 import { Header, MobileHeader } from "../../components/index"
@@ -8,14 +8,7 @@ import { Header, MobileHeader } from "../../components/index"
 
 export const HomePage = () => {
 
-  const [myQuery, seyMyQuery ] = useState({
-    matches: window.innerWidth < 769 ? true : false
-  })
-
-  useEffect(() => {
-    let mediaQuery = window.matchMedia("(max-width:769px)")
-    mediaQuery.addEventListener("change",  seyMyQuery)
-  },[])
+  const {myQuery} = useMatchMedia()
 
 
 
