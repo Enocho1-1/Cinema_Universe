@@ -103,7 +103,7 @@ figcaption{
   transition: ease-in-out 2ms;
 }
 
-.upComing span button:hover::after{
+.MovieCard a:hover::after{
   content: url("./assets/play-button-arrowhead.png");
   position: absolute;
   display: flex;
@@ -111,7 +111,7 @@ figcaption{
   align-items: center;
   top: 0;
   left: 0;
-  height: 260px;
+  height: 255px;
   width: inherit;
   background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;

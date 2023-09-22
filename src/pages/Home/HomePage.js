@@ -15,21 +15,21 @@ export const HomePage = () => {
   const {myQuery} = useMatchMedia()
 
   return (
-    <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
+    <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
         {/* Carousel */}
         < DefaultCarousel/>
 
         {/* Trending Section */}
-        <section className="mt-8 m-auto max-w-9xl flex flex-col items-center">
-          <h1 className=" font-sans font-semibold text-xl text-gray-300"><i className="bi bi-fire"></i>Trending Now<i className="bi bi-fire"></i></h1>
+        <section className="mt-8 m-auto flex flex-col items-center">
+          <h1 className=" font-sans font-semibold text-xl text-gray-300 flex justify-center"><i className="bi bi-fire"></i>Trending Now<i className="bi bi-fire"></i></h1>
           <Trending />
         </section>
 
         {/* Upcoming Section */}
-        <section className="relative mt-28 m-auto max-w-9xl px-4">
-          <h1 className=" mb-4  font-bold  text-4xl text-gray-300 flex"> <img src={play} className="h-8 self-center mr-2"/>UPCOMING</h1>
+        <section className="relative mt-[175px]  m-auto max-w-[1536px] px-4">
+          <h1 className="font-bold text-4xl text-gray-300 flex justify-start max-tablet:justify-center"><img src={play} className="h-8 self-center mr-2"/>UPCOMING</h1>
           <UpComing/>
         </section>
     </main>

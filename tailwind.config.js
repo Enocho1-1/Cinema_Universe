@@ -17,6 +17,12 @@ module.exports = {
         'extraSm': '375px',
         'mobile': '480px',
         'tablet': '769px',
+      },
+      gridTemplateColumns:{
+        'twoCols': 'repeat(2, minmax(0, 300px))',
+        'threeCols': 'repeat(3, minmax(0, 300px))',
+        'fiveCols': 'repeat(5, minmax(0, 300px))'
+
       }
     },
   },
