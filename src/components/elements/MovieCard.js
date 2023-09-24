@@ -5,9 +5,15 @@ export const MovieCard = ({item, type}) => {
     const {id, title, name, release_date,first_air_date, poster_path} = item
 
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
+
+    const saveType = (type) => {
+        sessionStorage.setItem("type",JSON.stringify(type))
+    }
+
+    // console.log(type)
   return (
     <span className="MovieCard relative max-w-[170px] mx-4">
-        <Link to={`/${id}`} className="h-[250px] w-[170px] rounded-xl">
+        <Link to={`/${id}`} onClick={() => saveType(type)} className="h-[250px] w-[170px] rounded-xl">
             <img className="rounded-xl" src={ poster_path ? posterImage: collage} alt="" />
         </Link>
         <aside className="mt-2 flex flex-col">

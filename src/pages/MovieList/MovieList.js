@@ -7,7 +7,6 @@ export const MovieList = ({apiPath, title}) => {
   useTitle( `Cinema Universe | ${title}`)
 
   const {data} = useFetch(apiPath)
-  console.log(data)
   return (
     <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
     { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
