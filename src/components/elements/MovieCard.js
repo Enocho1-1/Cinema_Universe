@@ -16,9 +16,7 @@ export const MovieCard = ({item, type}) => {
                 <p className="ml-3 text-md text-gray-300">{release_date}</p>
             </div>
             <div className="mt-2">
-                <Link to={`/${id}`}>
                     <h1 className="ml-2 text-md text-gray-300 hover:cursor-pointer">{title}</h1>
-                </Link>
             </div>
         </aside>
     </span>

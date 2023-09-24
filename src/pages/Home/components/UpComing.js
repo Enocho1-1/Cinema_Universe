@@ -19,8 +19,7 @@ export const UpComing = () => {
     }, [])
 
   return (
-    <div className="grid mt-[25px] px-4 grid-cols-fiveCols justify-center max-mobile:flex max-mobile:flex-col max-mobile:items-center mobile:max-[600px]:grid-cols-twoCols min-[600px]:max-lg:grid-cols-threeCols grid-rows-4 gap-x-[2px] gap-y-2 ">
-       
+    <div className="grid mt-[25px] px-4 grid-cols-sevenCols justify-center max-mobile:flex max-mobile:flex-col max-mobile:items-center mobile:max-[600px]:grid-cols-twoCols min-[600px]:max-lg:grid-cols-threeCols  gap-x-[2px] gap-y-2 ">
         { data.map( (item, index) => (
             <MovieCard key={index} item={item} type="MOVIE"/>
         ))}
