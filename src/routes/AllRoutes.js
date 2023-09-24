@@ -9,7 +9,8 @@ export const AllRoutes = () => {
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path='/home' element={<HomePage/>}/>
-        <Route path='/NowPlaying' element={<MovieList apiPath="now_playing" title=" Now Playing"/>}/>
+        <Route path='/NowPlaying' element={<MovieList apiPath="movie/now_playing" title="Now Playing"/>}/>
+        <Route path='/TopRated' element={<MovieList apiPath="tv/top_rated" title="Top Rated"/>}/>
         <Route path="/:id" element={<MovieDetail/>}/>
       
       </Routes>
