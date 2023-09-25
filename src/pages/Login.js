@@ -15,14 +15,14 @@ export const Login = () => {
       password: event.target.password.value
     }
 
-    const UserPost = {
+    const options = {
       method: "POST",
       headers: {"Content-Type": 'application/json'},
       body: JSON.stringify(authDetail)
     }
 
  
-      const response = await fetch("http://localhost:28000/signin", UserPost)
+      const response = await fetch("http://localhost:28000/signin", options)
       const data = await response.json()
    
     if(data.accessToken){
