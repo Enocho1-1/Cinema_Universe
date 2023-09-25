@@ -4,11 +4,14 @@ import { useParams } from "react-router"
 import { useMatchMedia } from "../../hooks/useMatchMedia"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
+import play from "../../assets/play-button.png"
+import gif from "../../assets/giphy(2).gif"
 
 export const MovieDetail = () => {
 
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [info, setInfo] = useState([])
+    const [playbutton, setPlayButton] = useState(false)
     const Params = useParams() 
     const movie_id = Params.id
     const {myQuery} = useMatchMedia()
@@ -35,7 +38,32 @@ export const MovieDetail = () => {
   return (
     <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
          { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
-          <img className=" h-[75vh] w-full" src={backdropImage ? backdropImage : collage} alt="" />
+
+            {/* Header Image */}
+            <section className="relative h-[85%] w-full" style={ {
+                    backgroundImage: `url( ${backdropImage ? backdropImage : collage})`,
+                    backgroundSize:"cover",
+                    backgroundRepeat: "no-repeat"
+            }}>
+                <aside  className="relative flex justify-center items-center" id="overlay">
+
+                  <button onClick={() => setPlayButton(!playbutton)} className=""><img src={play} className="h-[35px] w-[35px]" alt="" /></button>
+                  { playbutton && 
+                    <div className="absolute top-[25%]  h-[500px] w-[900px] flex justify-center items-center bg-black">
+                      <img src={gif} alt="" />
+                    </div>
+                  }
+                
+
+                </aside>
+              </section>
+
+              {/* Movie/TV Info */}
+           
+              <section></section>
+            
+         
+        
     </main>
   )
 }

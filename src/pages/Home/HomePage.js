@@ -1,21 +1,33 @@
 /* eslint-disable */
+import { useEffect,useState } from "react"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
-import { Header, MobileHeader } from "../../components/index"
+import { Header, MobileHeader,Loader } from "../../components/index"
 import play from "../../assets/play-button.png"
 
 
 
 export const HomePage = () => {
 
+  const [isShown, setIsShown] = useState(true)
   useTitle("Cinema Universe | Watch Movies and TV Shows")
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsShown(!isShown);
+    },3000)
+  },[])
+
   const navigate= useNavigate()
 
   const {myQuery} = useMatchMedia()
 
+
+
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
+        {isShown && <Loader/>}
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
         {/* Carousel */}
