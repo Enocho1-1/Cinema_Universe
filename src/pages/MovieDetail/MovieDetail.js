@@ -33,7 +33,7 @@ export const MovieDetail = () => {
         console.log(error)
       }
       
-    },[])
+    },[movie_id])
 
         // Recommendation useEffect
         useEffect(() => {
@@ -49,7 +49,7 @@ export const MovieDetail = () => {
           }catch(error){
               console.log(error.message)
           }
-      },[])
+      },[movie_id])
 
       // console.log(recommendList)
     const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres, production_companies} = info
@@ -92,7 +92,7 @@ export const MovieDetail = () => {
                 <div className="flex flex-col">
                   <h1 className="font-sans font-semibold text-4xl text-gray-200">{title ? title : name}</h1>
 
-                  <aside className="text-md mt-6 max-w-6xl flex ">
+                  <aside className="text-md mt-10 max-w-6xl flex ">
 
                   <div className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</div>
                   <div className="font-semibold text-sm ml-3 px-2 rounded-lg border border-gray-200 text-gray-200">PG-13</div>
