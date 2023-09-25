@@ -98,7 +98,7 @@ figcaption{
   left: 0;
   height: 200px;
   width: inherit;
-  background: rgba();
+  background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;
   transition: ease-in-out 2ms;
 }
