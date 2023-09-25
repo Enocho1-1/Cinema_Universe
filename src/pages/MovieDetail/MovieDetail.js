@@ -1,7 +1,8 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
-import { useMatchMedia } from "../../hooks/useMatchMedia"
+import { useMatchMedia, useRecommend } from "../../hooks/index"
+import { RecommendCard } from "./components/RecommendCard"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
 import play from "../../assets/play-button.png"
@@ -12,6 +13,7 @@ export const MovieDetail = () => {
 
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [info, setInfo] = useState([])
+    const [recommendList , setRecommend]  =useState([])
     const [playbutton, setPlayButton] = useState(false)
     const Params = useParams() 
     const movie_id = Params.id
@@ -33,11 +35,32 @@ export const MovieDetail = () => {
       
     },[])
 
-    const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries} = info
+        // Recommendation useEffect
+        useEffect(() => {
+          try{
+              const fetchRecommended = async () => {
+                  const path = data === "MOVIE" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
+                  const response = await fetch(path)
+                  const result = await response.json()
+                  const array = result.results.slice(0,9)
+                  setRecommend(array)
+              }
+              fetchRecommended()
+          }catch(error){
+              console.log(error.message)
+          }
+      },[])
+
+      // console.log(recommendList)
+    const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres, production_companies} = info
+
+
+
+    // const { recommendList } = useRecommend(data,id)
     const backdropImage = `https://image.tmdb.org/t/p/original/${backdrop_path}`
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
 
-    console.log( production_countries)
+
   return (
     <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
          { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
@@ -52,6 +75,7 @@ export const MovieDetail = () => {
 
                   <button onClick={() => setPlayButton(!playbutton)} className=""><img src={play} className="h-[35px] w-[35px]" alt="" /></button>
                   { playbutton && 
+                  // Video Player
                     <div className="absolute top-[25%]  h-[500px] w-[900px] flex justify-center items-center bg-black">
                       <img src={gif} alt="" />
                     </div>
@@ -62,7 +86,7 @@ export const MovieDetail = () => {
 
               {/* Movie/TV Info */}
            
-              <section className="mt-10 flex max-w-6xl m-auto p-4 ">
+              <section className="mt-10 flex justify-evenly p-2 ">
                 <img src={posterImage} className="h-[400px] w-[300px] mr-10 rounded-lg" alt="" />
 
                 <div className="flex flex-col">
@@ -80,15 +104,40 @@ export const MovieDetail = () => {
                     <p className="ml-2 text-sm text-gray-200">Duration:{number_of_episodes ? ` ${number_of_episodes} episodes`: ` ${runtime} min`}</p>
                    </aside>
 
-                  <p className="mt-4 font-sans text-md text-gray-200">
-                    {overview}
-                  </p>
+                  <aside className="max-w-4xl">
+                    <p className="mt-4 font-sans text-md text-gray-200">
+                      {overview}
+                    </p>
+                  </aside>
+                
 
                   {/* Listing Info */}
-                  <aside className="flex col mt-2">
+                  <aside className="flex flex-col mt-4">
+                    {/* Countries */}
                     <span className="flex">
-                      <h1 className="font-sans text-lg text-gray-200 flex"> Countries: {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-2 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                      <h1 className="font-sans text-md text-gray-200 flex"> Countries: {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
                     </span>
+                    
+                    {/* Genres */}
+                    <span className="flex mt-2">
+                      <h1 className="font-sans text-md text-gray-200 flex"> Genres: {genres ? genres.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                    </span>
+
+                     {/* Production */}
+                     <span className="flex mt-2">
+                      <h1 className="font-sans text-md text-gray-200 flex"> Genres: {production_companies ? production_companies.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                    </span>
+                  </aside>
+                </div>
+
+                {/* Recommended */}
+                <div className=" flex flex-col">
+                  <h1 className="font-bold text-4xl text-gray-300 flex"><img src={play} className="h-6 self-center mr-2"/>Recommended</h1>
+                  <aside className="mt-4 flex flex-col  h-[350px] w-auto overflow-y-scroll overflow-x-hidden">
+                     { recommendList.map( (item,index )=> (
+                        <RecommendCard key={index} item={item} type={data}/>
+                    ))}
+            
                   </aside>
                 </div>
              

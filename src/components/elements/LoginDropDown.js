@@ -20,7 +20,7 @@ export const LoginDropDown = () => {
   return (
     <div id="dropdownAvatar" className="loginMenu select-none	absolute top-[100%] right-5 z-10 w-44 divide-y divide-gray-100 shadow">
       <div className="py-3 px-4 text-sm text-gray-200">
-          <div className="font-sans font-medium truncate">{username}</div>
+          <div className="font-sans font-medium ">{username}</div>
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-gray-500" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">

@@ -9,8 +9,7 @@ export const MovieCard = ({item, type}) => {
     const saveType = (type) => {
         sessionStorage.setItem("type",JSON.stringify(type))
     }
-
-    // console.log(type)
+    
   return (
     <span className="MovieCard relative max-w-[170px] mx-4">
         <Link to={`/${id}`} onClick={() => saveType(type)} className="h-[250px] w-[170px] rounded-xl">

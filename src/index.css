@@ -76,7 +76,7 @@ figcaption{
   border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
 
-.mainHead, .loginMenu{
+.mainHead, .loginMenu, .recommendation{
   background: rgba( 7, 7, 7, 0.50 );
 }
 
