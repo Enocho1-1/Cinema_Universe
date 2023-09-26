@@ -47,7 +47,7 @@ export const MovieDetail = () => {
                   const path = data === "MOVIE" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
                   const response = await fetch(path)
                   const result = await response.json()
-                  const array = result.results.slice(0,9)
+                  const array = result.results.slice(0,10)
                   setRecommend(array)
               }
               fetchRecommended()

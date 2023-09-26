@@ -21,6 +21,7 @@ module.exports = {
       gridTemplateColumns:{
         'twoCols': 'repeat(2, minmax(0, 300px))',
         'threeCols': 'repeat(3, minmax(0, 300px))',
+        'fiveCols': 'repeat(5, minmax(0, 300px))',
         'sevenCols': 'repeat(7, minmax(0, 300px))'
 
       }
