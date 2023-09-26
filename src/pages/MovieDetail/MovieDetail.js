@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
-import { useMatchMedia, useRecommend } from "../../hooks/index"
+import { useMatchMedia} from "../../hooks/index"
 import { RecommendCard } from "./components/RecommendCard"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
@@ -33,6 +33,7 @@ export const MovieDetail = () => {
         console.log(error)
       }
       
+   
     },[movie_id])
 
         // Recommendation useEffect
@@ -51,12 +52,10 @@ export const MovieDetail = () => {
           }
       },[movie_id])
 
-      // console.log(recommendList)
     const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres, production_companies} = info
 
 
 
-    // const { recommendList } = useRecommend(data,id)
     const backdropImage = `https://image.tmdb.org/t/p/original/${backdrop_path}`
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
 
@@ -67,7 +66,7 @@ export const MovieDetail = () => {
 
             {/* Header Image & Video Player */}
             <section className="relative h-[85%] w-full" style={ {
-                    backgroundImage: `url( ${backdropImage ? backdropImage : collage})`,
+                    backgroundImage: `url( ${backdrop_path ? backdropImage : collage})`,
                     backgroundSize:"cover",
                     backgroundRepeat: "no-repeat"
             }}>
@@ -86,11 +85,11 @@ export const MovieDetail = () => {
 
               {/* Movie/TV Info */}
            
-              <section className="mt-10 flex justify-evenly p-2 ">
-                <img src={posterImage} className="h-[400px] w-[300px] mr-10 rounded-lg" alt="" />
+              <section className="my-12 flex justify-evenly max-lg:flex-col p-2 ">
+                <img src={poster_path ? posterImage : collage} className="h-[400px] w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
-                <div className="flex flex-col">
-                  <h1 className="font-sans font-semibold text-4xl text-gray-200">{title ? title : name}</h1>
+                <div className="flex flex-col ">
+                  <h1 className="font-sans font-semibold text-4xl max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex ">
 
@@ -112,7 +111,7 @@ export const MovieDetail = () => {
                 
 
                   {/* Listing Info */}
-                  <aside className="flex flex-col mt-4">
+                  <aside className="flex flex-col mt-4 max-w-4xl">
                     {/* Countries */}
                     <span className="flex">
                       <h1 className="font-sans text-md text-gray-200 flex"> Countries: {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
@@ -125,21 +124,25 @@ export const MovieDetail = () => {
 
                      {/* Production */}
                      <span className="flex mt-2">
-                      <h1 className="font-sans text-md text-gray-200 flex"> Genres: {production_companies ? production_companies.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                      <h1 className="font-sans text-md text-gray-200 flex"> Production: {production_companies ? production_companies.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
                     </span>
                   </aside>
                 </div>
 
                 {/* Recommended */}
-                <div className=" flex flex-col">
-                  <h1 className="font-bold text-4xl text-gray-300 flex"><img src={play} className="h-6 self-center mr-2"/>Recommended</h1>
-                  <aside className="mt-4 flex flex-col  h-[350px] w-auto overflow-y-scroll overflow-x-hidden">
-                     { recommendList.map( (item,index )=> (
-                        <RecommendCard key={index} item={item} type={data}/>
-                    ))}
-            
-                  </aside>
-                </div>
+                { recommendList.length === 0 ? "" : (
+                    <div className=" flex flex-col">
+                      <h1 className="font-bold text-4xl max-xl:text-3xl text-gray-300 flex"><img src={play} className="h-6 self-center mr-2"/>Recommended</h1>
+                      
+                      <aside className="mt-4 flex flex-col  h-[350px] w-auto overflow-y-scroll overflow-x-hidden">
+                        { recommendList.map( (item,index )=> (
+                            <RecommendCard key={index} item={item} type={data}/>
+                        ))}
+                
+                      </aside>
+                    </div>
+                    )}
+                
              
               </section>
             

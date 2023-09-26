@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import { ScrollTop } from './components/index';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import App from './App';
@@ -23,6 +24,7 @@ root.render(
       pauseOnHover
       theme="dark"
     />
+      <ScrollTop/>
       <App />
     </BrowserRouter>
 
