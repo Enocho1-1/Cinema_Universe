@@ -13,6 +13,8 @@ export const HomePage = () => {
   const [isShown, setIsShown] = useState(true)
   useTitle("Cinema Universe | Watch Movies and TV Shows")
 
+  const value = 769
+
   useEffect(() => {
     setTimeout(() => {
       setIsShown(!isShown);
@@ -21,7 +23,7 @@ export const HomePage = () => {
 
   const navigate= useNavigate()
 
-  const {myQuery} = useMatchMedia()
+  const {myQuery} = useMatchMedia(value)
 
 
 

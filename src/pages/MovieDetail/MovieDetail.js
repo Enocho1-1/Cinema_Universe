@@ -2,6 +2,7 @@
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
 import { useMatchMedia} from "../../hooks/index"
+import { Recommend } from "./components/Recommend"
 import { RecommendCard } from "./components/RecommendCard"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
@@ -15,9 +16,12 @@ export const MovieDetail = () => {
     const [info, setInfo] = useState([])
     const [recommendList , setRecommend]  =useState([])
     const [playbutton, setPlayButton] = useState(false)
+    const value = 769
+    const valueTwo = 1024
     const Params = useParams() 
     const movie_id = Params.id
-    const {myQuery} = useMatchMedia()
+    const {myQuery} = useMatchMedia(value)
+
    
 
     useEffect(() => {
@@ -85,10 +89,10 @@ export const MovieDetail = () => {
 
               {/* Movie/TV Info */}
            
-              <section className="my-12 flex justify-evenly max-lg:flex-col p-2 ">
+              <section className="my-12 flex justify-evenly max-lg:flex-col  p-2 ">
                 <img src={poster_path ? posterImage : collage} className="h-[400px] w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
-                <div className="flex flex-col ">
+                <div className="flex flex-col max-lg:items-center">
                   <h1 className="font-sans font-semibold text-4xl max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex ">
@@ -130,20 +134,8 @@ export const MovieDetail = () => {
                 </div>
 
                 {/* Recommended */}
-                { recommendList.length === 0 ? "" : (
-                    <div className=" flex flex-col">
-                      <h1 className="font-bold text-4xl max-xl:text-3xl text-gray-300 flex"><img src={play} className="h-6 self-center mr-2"/>Recommended</h1>
-                      
-                      <aside className="mt-4 flex flex-col  h-[350px] w-auto overflow-y-scroll overflow-x-hidden">
-                        { recommendList.map( (item,index )=> (
-                            <RecommendCard key={index} item={item} type={data}/>
-                        ))}
-                
-                      </aside>
-                    </div>
-                    )}
-                
-             
+                <Recommend list={recommendList} type={data}/>
+      
               </section>
             
          
