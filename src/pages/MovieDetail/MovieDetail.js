@@ -3,10 +3,9 @@ import { useEffect,useState } from "react"
 import { useParams } from "react-router"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { Recommend } from "./components/Recommend"
+import { VideoPlayer } from "./components/VideoPlayer"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
-import play from "../../assets/play-button.png"
-import gif from "../../assets/giphy(2).gif"
 import star from "../../assets/star.png"
 
 export const MovieDetail = () => {
@@ -14,7 +13,6 @@ export const MovieDetail = () => {
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [info, setInfo] = useState([])
     const [recommendList , setRecommend]  =useState([])
-    const [playbutton, setPlayButton] = useState(false)
     const Params = useParams() 
     const movie_id = Params.id
     const value = 769
@@ -56,10 +54,9 @@ export const MovieDetail = () => {
 
     const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
 
-    useTitle(`Cinema Universe | ${title}`)
+    useTitle(`Cinema Universe | ${title ? title : name}`)
 
 
-    const backdropImage = `https://image.tmdb.org/t/p/original/${backdrop_path}`
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
 
 
@@ -68,23 +65,7 @@ export const MovieDetail = () => {
          { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
             {/* Header Image & Video Player */}
-            <section className="relative h-[85%] w-full" style={ {
-                    backgroundImage: `url( ${backdrop_path ? backdropImage : collage})`,
-                    backgroundSize:"cover",
-                    backgroundRepeat: "no-repeat"
-            }}>
-                <aside  className="relative flex justify-center items-center" id="overlay">
-
-                  <button onClick={() => setPlayButton(!playbutton)} className=""><img src={play} className="h-[35px] w-[35px]" alt="" /></button>
-                  { playbutton && 
-                  // Video Player
-                    <div className="absolute top-[25%]  h-[500px] w-[900px] flex justify-center items-center bg-black">
-                      <img src={gif} alt="" />
-                    </div>
-                  }
-                
-                </aside>
-              </section>
+              <VideoPlayer backdrop={backdrop_path}/>
 
               {/* Movie/TV Info */}
            
@@ -95,17 +76,17 @@ export const MovieDetail = () => {
                   <h1 className="font-sans font-semibold text-4xl max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex ">
-
-                  <div className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</div>
-                  <div className="font-semibold text-sm ml-3 px-2 rounded-lg border border-gray-200 text-gray-200">PG-13</div>
-                    <>
-                        <img src={star} className="h-4 ml-2 self-center" alt="" />
-                        <p className="ml-2 text-sm text-gray-200">{(Math.floor(vote_average))}/10</p>
-                    </>
-                    <p className="ml-2 text-sm text-gray-200">{release_date ? release_date : first_air_date}</p>
-                    <p className="ml-2 text-sm text-gray-200">Duration:{number_of_episodes ? ` ${number_of_episodes} episodes`: ` ${runtime} min`}</p>
+                    <div className="font-semibold w-fit text-sm px-1 rounded-lg bg-primary-blue">HD</div>
+                    <div className="font-semibold text-sm ml-3 w-fit px-2 rounded-lg border border-gray-200 text-gray-200">PG-13</div>
+                      <>
+                          <img src={star} className="h-4 ml-2 extraSm:self-center " alt="" />
+                          <p className="ml-2 text-sm max-extraSm:text-xs text-gray-200">{(Math.floor(vote_average))}/10</p>
+                      </>
+                      <p className="ml-2 text-sm max-extraSm:text-xs text-gray-200">{release_date ? release_date : first_air_date}</p>
+                      <p className="ml-2 text-sm max-extraSm:text-xs text-gray-200">Duration:{number_of_episodes ? ` ${number_of_episodes} episodes`: ` ${runtime} min`}</p>
                    </aside>
 
+                  {/* Movie/TV Overview */}
                   <aside className="max-w-4xl">
                     <p className="mt-4 font-sans text-md text-gray-200">
                       {overview}
@@ -116,13 +97,13 @@ export const MovieDetail = () => {
                   {/* Listing Info */}
                   <aside className="flex flex-col mt-4 max-w-4xl">
                     {/* Countries */}
-                    <span className="flex">
-                      <h1 className="font-sans text-md text-gray-200 flex"> Countries: {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                    <span className="flex max-mobile:flex-col">
+                      <h1 className="font-sans text-md text-gray-200 flex"> Countries: {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md">{item.name},</p>)): ""}</h1>
                     </span>
                     
                     {/* Genres */}
-                    <span className="flex mt-2">
-                      <h1 className="font-sans text-md text-gray-200 flex"> Genres: {genres ? genres.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
+                    <span className="flex max-mobile:flex-col mt-2">
+                      <h1 className="font-sans text-md text-gray-200 flex"> Genres: {genres ? genres.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md">{item.name},</p>)): ""}</h1>
                     </span>
                   </aside>
                 </div>

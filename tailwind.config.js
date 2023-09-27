@@ -14,7 +14,7 @@ module.exports = {
         'primary-black': '#070707'
       },
       screens:{
-        'extraSm': '375px',
+        'extraSm': '382px',
         'mobile': '480px',
         'mobileLg': '600px',
         'tablet': '769px',
