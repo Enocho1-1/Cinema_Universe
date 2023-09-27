@@ -16,6 +16,7 @@ module.exports = {
       screens:{
         'extraSm': '375px',
         'mobile': '480px',
+        'mobileLg': '600px',
         'tablet': '769px',
       },
       gridTemplateColumns:{

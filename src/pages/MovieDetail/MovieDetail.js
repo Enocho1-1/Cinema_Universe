@@ -1,9 +1,8 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
-import { useMatchMedia} from "../../hooks/index"
+import { useMatchMedia,useTitle } from "../../hooks/index"
 import { Recommend } from "./components/Recommend"
-import { RecommendCard } from "./components/RecommendCard"
 import { Header, MobileHeader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
 import play from "../../assets/play-button.png"
@@ -16,10 +15,9 @@ export const MovieDetail = () => {
     const [info, setInfo] = useState([])
     const [recommendList , setRecommend]  =useState([])
     const [playbutton, setPlayButton] = useState(false)
-    const value = 769
-    const valueTwo = 1024
     const Params = useParams() 
     const movie_id = Params.id
+    const value = 769
     const {myQuery} = useMatchMedia(value)
 
    
@@ -56,8 +54,9 @@ export const MovieDetail = () => {
           }
       },[movie_id])
 
-    const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres, production_companies} = info
+    const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
 
+    useTitle(`Cinema Universe | ${title}`)
 
 
     const backdropImage = `https://image.tmdb.org/t/p/original/${backdrop_path}`
@@ -90,9 +89,9 @@ export const MovieDetail = () => {
               {/* Movie/TV Info */}
            
               <section className="my-12 flex justify-evenly max-lg:flex-col  p-2 ">
-                <img src={poster_path ? posterImage : collage} className="h-[400px] w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
+                <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
-                <div className="flex flex-col max-lg:items-center">
+                <div className="flex flex-col max-lg:justify-center">
                   <h1 className="font-sans font-semibold text-4xl max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex ">
@@ -124,11 +123,6 @@ export const MovieDetail = () => {
                     {/* Genres */}
                     <span className="flex mt-2">
                       <h1 className="font-sans text-md text-gray-200 flex"> Genres: {genres ? genres.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
-                    </span>
-
-                     {/* Production */}
-                     <span className="flex mt-2">
-                      <h1 className="font-sans text-md text-gray-200 flex"> Production: {production_companies ? production_companies.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md text-gray-200">{item.name},</p>)): ""}</h1>
                     </span>
                   </aside>
                 </div>
