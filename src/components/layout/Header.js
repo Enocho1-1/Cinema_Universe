@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState,useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import { Link } from "react-router-dom"
 import { LoginDropDown,DropMenu } from "../../components/index"
 import menu from "../../assets/menu.png"
@@ -9,6 +10,13 @@ export const Header = () => {
 
     const [isHidden, setIsHidden] = useState(false)
     const [dropHidden, setDropHidden] = useState(false)
+    const location = useLocation()
+
+    useEffect(() => {
+        setDropHidden(false)
+        setIsHidden(false)
+    },[location])
+    
   return (
     <header className="absolute top-0 mainHead z-10 w-full px-2">
         <div className=" flex justify-between px-12 py-4">

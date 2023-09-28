@@ -18,7 +18,7 @@ export const HomePage = () => {
   useEffect(() => {
     setTimeout(() => {
       setIsShown(!isShown);
-    },3000)
+    },6000)
   },[])
 
 

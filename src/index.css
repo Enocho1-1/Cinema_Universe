@@ -111,7 +111,7 @@ figcaption{
   align-items: center;
   top: 0;
   left: 0;
-  height: 255px;
+  height: inherit;
   width: inherit;
   background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;

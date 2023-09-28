@@ -1,12 +1,10 @@
 
 /* eslint-disable */
-import { useState,useEffect } from "react"
 import { useFetch,useTitle,useMatchMedia } from "../../hooks/index"
 import { Header, MobileHeader, Footer, Loader, MovieCard } from "../../components"
 import play from "../../assets/play-button.png"
 
 export const MovieList = ({apiPath, title, type}) => {
-  const [isShown, setIsShown] = useState(true)
   const value = 870
   const {myQuery} = useMatchMedia(value)
   useTitle( `Cinema Universe | ${title}`)
@@ -14,7 +12,6 @@ export const MovieList = ({apiPath, title, type}) => {
   const {data : list} = useFetch(apiPath)
   return (
     <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
-      {/* {isShown && <Loader/>} */}
       { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
       <section className=" max-w-7xl m-auto mt-[100px]">
         <header className="movieList p-4">
