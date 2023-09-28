@@ -118,9 +118,14 @@ figcaption{
   transition: ease-in-out 2ms;
 }
 
-/* .upComing span button img {
-  object-fit: contain;
-} */
+.movieList::after{
+  content: "";
+  display: block;
+  width: auto;
+  height: 2px;
+  margin-top: 10px;
+  background-color: #e5e7eb;
+}
 
 #overlay{
   position: absolute;
