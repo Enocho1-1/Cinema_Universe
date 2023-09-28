@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { LoginDropDown } from "../../components/index"
+import { LoginDropDown,DropMenu } from "../../components/index"
 import menu from "../../assets/menu.png"
 import arrow from "../../assets/right-arrow.png"
 import user from "../../assets/account.png"
@@ -8,13 +8,15 @@ import user from "../../assets/account.png"
 export const Header = () => {
 
     const [isHidden, setIsHidden] = useState(false)
+    const [dropHidden, setDropHidden] = useState(false)
   return (
     <header className="absolute top-0 mainHead z-10 w-full px-2">
         <div className=" flex justify-between px-12 py-4">
             <span className="flex">
-                <aside className="hover:cursor-pointer mr-4">
+                <button onClick={() => setDropHidden(!dropHidden)} className="hover:cursor-pointer mr-4">
                     <img src={menu} className="h-10 w-8" alt="" />
-                </aside>
+                </button>
+                { dropHidden &&  <DropMenu /> }
                 <Link to="/home">
                     <h1 className="font-teko  text-5xl max-tablet:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
                 </Link>

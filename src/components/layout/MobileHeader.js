@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Link } from "react-router-dom"
-import { LoginDropDown } from "../../components/index"
+import { LoginDropDown,DropMenu } from "../../components/index"
 import menu from "../../assets/menu.png"
 import arrow from "../../assets/right-arrow.png"
 import search from "../../assets/search.png"
@@ -9,14 +9,16 @@ import user from "../../assets/account.png"
 
 export const MobileHeader = () => {
     const [isHidden, setIsHidden] = useState(false)
+    const [dropHidden, setDropHidden] = useState(false)
     const [showSearch, setShowSearch] = useState(false)
   return (
     <header className="relative">
         <div className="absolute top-0 mainHead z-10 w-full flex justify-evenly  py-4">
             <span className="flex">
-                <aside className="self-center hover:cursor-pointer mr-2">
+                <button onClick={() => setDropHidden(!dropHidden)} className="self-center hover:cursor-pointer mr-2">
                     <img src={menu} className="h-8 w-8" alt="" />
-                </aside>
+                </button>
+                { dropHidden &&  <DropMenu /> }
                 <Link to="/home">
                     <h1 className="font-teko  text-3xl mt-2 mx-4 max-md:text-4xl text-primary-blue hover:cursor-pointer">Cinema-U</h1>
                 </Link>
