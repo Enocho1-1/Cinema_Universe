@@ -68,11 +68,11 @@ export const MovieDetail = () => {
 
               {/* Movie/TV Info */}
            
-              <section className="my-12 flex justify-evenly max-mobile:my-8 max-lg:flex-col  p-2 ">
+              <section className="my-10 flex justify-evenly max-mobile:my-8 max-lg:flex-col  p-2 ">
                 <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
-                <div className="flex flex-col max-lg:justify-center">
-                  <h1 className="font-sans font-semibold text-4xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
+                <div className="flex flex-col max-lg:justify-center lg:justify-center">
+                  <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex max-mobile:flex-col max-mobile:items-center">
                     <div>

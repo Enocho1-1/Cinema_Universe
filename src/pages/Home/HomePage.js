@@ -3,7 +3,7 @@ import { useEffect,useState } from "react"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
-import { Header, MobileHeader,Loader } from "../../components/index"
+import { Header, Footer, MobileHeader,Loader } from "../../components/index"
 import play from "../../assets/play-button.png"
 
 
@@ -58,13 +58,16 @@ export const HomePage = () => {
           </section>
 
             {/* Top Rated Section */}
-            <section className="relative mt-[100px]   px-6">
-            <div className="max-w-[95%] flex justify-between max-[600px]:flex-col max-[600px]:items-center">
-              <h1 className="font-bold text-4xl text-gray-300 flex ml-6 "><img src={play} className="h-8 self-center mr-2"/>TOP RATED</h1>
-              <button onClick={() => navigate("/TopRated")} className="w-fit max-[600px]:mt-4  px-4 hover:text-primary-blue hover:border-primary-blue hover:bg-primary-blue/25 rounded-3xl border border-gray-400 text-gray-400 text-sm">View More <i className="bi bi-arrow-up-right"></i></button>
-            </div>
-            <TopRated/>
-          </section>
+            <section className="relative my-[100px] px-6">
+              <div className="max-w-[95%] flex justify-between max-[600px]:flex-col max-[600px]:items-center">
+                <h1 className="font-bold text-4xl text-gray-300 flex ml-6 "><img src={play} className="h-8 self-center mr-2"/>TOP RATED</h1>
+                <button onClick={() => navigate("/TopRated")} className="w-fit max-[600px]:mt-4  px-4 hover:text-primary-blue hover:border-primary-blue hover:bg-primary-blue/25 rounded-3xl border border-gray-400 text-gray-400 text-sm">View More <i className="bi bi-arrow-up-right"></i></button>
+              </div>
+              <TopRated/>
+            </section>
+
+            {/* Footer */}
+            <Footer/>
     </main>
   
   )
