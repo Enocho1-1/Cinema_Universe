@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useMatchMedia, useTitle } from "../../hooks/index"
-import { useNavigate } from "react-router"
+import { useNavigate } from "react-router-dom"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components/index"
 import play from "../../assets/play-button.png"
@@ -20,6 +20,7 @@ export const HomePage = () => {
       setIsShown(!isShown);
     },3000)
   },[])
+
 
   const navigate= useNavigate()
 
