@@ -1,3 +1,4 @@
+import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
 import { Link } from "react-router-dom"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
@@ -5,6 +6,7 @@ import { toast } from 'react-toastify';
 
 export const Login = () => {
 
+  useTitle("Cinema Universe | Login")
   const navigate = useNavigate()
 
   const handleSignIn  = async (event) => {

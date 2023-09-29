@@ -1,9 +1,11 @@
+import { useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router"
 import { InitialHeader } from "./components/InitialHeader"
 import arrow from "../../assets/right-arrow.png"
 
 export const InitialPage = () => {
 
+  useTitle("Cinema Universe | Watch Movies and TV Shows")
   const navigate = useNavigate()
 
   const initialSubmit = (event) => {
@@ -13,6 +15,7 @@ export const InitialPage = () => {
     event.target.reset()
     navigate("/register")
   }
+
 
   return (
     <main className="initial h-screen w-screen">

@@ -1,4 +1,5 @@
 
+import { useTitle } from "../hooks/index"
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
@@ -7,6 +8,7 @@ import { toast } from 'react-toastify';
 
 export const Register = () => {
 
+  useTitle("Cinema Universe | Sign-Up")
   const [username, setUsername] = useState("")
   const navigate = useNavigate()
 
