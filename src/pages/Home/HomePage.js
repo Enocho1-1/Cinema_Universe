@@ -30,15 +30,15 @@ export const HomePage = () => {
 
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
-        {isShown && <Loader/>}
+        {/* {isShown && <Loader/>} */}
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
         {/* Carousel */}
         < DefaultCarousel/>
 
         {/* Trending Movies Section */}
-        <section className="mt-8 m-auto flex flex-col items-center">
-          <h1 className=" font-sans font-semibold text-xl text-gray-300 flex justify-center"><i className="bi bi-fire"></i>Trending Now<i className="bi bi-fire"></i></h1>
+        <section className="mt-8">
+          <h1 className="font-sans font-semibold text-xl text-gray-300 text-center"><i className="bi bi-fire"></i>Trending Now<i className="bi bi-fire"></i></h1>
           <Trending />
         </section>
 

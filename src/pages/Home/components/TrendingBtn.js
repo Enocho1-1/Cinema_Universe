@@ -10,7 +10,7 @@ export const TrendingBtn = ({item,type}) => {
   }
 
   return (
-    <Link to={`/${id}`} onClick={() => saveType(type)} className=" relative h-[165px] w-[350px] rounded-xl mx-4 max-tablet: mt-12">
+    <Link to={`/${id}`} onClick={() => saveType(type)} className=" relative h-[165px] w-[350px] rounded-xl max-tablet: mt-12">
         <img className="h-fit w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
         <span className="absolute px-2 top-[60%] left-0">
             <h1 className="font-sans text-md font-bold text-white">{title}</h1>
