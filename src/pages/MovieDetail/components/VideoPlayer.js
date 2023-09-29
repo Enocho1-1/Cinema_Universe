@@ -10,7 +10,7 @@ export const VideoPlayer = ({backdrop}) => {
 
     useEffect(() => {setPlayButton(false)},[backdrop])
   return (
-        <section className="relative h-[85%] max-mobileLg:h-[55%] w-full" style={ {
+        <section className="relative h-[100vh] max-mobileLg:h-[55%] w-full" style={ {
                 backgroundImage: `url( ${backdrop ? backdropImage : collage})`,
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat"

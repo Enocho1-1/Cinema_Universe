@@ -18,7 +18,7 @@ export const Header = () => {
     },[location])
     
   return (
-    <header className="absolute top-0 mainHead z-10 w-full px-2">
+    <header className="absolute top-0 mainHead z-10 w-full px-2" id="top">
         <div className=" flex justify-between px-12 py-4">
             <span className="flex">
                 <button onClick={() => setDropHidden(!dropHidden)} className="hover:cursor-pointer mr-4">

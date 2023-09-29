@@ -12,10 +12,10 @@ export const Pagination = ({list,postperPage,changePage}) => {
   return (
     <>
     <nav aria-label="Page navigation example" className="mt-6 flex justify-center">
-      <ul className="inline-flex -space-x-px text-sm">
+      <ul className="inline-flex space-x-[10px] text-sm ">
         { array.map( number => (
             <li key={number}>
-              <a href="#top " onClick={() => {changePage(number)}} className="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-500 active:bg-slate-800">{number}</a>
+              <a href="#top" onClick={() => {changePage(number)}} className="flex rounded-lg items-center justify-center px-3 h-8 leading-tight text-gray-200 bg-primary-black border border-primary-blue hover:bg-secondary-blue active:bg-secondary-blue">{number}</a>
             </li>
         ))}
       

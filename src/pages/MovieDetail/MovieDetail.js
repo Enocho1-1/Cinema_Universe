@@ -71,7 +71,7 @@ export const MovieDetail = () => {
               <section className="my-10 flex justify-evenly max-mobile:my-8 max-lg:flex-col  p-2 ">
                 <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
-                <div className="flex flex-col max-lg:justify-center lg:justify-center">
+                <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
 
                   <aside className="text-md mt-10 max-w-6xl flex max-mobile:flex-col max-mobile:items-center">
@@ -92,7 +92,7 @@ export const MovieDetail = () => {
                    </aside>
 
                   {/* Movie/TV Overview */}
-                  <aside className="max-w-4xl max-mobile:text-center">
+                  <aside className="max-w-4xl ">
                     <p className="mt-4 font-sans text-md text-gray-200">
                       {overview}
                     </p>
@@ -100,9 +100,9 @@ export const MovieDetail = () => {
                 
 
                   {/* Listing Info */}
-                  <aside className="flex flex-col max-mobile:items-center mt-4 max-w-4xl">
+                  <aside className="flex flex-col  mt-4 max-w-4xl mx-2">
                     {/* Countries */}
-                    <div className="flex max-mobile:flex-col max-mobile:items-center text-gray-200">
+                    <div className="flex max-mobile:flex-col  text-gray-200">
                       <h1 className="font-sans text-md flex"> Countries: </h1>
                       <span className="flex flex-wrap">
                         {production_countries ? production_countries.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md">{item.name},</p>)): ""}
@@ -110,7 +110,7 @@ export const MovieDetail = () => {
                     </div>
                     
                     {/* Genres */}
-                    <div className="flex max-mobile:flex-col max-mobile:items-center mt-2 text-gray-200">
+                    <div className="flex max-mobile:flex-col  mt-2 text-gray-200">
                       <h1 className="font-sans text-md"> Genres: </h1>
                       <span className="flex flex-wrap">
                         {genres ? genres.map((item, index) => ( <p key={index} className="font-sans mx-1 text-md">{item.name},</p>)): ""}

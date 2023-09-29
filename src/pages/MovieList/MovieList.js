@@ -1,6 +1,6 @@
 
 /* eslint-disable */
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useFetch,useFetchTwo,useFetchThree,useTitle,useMatchMedia } from "../../hooks/index"
 import { Pagination } from "./component/Pagination"
 import { Header, MobileHeader, Footer, Loader, MovieCard } from "../../components"
@@ -13,6 +13,7 @@ export const MovieList = ({apiPath, title, type}) => {
   const {myQuery} = useMatchMedia(value)
   useTitle( `Cinema Universe | ${title}`)
 
+  useEffect(() => { setPage(1) },[apiPath])
 
   const {data : dataOne} = useFetch(apiPath)
   const {data : dataTwo} = useFetchTwo(apiPath)
@@ -29,7 +30,7 @@ export const MovieList = ({apiPath, title, type}) => {
   }
 
   return (
-    <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
+    <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black" >
       { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
       <section className=" max-w-7xl m-auto mt-[100px]">
         <header className="movieList p-4">
