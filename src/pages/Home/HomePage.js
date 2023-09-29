@@ -30,7 +30,7 @@ export const HomePage = () => {
 
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
-        {/* {isShown && <Loader/>} */}
+        {isShown && <Loader/>}
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
         {/* Carousel */}

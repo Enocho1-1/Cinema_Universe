@@ -7,7 +7,6 @@ import bookmark from "../../../assets/bookmark-white.png"
 export const CarouselSlide = ({item,type}) => {
 
     const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
-
     const saveType = (type) => {
         sessionStorage.setItem("type",JSON.stringify(type))
     }
