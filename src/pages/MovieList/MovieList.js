@@ -2,6 +2,7 @@
 /* eslint-disable */
 import { useState } from "react"
 import { useFetch,useFetchTwo,useFetchThree,useTitle,useMatchMedia } from "../../hooks/index"
+import { Pagination } from "./component/Pagination"
 import { Header, MobileHeader, Footer, Loader, MovieCard } from "../../components"
 import play from "../../assets/play-button.png"
 
@@ -20,11 +21,11 @@ export const MovieList = ({apiPath, title, type}) => {
   const combineData = [...dataOne,...dataTwo, ...dataThree]
 
   const lastIndex = page * postperPage
-  const firstIndex = postperPage - lastIndex
+  const firstIndex = lastIndex - postperPage
   const list = combineData.slice(firstIndex,lastIndex)
 
-  const changePage = (page) => {
-    setPage(page)
+  const changePage = (number) => {
+    setPage(number)
   }
 
   return (
@@ -44,7 +45,7 @@ export const MovieList = ({apiPath, title, type}) => {
           </div>
         )}
       </section>
-
+        < Pagination list={combineData.length} postperPage={postperPage} changePage={changePage} />
       {/* Footer */}
       <Footer/>
     </main>
