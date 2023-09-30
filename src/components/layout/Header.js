@@ -1,5 +1,5 @@
 import { useState,useEffect } from "react"
-import { useLocation } from "react-router-dom"
+import { useLocation,useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import { LoginDropDown,DropMenu } from "../../components/index"
 import menu from "../../assets/menu.png"
@@ -11,11 +11,20 @@ export const Header = () => {
     const [isHidden, setIsHidden] = useState(false)
     const [dropHidden, setDropHidden] = useState(false)
     const location = useLocation()
+    const navigate = useNavigate()
 
     useEffect(() => {
         setDropHidden(false)
         setIsHidden(false)
     },[location])
+
+   const handleSearch = (event) => {
+        event.preventDefault()
+        const userSearch = event.target.search.value
+        event.target.reset()
+        navigate(`/search?query=${userSearch}`)
+   }
+
     
   return (
     <header className="absolute top-0 mainHead z-10 w-full px-2" id="top">
@@ -31,9 +40,9 @@ export const Header = () => {
             </span>
 
             {/* Search Movies */}
-            <form>   
+            <form onSubmit={handleSearch}>   
                 <div className="relative">
-                    <input type="search" id="search" className="headerInput block min-w-[29.688rem] p-3 pl-10 text-sm rounded-[75px]  text-white" placeholder="Search Movies" require />
+                    <input  name="search" type="search" id="search" className="headerInput block min-w-[29.688rem] p-3 pl-10 text-sm rounded-[75px]  text-white" placeholder="Search Movies..." autoComplete="off" require />
                     <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
                         <img src={arrow} className="h-3 w-3" alt="" />
                     </button>

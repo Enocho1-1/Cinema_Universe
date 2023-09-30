@@ -27,7 +27,7 @@ export const CarouselSlide = ({item,type}) => {
             </aside>
 
             {/* OverView */}
-            <aside className="max-w-4xl mt-4 ">
+            <aside className="max-h-60 max-w-4xl mt-4 ">
                 <p className="text-gray-200 max-xl:hidden">{overview}</p>
             </aside> 
 
