@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 import { LoginDropDown,DropMenu } from "../../components/index"
 import menu from "../../assets/menu.png"
 import arrow from "../../assets/right-arrow.png"
@@ -11,6 +11,15 @@ export const MobileHeader = () => {
     const [isHidden, setIsHidden] = useState(false)
     const [dropHidden, setDropHidden] = useState(false)
     const [showSearch, setShowSearch] = useState(false)
+    const navigate = useNavigate()
+
+    const handleSearch = (event) =>{
+        event.preventDefault()
+        const userSearch = event.target.search.value
+        event.target.reset()
+        navigate(`/search?query=${userSearch}`)
+    }
+
   return (
     <header className="relative">
         <div className="absolute top-0 mainHead z-10 w-full flex justify-evenly  py-4">
@@ -37,7 +46,7 @@ export const MobileHeader = () => {
           
         </div>
             {showSearch && 
-                <form className="absolute top-20 z-10">   
+                <form onSubmit={handleSearch} className="absolute top-20 z-10">   
                     <div className="relative">
                         <input type="search" id="search" className="headerInput block min-w-[90vw] max-mobile:mx-4 mobile:max-tablet:mx-8 p-3 pl-10 text-sm border rounded-[50px] text-white" placeholder="Search Movies" require />
                         <button type="submit" className="text-white absolute right-[8%] bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">

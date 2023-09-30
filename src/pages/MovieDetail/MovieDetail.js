@@ -39,7 +39,7 @@ export const MovieDetail = () => {
         useEffect(() => {
           try{
               const fetchRecommended = async () => {
-                  const path = data === "MOVIE" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
+                  const path = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
                   const response = await fetch(path)
                   const result = await response.json()
                   const array = result.results.slice(0,10)
