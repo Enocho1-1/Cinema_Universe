@@ -9,8 +9,7 @@ import play from "../../assets/play-button.png"
 export const MovieList = ({apiPath, title, type}) => {
   const [page, setPage ] = useState(1)
   const [postperPage] = useState(15)
-  const value = 870
-  const {myQuery} = useMatchMedia(value)
+  const {myQuery} = useMatchMedia(870)
   useTitle( `Cinema Universe | ${title}`)
 
   useEffect(() => { setPage(1) },[apiPath])

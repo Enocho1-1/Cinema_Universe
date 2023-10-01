@@ -42,7 +42,7 @@ export const Header = () => {
             {/* Search Movies */}
             <form onSubmit={handleSearch}>   
                 <div className="relative">
-                    <input  name="search" type="search" id="search" className="headerInput block min-w-[29.688rem] p-3 pl-10 text-sm rounded-[75px]  text-white" placeholder="Search Movies..." autoComplete="off" require />
+                    <input  name="search" type="search" id="search" className="headerInput block min-w-[29.688rem] p-3 pl-10 text-sm rounded-[75px]  text-white" placeholder="Search Movies..." autoComplete="off" require="true" />
                     <button type="submit" className="text-white absolute right-3.5 bottom-2.5 bg-primary-blue hover:bg-secondary-blue font-medium rounded-lg text-sm px-4 py-2">
                         <img src={arrow} className="h-3 w-3" alt="" />
                     </button>
