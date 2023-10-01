@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useMatchMedia } from "../../hooks"
 import { useSearchParams } from "react-router-dom"
-import { Header, MobileHeader,MovieCard,Loader, Footer } from "../../components"
+import { Header, MobileHeader,MovieCard,Loader,PageNotFound, Footer } from "../../components"
 
 export const Search = () => {
 
@@ -34,7 +34,7 @@ export const Search = () => {
             </header>
 
             {/* Movie/TV List */}
-            {data.length === 0 ? <Loader/> : (
+            {data.length === 0 ? <PageNotFound/> : (
                 <div className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-4 place-content-center">
                 { data.map((item, index) => (
                     <MovieCard key={index} item={item} type={item.media_type}/>
