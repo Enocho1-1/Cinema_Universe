@@ -28,7 +28,7 @@ export const Search = () => {
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
        { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
-        <section className=" max-w-7xl m-auto mt-[100px]">
+        <section className=" max-w-7xl min-h-[90vh] m-auto mt-[100px]">
             <header className="movieList p-4">
                 <h1 className="font-bold text-4xl text-gray-300 flex justify-start ml-6 max-tablet:justify-center">Search | "{searchTerm}"</h1>
             </header>
@@ -37,7 +37,7 @@ export const Search = () => {
             {data.length === 0 ? <Loader/> : (
                 <div className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-4 place-content-center">
                 { data.map((item, index) => (
-                    <MovieCard key={index} item={item} type={index}/>
+                    <MovieCard key={index} item={item} type={item.media_type}/>
                 ))}
             </div>
             )}

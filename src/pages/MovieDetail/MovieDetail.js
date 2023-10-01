@@ -20,9 +20,10 @@ export const MovieDetail = () => {
    
 
     useEffect(() => {
+ 
       try{
         const fetchData = async () => {
-          const type = data === "MOVIE" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
+          const type = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
           const response = await fetch(type)
           const result = await response.json()
           setInfo(result)
