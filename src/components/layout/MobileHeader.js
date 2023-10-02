@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link, useNavigate } from "react-router-dom"
 import { LoginDropDown,DropMenu } from "../../components/index"
+import { toast } from 'react-toastify';
 import menu from "../../assets/menu.png"
 import arrow from "../../assets/right-arrow.png"
 import search from "../../assets/search.png"
@@ -15,9 +16,17 @@ export const MobileHeader = () => {
 
     const handleSearch = (event) =>{
         event.preventDefault()
-        const userSearch = event.target.search.value
-        event.target.reset()
-        navigate(`/search?query=${userSearch}`)
+        
+        switch(event.target.search.value){
+            case "":
+                toast.error("Please Enter Movie or Show")
+                break;
+            default:
+                const userSearch = event.target.search.value
+                event.target.reset()
+                navigate(`/search?query=${userSearch}`)
+        }
+        
     }
 
   return (
