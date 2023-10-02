@@ -4,8 +4,10 @@ import { useParams } from "react-router"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
+import { toast } from 'react-toastify';
 import collage from "../../assets/movieCollage.jpg"
 import star from "../../assets/star.png"
+import bookmark from "../../assets/bookmark-white.png"
 
 export const MovieDetail = () => {
 
@@ -74,7 +76,14 @@ export const MovieDetail = () => {
                 <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
-                  <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
+                  <aside className="flex justify-between ">
+                    <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
+                    <button onClick={() => toast.success(`${data === "MOVIE" || data === "movie" ? "Movie" : "TV Show"} added to watchlist`)}>
+                      <img src={bookmark} className="h-6 pr-8" alt="" />
+                    </button>
+                
+                  </aside>
+        
 
                   <aside className="text-md mt-10 max-w-6xl flex max-mobile:flex-col max-mobile:items-center">
                     <div>
