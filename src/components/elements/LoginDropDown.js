@@ -24,7 +24,7 @@ export const LoginDropDown = () => {
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">
-              <Link to="" className="block py-2 px-4">WatchList</Link>
+              <Link to={`/watchlist`} className="block py-2 px-4">WatchList</Link>
 
               <img src={Bookmark} className="h-4 self-center" alt="" />
           </li>
