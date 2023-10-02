@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { Link } from "react-router-dom"
+import { toast } from 'react-toastify';
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
 import bookmark from "../../../assets/bookmark-white.png"
@@ -38,7 +39,7 @@ export const CarouselSlide = ({item,type}) => {
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
           
-                <button className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
+                <button onClick={() => toast.success(`${type} added to watchlist`)} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
                 </button>
