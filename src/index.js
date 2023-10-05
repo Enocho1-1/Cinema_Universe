@@ -3,18 +3,16 @@ import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import { ScrollTop } from './components/index';
-import { QueryClient,QueryClientProvider } from 'react-query';
 import 'react-toastify/dist/ReactToastify.css';
 import './index.css';
 import App from './App';
 
 
-const client = new QueryClient()
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <QueryClientProvider client={client}>
       <BrowserRouter>
       <ToastContainer
         position="top-right"
@@ -31,9 +29,6 @@ root.render(
         <ScrollTop/>
         <App />
       </BrowserRouter>
-    </QueryClientProvider>
- 
-
   </React.StrictMode>
 );
 

@@ -1,11 +1,16 @@
 import { AllRoutes } from './routes/AllRoutes';
+import { QueryClient,QueryClientProvider } from 'react-query';
 import './App.css';
 
 function App() {
+  const queryClient = new QueryClient()
   return (
-    <div>
-      <AllRoutes />
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <div>
+        <AllRoutes />
+      </div>
+    </QueryClientProvider>
+   
   );
 }
 
