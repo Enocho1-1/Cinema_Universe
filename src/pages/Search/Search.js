@@ -16,9 +16,14 @@ export const Search = () => {
        try{
         const fetchSearch = async () => {
             const response = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=94a1cc264f4c55063be364b9346acc68&query=${searchTerm}&include_adult=false&language=en-US&page=1`)
-            const result = await response.json()
-            setIsShown(false)
-            setData(result.results)
+            if(!response.ok){
+                throw new Error(`${response.status}`)
+            } else{
+                const result = await response.json()
+                setIsShown(false)
+                setData(result.results)
+            }
+          
         }
         fetchSearch()
        } catch(error){
