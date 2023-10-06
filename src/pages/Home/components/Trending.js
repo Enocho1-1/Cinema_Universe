@@ -9,10 +9,15 @@ export const Trending = () => {
     const fetchData = async () => {
               
         const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        const result = await response.json()
-        const array = result.results.slice(11,15)
+        if(!response.ok){
+            throw new Error(`${response.status}`)
+          } else{
+            const result = await response.json()
+            const array = result.results.slice(11,15)
+            
+            return array
+          }
         
-        return array
     }
 
     // Use Query Initialize

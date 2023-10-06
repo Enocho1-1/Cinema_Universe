@@ -55,6 +55,11 @@
       "email": "prince@example.com",
       "password": "$2a$10$sXiWVvwUYuonxbhztQfIyuMPuF1XbBP7gynSh9hkBFLMwLgGPEy6e",
       "id": 11
+    },
+    {
+      "email": "bee@example.com",
+      "password": "$2a$10$Ko9lk0hz2SIjTpxNFJgHQuIRTqcQRNMMvWm8.5AQl4C3ql4Vmhwb2",
+      "id": 12
     }
   ]
 }

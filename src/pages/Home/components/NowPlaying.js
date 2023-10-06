@@ -6,10 +6,15 @@ export const NowPlaying = () => {
 
     const fetchData = async () => {
         const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        const result = await response.json()
-        const array = result.results.slice(0,14)
-       
-        return array
+        if(!response.ok){
+            throw new Error(`${response.status}`)
+          } else{
+            const result = await response.json()
+            const array = result.results.slice(0,14)
+           
+            return array
+          }
+     
     }
 
     // Use Query Initialize

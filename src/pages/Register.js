@@ -34,16 +34,19 @@ export const Register = () => {
 
  
       const response = await fetch("http://localhost:28000/register", options)
-      const data = await response.json()
-
-   
-    if(data.accessToken){
-      sessionStorage.setItem("username", JSON.stringify(data.user.email))
-      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
-      navigate("/home")
-    } else {
-      toast.error("Existing Email")
-    }
+      if (!response.ok){
+        throw new Error(`${response.status}`)
+      } else{
+        const data = await response.json()
+        if(data.accessToken){
+          sessionStorage.setItem("username", JSON.stringify(data.user.email))
+          sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+          navigate("/home")
+        } else {
+          toast.error("Existing Email")
+        }
+      }
+     
 
   }
 

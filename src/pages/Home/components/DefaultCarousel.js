@@ -9,16 +9,20 @@ export const DefaultCarousel = () => {
     // Async Function
     const fetchData = async () => {
         const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        const result = await response.json()
-        const array = result.results.slice(0,10)
+        if(!response.ok){
+          throw new Error(`${response.status}`)
+        } else {
+          const result = await response.json()
+          const array = result.results.slice(0,10)
         
-        return array
+          return array
+        }
+        
     }
 
     // Use Query Initialize
     const { isLoading, error, data } = useQuery("backdrop", fetchData)
-
-
+    
     if(error){
         console.log(error)
     }

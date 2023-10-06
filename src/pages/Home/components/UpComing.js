@@ -8,9 +8,13 @@ export const UpComing = () => {
 
     const fetchData = async () => {
         const response = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        const result = await response.json()
-        
-        return result
+        if(!response.ok){
+          throw new Error(`${response.status}`)
+        } else{
+          const result = await response.json()
+          return result
+        }
+       
     }
 
       // Use Query Initialize
