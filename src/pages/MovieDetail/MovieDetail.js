@@ -64,7 +64,15 @@ export const MovieDetail = () => {
           }
       },[movie_id])
 
-    const { title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
+    const {id, title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
+
+    const watchListItem = {
+      id: id,
+      title: title ? title : name,
+      image: poster_path,
+      type: data
+
+  }
 
     useTitle(`Cinema Universe | ${title ? title : name}`)
 
@@ -87,7 +95,7 @@ export const MovieDetail = () => {
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <aside className="flex justify-between ">
                     <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
-                    <button onClick={() => toast.success(`${data === "MOVIE" || data === "movie" ? "Movie" : "TV Show"} added to watchlist`)}>
+                    <button onClick={() => {toast.success(`${data === "MOVIE" || data === "movie" ? "Movie" : "TV Show"} added to watchlist`)}}>
                       <img src={bookmark} className="h-6 pr-8" alt="" />
                     </button>
                 

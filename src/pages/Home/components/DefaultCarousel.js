@@ -14,7 +14,7 @@ export const DefaultCarousel = () => {
         } else {
           const result = await response.json()
           const array = result.results.slice(0,10)
-        
+
           return array
         }
         

@@ -2,8 +2,8 @@ import { Link } from "react-router-dom"
 
 export const WatchCard = ({item}) => {
 
-    const {id, title, name, poster_path} = item
-    const type = JSON.parse(sessionStorage.getItem("type")) || ""
+    const {id, title, image,type} = item
+    const sessionType = JSON.parse(sessionStorage.getItem("type")) || ""
 
     const saveType = (type) => {
         sessionStorage.setItem("type",JSON.stringify(type))
