@@ -37,7 +37,7 @@ export const Trending = () => {
             (  
             <div className="trendingBtn my-[30px] px-2 flex justify-around max-tablet:flex-col max-tablet:items-center tablet:max-[1545px]:grid tablet:max-[1545px]:grid-cols-twoCols tablet:max-[1545px]:gap-x-20 tablet:max-[1545px]:place-content-center ">
                 { data.map( (item,index) => (
-                    <TrendingBtn key={index} item={item} type="MOVIE"/>
+                    <TrendingBtn key={index} item={item} type="movie"/>
                 ))}
             </div>
             )

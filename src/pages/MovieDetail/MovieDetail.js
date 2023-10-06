@@ -27,9 +27,13 @@ export const MovieDetail = () => {
         const fetchData = async () => {
           const type = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
           const response = await fetch(type)
-          const result = await response.json()
-          setIsShown(false)
-          setInfo(result)
+          if (!response.ok){
+            throw new Error(`${response.status}`)
+          }else{
+            const result = await response.json()
+            setIsShown(false)
+            setInfo(result)
+          }
         }
         fetchData()
       }catch(error){
@@ -45,9 +49,14 @@ export const MovieDetail = () => {
               const fetchRecommended = async () => {
                   const path = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
                   const response = await fetch(path)
-                  const result = await response.json()
-                  const array = result.results.slice(0,10)
-                  setRecommend(array)
+                  if (!response.ok){
+                    throw new Error(`${response.status}`)
+                  }else{
+                    const result = await response.json()
+                    const array = result.results.slice(0,10)
+                    setRecommend(array)
+                  }
+                  
               }
               fetchRecommended()
           }catch(error){

@@ -29,7 +29,7 @@ export const InitialPage = () => {
 
             <form onSubmit={initialSubmit} className="mt-4 flex items-center max-[600px]:flex-col">   
                 <div className="relative w-full">
-                    <input type="email" name="email" id="voice-search" className="initialInput border border-gray-300 text-white text-sm rounded-sm block pl-10 py-3 px-24 w-[450px]" placeholder="Email Address" required/>
+                    <input type="email" name="email" id="voice-search" className="initialInput border border-gray-300 text-white text-sm rounded-sm block pl-10 py-3 px-24 w-[450px] max-[450px]:w-[350px]" placeholder="Email Address" required/>
                 </div>
                 <div className="w-full max-md:w-[50%] max-md:mt-4">
                   <button  className="flex items-center px-6 py-2 ml-2 font-medium text-white bg-primary-blue hover:bg-secondary-blue font-teko rounded-lg"type="submit">

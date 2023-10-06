@@ -10,6 +10,8 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
 
+
+
   useTitle("Cinema Universe | Watch Movies and TV Shows")
 
   const navigate= useNavigate()
