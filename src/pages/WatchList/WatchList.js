@@ -4,9 +4,11 @@ import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
 import { WatchCard } from "./components/WatchCard"
 import play from "../../assets/play-button.png"
-import potter from "../../assets/mermaid.png"
 export const WatchList = ({title}) => {
 
+    const { list } = useWatch()
+
+    console.log(list)
     useTitle( `Cinema Universe | ${title}`)
     const {myQuery} = useMatchMedia(870)
   return (
@@ -19,7 +21,9 @@ export const WatchList = ({title}) => {
           </header>
 
           <aside className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-4 place-content-center">
-            
+            { list.map((item,index) => (
+              <WatchCard key={index} item={item} />
+            ))}
           </aside>
          </section>
 
