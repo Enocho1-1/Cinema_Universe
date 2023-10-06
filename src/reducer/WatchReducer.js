@@ -5,10 +5,10 @@ export const WatchReducer = (state,action) => {
     switch(type){
         case "ADD_TO_WATCHLIST":
             return { ...state, list: payload.list}
-        case "DELETE_WATCH":
-            return
+        case "REMOVE_FROM_WATCHLIST":
+            return { ...state, list: payload.list}
         case "CLEAR":
-            return
+            return { ...state, list: []}
         default:
             console.log("No Watch List")
 

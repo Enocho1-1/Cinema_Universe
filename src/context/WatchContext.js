@@ -30,9 +30,21 @@ export const WatchProvider = ({children}) => {
    
     }
 
+    // Remove from WatchList
+    function removeFromWatchlist(item){
+        const updateList = state.list.filter( watchItem => watchItem.id !== item.id)
+        dispatch({
+            type:"REMOVE_FROM_WATCHLIST",
+            payload:{
+                list: updateList
+            }
+        })
+    }
     const value = {
         list:state.list,
-        addToWatchlist
+        dispatch,
+        addToWatchlist,
+        removeFromWatchlist
     }
 
     return(
