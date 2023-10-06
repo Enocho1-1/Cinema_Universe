@@ -54,7 +54,7 @@ export const CarouselSlide = ({item,type}) => {
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
           
-                <button onClick={() => {addToWatchlist(watchListItem);toast.success(`${type} added to watchlist`)}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
+                <button onClick={() => addToWatchlist(watchListItem)} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
                 </button>

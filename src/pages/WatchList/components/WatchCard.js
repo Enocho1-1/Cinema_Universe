@@ -11,17 +11,16 @@ export const WatchCard = ({item}) => {
     }
     
   return (
-    <span className="MovieCard relative max-w-[170px] mx-4">
+    <span className="MovieCard relative max-w-[175px] mx-4">
     <Link to={`/${id}`} onClick={() => saveType(`${type}`)} className="h-[250px] w-[170px] rounded-xl">
         <img className="rounded-xl" src={ image ? posterImage: collage} alt="" />
     </Link>
-    <aside className="mt-2 flex flex-col">
-        <div className="flex max-w-auto">
+    <aside className="mt-2 flex ">
+        <div className="max-w-xs flex">
             <p className=" px-2 text-sm rounded-xl border border-gray-300  text-gray-300">{type}</p>
+            <h1 className="max-w-[100px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title}>{title}</h1>
         </div>
-        <div className="mt-2">
-                <h1 className="ml-2 text-md text-gray-300 hover:cursor-pointer">{title}</h1>
-        </div>
+        <button className="ml-2 text-red-600"><i className="bi bi-trash3-fill"></i></button>
     </aside>
     </span>
   )

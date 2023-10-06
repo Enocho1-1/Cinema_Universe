@@ -7,8 +7,6 @@ import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
     const { list } = useWatch()
-
-    console.log(list)
     useTitle( `Cinema Universe | ${title}`)
     const {myQuery} = useMatchMedia(870)
   return (

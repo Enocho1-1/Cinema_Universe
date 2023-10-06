@@ -2,15 +2,16 @@
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
 import { useMatchMedia,useTitle } from "../../hooks/index"
+import { useWatch } from "../../context/WatchContext"
 import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
-import { toast } from 'react-toastify';
 import collage from "../../assets/movieCollage.jpg"
 import star from "../../assets/star.png"
 import bookmark from "../../assets/bookmark-white.png"
 
 export const MovieDetail = () => {
 
+    const { addToWatchlist } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -95,7 +96,7 @@ export const MovieDetail = () => {
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <aside className="flex justify-between ">
                     <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
-                    <button onClick={() => {toast.success(`${data === "MOVIE" || data === "movie" ? "Movie" : "TV Show"} added to watchlist`)}}>
+                    <button onClick={() => addToWatchlist(watchListItem)}>
                       <img src={bookmark} className="h-6 pr-8" alt="" />
                     </button>
                 
