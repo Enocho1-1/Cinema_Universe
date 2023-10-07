@@ -38,7 +38,7 @@ export const MovieList = ({apiPath, title, type}) => {
 
         {/* Movie/TV List */}
         {combineData.length === 0 ? <Loader/> : (
-            <div className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-4 place-content-center">
+            <div className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
             { list.map((item, index) => (
               <MovieCard key={index} item={item} type={type}/>
             ))}

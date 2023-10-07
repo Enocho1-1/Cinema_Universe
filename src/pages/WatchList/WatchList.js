@@ -19,11 +19,11 @@ export const WatchList = ({title}) => {
             <button onClick={() => dispatch({type:"CLEAR"})} className="absolute right-[8%] p-2 text-gray-200 rounded-lg font-sans font-semibold bg-primary-blue hover:bg-secondary-blue">Clear All</button>
           </header>
 
-          <aside className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-4 place-content-center">
-            { list.map((item,index) => (
-              <WatchCard key={index} item={item} />
-            ))}
-          </aside>
+            <aside className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
+              { list.map((item,index) => (
+                <WatchCard key={index} item={item} />
+              ))}
+            </aside>
          </section>
 
     </main>

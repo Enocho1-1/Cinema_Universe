@@ -22,7 +22,7 @@ export const MovieCard = ({item, type=""}) => {
                 <p className="ml-3 text-md text-gray-300">{release_date ? release_date : first_air_date}</p>
             </div>
             <div className="mt-2">
-                    <h1 className="ml-2 text-md text-gray-300 hover:cursor-pointer">{title ? title : name}</h1>
+                    <h1 className="max-w-[150px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title ? title : name}>{title ? title : name}</h1>
             </div>
         </aside>
     </span>
