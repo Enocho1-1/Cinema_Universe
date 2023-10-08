@@ -98,7 +98,6 @@ figcaption{
   left: 0;
   height: 200px;
   width: inherit;
-  background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;
   transition: ease-in-out 2ms;
 }
@@ -113,19 +112,11 @@ figcaption{
   left: 0;
   height: inherit;
   width: inherit;
-  background: rgba(13,110,253,0.45);
   border-radius: 0.75rem;
   transition: ease-in-out 2ms;
 }
 
-.movieList::after{
-  content: "";
-  display: block;
-  width: auto;
-  height: 2px;
-  margin-top: 10px;
-  background-color: #e5e7eb;
-}
+
 
 #overlay{
   position: absolute;

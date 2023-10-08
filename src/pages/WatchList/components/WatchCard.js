@@ -20,7 +20,7 @@ export const WatchCard = ({item}) => {
         <aside className="mt-2 flex max-lg:flex-col">
             <div className="max-w-xs flex">
                 <p className=" px-2 text-sm rounded-xl border border-gray-300  text-gray-300">{type}</p>
-                <h1 className="max-w-[150px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title}>{title}</h1>
+                <h1 className="max-w-[100px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title}>{title}</h1>
             </div>
             <button onClick={() => removeFromWatchlist(item)} className="ml-2 text-red-600"><i className="bi bi-trash3-fill"></i></button>
         </aside>

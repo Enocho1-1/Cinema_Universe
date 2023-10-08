@@ -26,19 +26,12 @@ export const Login = () => {
  
       const response = await fetch("http://localhost:28000/signin", options)
       if (!response.ok){
-        throw new Error(`${response.status}`)
+        toast.error("Check Email or Password")
       } else{
         const data = await response.json()
-
-    
-        if(data.accessToken){
-          sessionStorage.setItem("username", JSON.stringify(data.user.email))
-          sessionStorage.setItem("userID", JSON.stringify(data.user.id))
-          navigate("/home")
-        } else{
-          toast.error("Check Email or Password")
-        }
-    
+        sessionStorage.setItem("username", JSON.stringify(data.user.email))
+        sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+        navigate("/home")
       }
   
  

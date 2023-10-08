@@ -95,7 +95,7 @@ export const MovieDetail = () => {
 
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <aside className="flex justify-between ">
-                    <h1 className="font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
+                    <h1 className="max-w-[700px] font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
                     <button onClick={() => addToWatchlist(watchListItem)}>
                       <img src={bookmark} className="h-6 pr-8" alt="" />
                     </button>
