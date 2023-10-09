@@ -3,7 +3,9 @@ import { WatchReducer } from "../reducer/WatchReducer";
 import { toast } from "react-toastify";
 
 const initialState ={
-    list:[]
+    list:[],
+    movie: false,
+    tv:false
 }
 
 const WatchContext = createContext(initialState)
@@ -40,8 +42,22 @@ export const WatchProvider = ({children}) => {
             }
         })
     }
+
+    // Filter Movies
+    function filterMovies(watchlist){
+        return state.movie ? watchlist.filter(item => item.type === "movie" || item.type === "MOVIE") : watchlist
+    }
+
+     // Filter TV
+     function filterTV(watchlist){
+        return state.tv ? watchlist.filter(item => item.type === "tv" || item.type === "TV") : watchlist
+    }
+
+    const filteredList = filterTV(filterMovies(state.list))
+    
     const value = {
-        list:state.list,
+        list:filteredList,
+        state,
         dispatch,
         addToWatchlist,
         removeFromWatchlist

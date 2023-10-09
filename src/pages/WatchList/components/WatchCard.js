@@ -4,7 +4,7 @@ import collage from "../../../assets/collage.jpg"
 
 export const WatchCard = ({item}) => {
 
-    const {  removeFromWatchlist } = useWatch()
+    const { removeFromWatchlist } = useWatch()
     const {id, title, image,type} = item
 
     const posterImage = `https://image.tmdb.org/t/p/original/${image}`

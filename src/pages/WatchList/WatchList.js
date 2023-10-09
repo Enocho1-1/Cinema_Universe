@@ -6,7 +6,7 @@ import { WatchCard } from "./components/WatchCard"
 import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
-    const { list,dispatch } = useWatch()
+    const { list,state,dispatch } = useWatch()
     useTitle( `Cinema Universe | ${title}`)
     const {myQuery} = useMatchMedia(870)
   return (
@@ -20,9 +20,9 @@ export const WatchList = ({title}) => {
           </header>
             {/* Filter Buttons */}
             <aside className="watchFilter min-h-[50px] max-w-lg m-auto my-6 py-2 flex justify-center">
-              <span className=" font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">ALL</span>
-              <span className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">MOVIES</span>
-              <span className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">TV</span>
+              <span onClick={() => dispatch({type:"ALL"})} className=" font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">ALL</span>
+              <span onClick={() => dispatch({type:"ALL_MOVIES", payload:{value:!state.movie}})} className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">MOVIES</span>
+              <span onClick={() => dispatch({type:"ALL_TV", payload:{value:!state.tv}})} className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">TV</span>
             </aside>
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
