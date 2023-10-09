@@ -116,14 +116,17 @@ figcaption{
   transition: ease-in-out 2ms;
 }
 
+
 .watchFilter span:hover::after{
   content: "";
   display: block;
-  margin-top: 5px;
-  height: 2px;
+  margin-top: 2px;
+  height: 1px;
   width: auto;
   background-color: #0D6EFD;
 }
+
+
 
 #overlay{
   position: absolute;

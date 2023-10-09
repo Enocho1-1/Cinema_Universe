@@ -19,12 +19,13 @@ export const WatchList = ({title}) => {
             <button onClick={() => dispatch({type:"CLEAR"})} className="absolute right-[8%] p-2 text-gray-200 rounded-lg font-sans font-semibold bg-primary-blue hover:bg-secondary-blue">Clear All</button>
           </header>
             {/* Filter Buttons */}
-            <aside className="watchFilter max-w-lg m-auto my-6 flex justify-center">
+            <aside className="watchFilter min-h-[50px] max-w-lg m-auto my-6 py-2 flex justify-center">
               <span className=" font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">ALL</span>
               <span className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">MOVIES</span>
               <span className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">TV</span>
             </aside>
-            <aside className="mt-8 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
+
+            <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
               { list.map((item,index) => (
                 <WatchCard key={index} item={item} />
               ))}
