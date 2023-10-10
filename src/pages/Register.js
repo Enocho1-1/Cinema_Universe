@@ -10,8 +10,6 @@ export const Register = () => {
   useTitle("Cinema Universe | Sign-Up")
   const navigate = useNavigate()
 
-
-
   const user = JSON.parse(sessionStorage.getItem("user"))
 
   const handleRegister = async (event) => {

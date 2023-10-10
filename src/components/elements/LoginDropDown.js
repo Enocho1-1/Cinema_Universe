@@ -7,15 +7,30 @@ import Bookmark from "../../assets/bookmark-white.png"
 import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {
-
-    // const  = useState(JSON.parse(sessionStorage.getItem("username")))
+    const token = JSON.parse(sessionStorage.getItem("token"))
+    const userID = JSON.parse(sessionStorage.getItem("userID"))
     const navigate=useNavigate()
 
-    // const fetchData = async () => {
-    //     const 
-    //     const response = await fetch()
-    // }
+    const authDetail = {
+        method: "GET",
+        headers: {"Content-Type": "application/json", Authorization: `Bearer ${token}`}
+    }
+
+    const fetchData = async () => {
+        const response = await fetch(`http://localhost:28000/600/users/${userID}`, authDetail)
+
+        if(!response.ok){
+            throw new Error(`${response.status}`)
+        }else {
+            const result = await response.json()
+            return result
+        }
+    }
     
+    const {isLoading,data} = useQuery("username", fetchData)
+
+    const userName = data.email
+
     const handleLogout = (event) => {
         event.preventDefault()
 
@@ -26,7 +41,7 @@ export const LoginDropDown = () => {
   return (
     <div id="dropdownAvatar" className="loginMenu select-none	absolute top-[100%] right-5 z-10 w-44 divide-y divide-gray-100 shadow">
       <div className="py-3 px-4 text-sm text-gray-200">
-          <div className="font-sans font-medium "></div>
+          <div className="font-sans font-medium truncate">{isLoading ? "" : userName}</div>
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">
