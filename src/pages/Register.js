@@ -27,7 +27,7 @@ export const Register = () => {
     }
 
  
-      const response = await fetch("http://localhost:28000/register", options)
+      const response = await fetch("http://localhost:29000/register", options)
       if (!response.ok){
         toast.error("User Already Exists")
       } else{

@@ -1,5 +1,4 @@
 
-import { useState } from "react"
 import { useQuery } from "react-query"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
@@ -17,7 +16,7 @@ export const LoginDropDown = () => {
     }
 
     const fetchData = async () => {
-        const response = await fetch(`http://localhost:28000/600/users/${userID}`, authDetail)
+        const response = await fetch(`http://localhost:29000/600/users/${userID}`, authDetail)
 
         if(!response.ok){
             throw new Error(`${response.status}`)
@@ -29,7 +28,7 @@ export const LoginDropDown = () => {
     
     const {isLoading,data} = useQuery("username", fetchData)
 
-    const userName = data.email
+ 
 
     const handleLogout = (event) => {
         event.preventDefault()
@@ -41,7 +40,7 @@ export const LoginDropDown = () => {
   return (
     <div id="dropdownAvatar" className="loginMenu select-none	absolute top-[100%] right-5 z-10 w-44 divide-y divide-gray-100 shadow">
       <div className="py-3 px-4 text-sm text-gray-200">
-          <div className="font-sans font-medium truncate">{isLoading ? "" : userName}</div>
+          <div className="font-sans font-medium truncate">{isLoading ? "" : data.email}</div>
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">

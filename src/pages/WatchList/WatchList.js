@@ -1,4 +1,5 @@
 
+import { useEffect } from "react"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
@@ -6,9 +7,39 @@ import { WatchCard } from "./components/WatchCard"
 import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
-    const { list,state,dispatch } = useWatch()
     useTitle( `Cinema Universe | ${title}`)
+    const { list,state,dispatch } = useWatch()
     const {myQuery} = useMatchMedia(870)
+    const token = JSON.parse(sessionStorage.getItem("token"))
+    const userID = JSON.parse(sessionStorage.getItem("userID"))
+
+    const userInfo = {
+      id: userID,
+      accessToken: token,
+      watchList: list
+    }
+
+    useEffect(() => {
+      const authDetail = {
+        method: 'POST',
+        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+        body: JSON.stringify(userInfo)
+      }
+      const userCartStore = async () => {
+        const response = await fetch(`http://localhost:29000/600/orders/${userID}`,authDetail )
+
+        if(!response.ok){
+          throw new Error(`${response.status}`)
+        }else {
+            const result = await response.json()
+            console.log(result)
+            // return result
+        }
+      }
+      userCartStore()
+    },[list])
+
+
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
