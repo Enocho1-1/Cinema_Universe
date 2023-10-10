@@ -31,6 +31,7 @@ export const Login = () => {
         const data = await response.json()
         sessionStorage.setItem("username", JSON.stringify(data.user.email))
         sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+        sessionStorage.setItem("token", JSON.stringify(data.accessToken))
         navigate("/home")
       }
   

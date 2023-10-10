@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import { useQuery } from "react-query"
 import { useNavigate } from "react-router-dom"
 import { Link } from "react-router-dom"
 import Bookmark from "../../assets/bookmark-white.png"
@@ -7,8 +8,13 @@ import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {
 
-    const [username] = useState(JSON.parse(sessionStorage.getItem("username")))
+    // const  = useState(JSON.parse(sessionStorage.getItem("username")))
     const navigate=useNavigate()
+
+    // const fetchData = async () => {
+    //     const 
+    //     const response = await fetch()
+    // }
     
     const handleLogout = (event) => {
         event.preventDefault()
@@ -20,7 +26,7 @@ export const LoginDropDown = () => {
   return (
     <div id="dropdownAvatar" className="loginMenu select-none	absolute top-[100%] right-5 z-10 w-44 divide-y divide-gray-100 shadow">
       <div className="py-3 px-4 text-sm text-gray-200">
-          <div className="font-sans font-medium ">{username}</div>
+          <div className="font-sans font-medium "></div>
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">
