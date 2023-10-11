@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
@@ -11,6 +11,30 @@ export const Register = () => {
   const navigate = useNavigate()
 
   const user = JSON.parse(sessionStorage.getItem("user"))
+
+  const handleWatchList = async (id,token,email) => {
+
+     // user watch list object
+     const userList = {
+      id :id,
+      userToken: token,
+      userEmail: email,
+      list: []
+    }
+
+    const options = {
+      method: "POST",
+      headers: {"Content-Type": 'application/json', Authorization: `Bearer ${userList.userToken}`},
+      body: JSON.stringify(userList)
+    }
+
+    try{
+      const response = await fetch("http://localhost:32000/660/orders",options)
+    } catch(error){
+      throw new Error(error.message)
+    }
+    
+  }
 
   const handleRegister = async (event) => {
     event.preventDefault()
@@ -27,17 +51,19 @@ export const Register = () => {
     }
 
  
-      const response = await fetch("http://localhost:29000/register", options)
+      const response = await fetch("http://localhost:32000/register", options)
       if (!response.ok){
         toast.error("User Already Exists")
       } else{
         const data = await response.json()
+        // initialize user watch list function call
+        handleWatchList(data.user.id, data.accessToken, data.user.email )
         
         sessionStorage.setItem("username", JSON.stringify(data.user.email))
         sessionStorage.setItem("userID", JSON.stringify(data.user.id))
         sessionStorage.setItem("token", JSON.stringify(data.accessToken))
         navigate("/home")
-     
+ 
       }
      
 

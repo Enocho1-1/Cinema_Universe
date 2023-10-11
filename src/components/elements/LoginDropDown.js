@@ -16,7 +16,7 @@ export const LoginDropDown = () => {
     }
 
     const fetchData = async () => {
-        const response = await fetch(`http://localhost:29000/600/users/${userID}`, authDetail)
+        const response = await fetch(`http://localhost:32000/600/users/${userID}`, authDetail)
 
         if(!response.ok){
             throw new Error(`${response.status}`)

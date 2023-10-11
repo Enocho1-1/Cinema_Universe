@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import { useEffect } from "react"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
@@ -13,31 +13,31 @@ export const WatchList = ({title}) => {
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
 
-    const userInfo = {
-      id: userID,
-      accessToken: token,
-      watchList: list
-    }
+    // const userInfo = {
+    //   id: userID,
+    //   accessToken: token,
+    //   watchList: list
+    // }
 
-    useEffect(() => {
-      const authDetail = {
-        method: 'POST',
-        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
-        body: JSON.stringify(userInfo)
-      }
-      const userCartStore = async () => {
-        const response = await fetch(`http://localhost:29000/600/orders/${userID}`,authDetail )
+    // useEffect(() => {
+    //   const authDetail = {
+    //     method: 'POST',
+    //     headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+    //     body: JSON.stringify(userInfo)
+    //   }
+    //   const userCartStore = async () => {
+    //     const response = await fetch(`http://localhost:29000/600/orders/${userID}`,authDetail )
 
-        if(!response.ok){
-          throw new Error(`${response.status}`)
-        }else {
-            const result = await response.json()
-            console.log(result)
-            // return result
-        }
-      }
-      userCartStore()
-    },[list])
+    //     if(!response.ok){
+    //       throw new Error(`${response.status}`)
+    //     }else {
+    //         const result = await response.json()
+    //         console.log(result)
+    //         // return result
+    //     }
+    //   }
+    //   userCartStore()
+    // },[list])
 
 
   return (
