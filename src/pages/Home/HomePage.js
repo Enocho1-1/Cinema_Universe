@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { useMatchMedia, useTitle } from "../../hooks/index"
-import { useQuery } from "react-query"
 import { useNavigate } from "react-router-dom"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
 import { Header, Footer, MobileHeader } from "../../components/index"

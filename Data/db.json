@@ -1,109 +1,30 @@
 {
   "orders": [
     {
-      "userId": 3,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzdGFAaGFnZS5jb20iLCJpYXQiOjE2OTcwNDAyMDcsImV4cCI6MTY5NzA0MzgwNywic3ViIjoiMyJ9.WXcuAohFhghCOjbhYPDnmVOEslrXGwSqvP-2t6_Vr1M",
-      "userEmail": "asta@hage.com",
-      "list": [],
-      "id": 1
-    },
-    {
-      "userId": 4,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1bm9AaGFnZS5jb20iLCJpYXQiOjE2OTcwNDE0NTksImV4cCI6MTY5NzA0NTA1OSwic3ViIjoiNCJ9.3RklJTBSt3ZLbuavbiZFWXG63G3t-XcdhBa66X1mPHI",
-      "userEmail": "yuno@hage.com",
-      "list": [],
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzA0MjQ0OCwiZXhwIjoxNjk3MDQ2MDQ4LCJzdWIiOiI1In0.vKAKgL2rzSGPQRYZA9u1DfFK3xzfznHz2LV2NQF-hn4",
+      "id": 1,
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzEzMDkyMiwiZXhwIjoxNjk3MTM0NTIyLCJzdWIiOiIxIn0.xQywD9pSijfbSzEUCrObIzre_VB8A894ewP_hoyB65U",
       "userEmail": "naruto@example.com",
-      "list": [],
-      "id": 3
-    },
-    {
-      "userId": 6,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNha3VyYUBleGFtcGxlLmNvbSIsImlhdCI6MTY5NzA0MzA3MywiZXhwIjoxNjk3MDQ2NjczLCJzdWIiOiI2In0.RrPoS04ZrVkGMSD2gC5xVakz-BKp8hQGzLHQhf_1tF8",
-      "userEmail": "sakura@example.com",
-      "list": [],
-      "id": 4
-    },
-    {
-      "userId": 7,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imlub0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzA0MzQwMSwiZXhwIjoxNjk3MDQ3MDAxLCJzdWIiOiI3In0.5jGVgyJkpaV5-rVUA-pl-sH-fm0yVkf2uYMx_BdMS9k",
-      "userEmail": "ino@example.com",
-      "list": [],
-      "id": 5
-    },
-    {
-      "userId": 9,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNoaW5vQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3MDQ0ODU2LCJleHAiOjE2OTcwNDg0NTYsInN1YiI6IjkifQ.n9PxQ3bT5MSdU37EDSD8nwUNA6MUYbGY-mMMLyd6kmA",
-      "userEmail": "shino@example.com",
-      "list": [],
-      "id": 6
-    },
-    {
-      "id": 10,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImNob2ppQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3MDQ1MjE3LCJleHAiOjE2OTcwNDg4MTcsInN1YiI6IjEwIn0._r7WEMEheSWNo1c2vbp5nujtCSBgSyNe_Xb2RziOGMs",
-      "userEmail": "choji@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 926393,
+          "title": "The Equalizer 3",
+          "image": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+          "type": "MOVIE"
+        },
+        {
+          "id": 951491,
+          "title": "Saw X",
+          "image": "/hYaKxnvqQt4pMtFy5KptUYJo1S0.jpg",
+          "type": "movie"
+        }
+      ]
     }
   ],
   "users": [
     {
-      "email": "Okyeree@wmpenn.edu",
-      "password": "$2a$10$NOLJDH2a2cKtz.rx6mmhk.m19Ndhbiz14DUJnfkdIYRq/M0e7yk0G",
-      "id": 1
-    },
-    {
-      "email": "erykah@example.com",
-      "password": "$2a$10$.21OY4SAHAagTQdaiu6k1.ppMP6/4TiQmZ8UNuulkB74vCovTbP8y",
-      "id": 2
-    },
-    {
-      "email": "asta@hage.com",
-      "password": "$2a$10$xCk7cR4zLEXpbvWSEgdR1OBKBas5JZ.hTF5FaqRI6iY5fh1E3LUxy",
-      "id": 3
-    },
-    {
-      "email": "yuno@hage.com",
-      "password": "$2a$10$XE/AFGrM4ockiipSDyjSre1/ino.IPurzxHeFx5sQdvfGt/pWaM86",
-      "id": 4
-    },
-    {
       "email": "naruto@example.com",
-      "password": "$2a$10$svGfw0xWfSoKVIdvuuph5uvowV3V7nBqfk8NPlJ3PLuZlqWcZyXX6",
-      "id": 5
-    },
-    {
-      "email": "sakura@example.com",
-      "password": "$2a$10$Uuu8fQRtI4l7NVGsbuRMkeKNAJ4BCN6ANtqjSiGHC2fWcpP2Wqbby",
-      "id": 6
-    },
-    {
-      "email": "ino@example.com",
-      "password": "$2a$10$Knrqnp6MQd9srzuTsB93guQ.FdOkwGvMr94el08E0UuwBx0nA4wGu",
-      "id": 7
-    },
-    {
-      "email": "kiba@example.com",
-      "password": "$2a$10$2SC9vNRqd.goQrF24690ye8Bwq3HsQ60U.E7Z8k27Hh/5J.EbBxjS",
-      "id": 8
-    },
-    {
-      "email": "shino@example.com",
-      "password": "$2a$10$Yb/8RMNpmBXfbksKlP6uxuuS4gChbVNr8l4jZ6D6d3ZlWOteDYNJi",
-      "id": 9
-    },
-    {
-      "email": "choji@example.com",
-      "password": "$2a$10$QJjqpoMjkTbQ9XMFvwaCle8s6TK9nZBq/20aHZcBIaVxJNmYUhouO",
-      "id": 10
-    },
-    {
-      "email": "gong@example.com",
-      "password": "$2a$10$ymL7/MoJNdNacSehzqkMuudxVJD/2ZpQKbGb3GXrFK1.lnhWyuN/W",
-      "id": 11
+      "password": "$2a$10$VbMYF0ljPIvOlKASW8TQo.N4tUEleJumFnuz9UPtHijJaEXEdeA3q",
+      "id": 1
     }
   ]
 }

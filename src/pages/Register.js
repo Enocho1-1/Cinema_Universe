@@ -10,7 +10,7 @@ export const Register = () => {
   useTitle("Cinema Universe | Sign-Up")
   const navigate = useNavigate()
 
-  const user = JSON.parse(sessionStorage.getItem("user"))
+  const user = JSON.parse(sessionStorage.getItem("username"))
 
   const handleWatchList = async (id,token,email) => {
 
@@ -29,7 +29,12 @@ export const Register = () => {
     }
 
     try{
-      const response = await fetch("http://localhost:32000/660/orders",options)
+      const response = await fetch("http://localhost:34000/660/orders",options)
+      if(!response){
+        throw new Error(`${response.status}`)
+      } else{
+        const data = response.json()
+      }
     } catch(error){
       throw new Error(error.message)
     }
@@ -51,7 +56,7 @@ export const Register = () => {
     }
 
  
-      const response = await fetch("http://localhost:32000/register", options)
+      const response = await fetch("http://localhost:34000/register", options)
       if (!response.ok){
         toast.error("User Already Exists")
       } else{
@@ -59,7 +64,6 @@ export const Register = () => {
         // initialize user watch list function call
         handleWatchList(data.user.id, data.accessToken, data.user.email )
         
-        sessionStorage.setItem("username", JSON.stringify(data.user.email))
         sessionStorage.setItem("userID", JSON.stringify(data.user.id))
         sessionStorage.setItem("token", JSON.stringify(data.accessToken))
         navigate("/home")

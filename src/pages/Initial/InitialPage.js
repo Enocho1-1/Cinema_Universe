@@ -11,7 +11,7 @@ export const InitialPage = () => {
   const initialSubmit = (event) => {
     event.preventDefault()
     const userEmail = event.target.email.value
-    sessionStorage.setItem("user", JSON.stringify(userEmail))
+    sessionStorage.setItem("username", JSON.stringify(userEmail))
     event.target.reset()
     navigate("/register")
   }

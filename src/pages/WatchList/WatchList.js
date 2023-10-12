@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
+import { useQuery } from "react-query"
 import { useMatchMedia,useTitle, useUpdateList } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
@@ -9,34 +10,78 @@ export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
     const { list,state,dispatch } = useWatch()
-    const [data, setData] = useState([])
+    const [user, setUser] = useState({})
+    //  useUpdateList(list)
+
     const {myQuery} = useMatchMedia(870)
 
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
+    const email = JSON.parse(sessionStorage.getItem("username"))
+
+
+
+ 
+
+    useEffect(() => {
+        // user watch list object
+      const userList = {
+        id:userID,
+        userToken: token,
+        userEmail: email ,
+        list: list
+      }
+
+
+      const options = {
+        method: "PUT",
+        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+        body:JSON.stringify(userList)
+    }
+
+    const updateList = async () => {
+      try{
+          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+          if(!response.ok){
+              throw new Error(`${response.status}`)
+          } else {
+              const result = await response.json()
+          }
+
+      }catch(error){
+          throw new Error(error.message)
+      }
+      }
+      updateList()
+    },[list])
 
     const options = {
       method: 'GET',
       headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
     }
-  
-    useEffect(()=>{
-      const fetchWatchList = async () => {
-        try{
-            const response = await fetch(`http://localhost:32000/660/orders/${userID}`, options)
-            if(!response.ok){
-                throw new Error(`${response.status}`)
-            } else {
-                const result = await response.json()
-                setData(result.list)
-            }
-            fetchWatchList()
 
-        }catch(error){
-            throw new Error(error.message)
-        }
-    }
-    },[list])
+    const fetchWatchList = async () => {
+      try{
+          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+          if(!response.ok){
+              throw new Error(`${response.status}`)
+          } else {
+              const result = await response.json()
+              return result
+          }
+
+      }catch(error){
+          throw new Error(error.message)
+      }
+  }
+
+    const { isLoading, data} = useQuery("watchList", fetchWatchList)
+  
+
+  
+
+
+ 
 
 
   return (
@@ -56,7 +101,7 @@ export const WatchList = ({title}) => {
             </aside>
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              { data.map((item,index) => (
+              { isLoading ? "" : data.list.map((item,index) => (
                 <WatchCard key={index} item={item} />
               ))}
             </aside>
