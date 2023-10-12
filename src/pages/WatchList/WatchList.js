@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { useEffect } from "react"
-import { useMatchMedia,useTitle } from "../../hooks/index"
+import { useEffect,useState } from "react"
+import { useMatchMedia,useTitle, useUpdateList } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
 import { WatchCard } from "./components/WatchCard"
@@ -9,35 +9,34 @@ export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
     const { list,state,dispatch } = useWatch()
+    const [data, setData] = useState([])
     const {myQuery} = useMatchMedia(870)
+
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
 
-    // const userInfo = {
-    //   id: userID,
-    //   accessToken: token,
-    //   watchList: list
-    // }
+    const options = {
+      method: 'GET',
+      headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
+    }
+  
+    useEffect(()=>{
+      const fetchWatchList = async () => {
+        try{
+            const response = await fetch(`http://localhost:32000/660/orders/${userID}`, options)
+            if(!response.ok){
+                throw new Error(`${response.status}`)
+            } else {
+                const result = await response.json()
+                setData(result.list)
+            }
+            fetchWatchList()
 
-    // useEffect(() => {
-    //   const authDetail = {
-    //     method: 'POST',
-    //     headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
-    //     body: JSON.stringify(userInfo)
-    //   }
-    //   const userCartStore = async () => {
-    //     const response = await fetch(`http://localhost:29000/600/orders/${userID}`,authDetail )
-
-    //     if(!response.ok){
-    //       throw new Error(`${response.status}`)
-    //     }else {
-    //         const result = await response.json()
-    //         console.log(result)
-    //         // return result
-    //     }
-    //   }
-    //   userCartStore()
-    // },[list])
+        }catch(error){
+            throw new Error(error.message)
+        }
+    }
+    },[list])
 
 
   return (
@@ -57,7 +56,7 @@ export const WatchList = ({title}) => {
             </aside>
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              { list.map((item,index) => (
+              { data.map((item,index) => (
                 <WatchCard key={index} item={item} />
               ))}
             </aside>
