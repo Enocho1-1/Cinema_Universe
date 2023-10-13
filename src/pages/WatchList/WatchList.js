@@ -1,10 +1,9 @@
 /* eslint-disable */
-import { useEffect,useState } from "react"
 import { useQuery } from "react-query"
 import { useMatchMedia,useTitle,useUpdate } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
-import { WatchCard } from "./components/WatchCard"
+import { WatchCard,EmptyList } from "./components/index"
 import play from "../../assets/play-button.png"
 
 export const WatchList = ({title}) => {
@@ -52,14 +51,14 @@ export const WatchList = ({title}) => {
             <button onClick={() => dispatch({type:"CLEAR"})} className="absolute right-[8%] p-2 text-gray-200 rounded-lg font-sans font-semibold bg-primary-blue hover:bg-secondary-blue">Clear All</button>
           </header>
             {/* Filter Buttons */}
-            <aside className="watchFilter min-h-[50px] max-w-lg m-auto my-6 py-2 flex justify-center">
+            {/* <aside className="watchFilter min-h-[50px] max-w-lg m-auto my-6 py-2 flex justify-center">
               <span onClick={() => dispatch({type:"ALL"})} className=" font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">ALL</span>
               <span onClick={() => dispatch({type:"ALL_MOVIES", payload:{value:!state.movie}})} className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">MOVIES</span>
               <span onClick={() => dispatch({type:"ALL_TV", payload:{value:!state.tv}})} className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">TV</span>
-            </aside>
+            </aside> */}
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              { isLoading ? "" : data.list.map((item,index) => (
+              { isLoading || data.list.length === 0 ? <EmptyList/> : data.list.map((item,index) => (
                 <WatchCard key={index} item={item} />
               ))}
             </aside>

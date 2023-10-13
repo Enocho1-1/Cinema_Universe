@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useEffect } from "react"
 import { useWatch } from "../context/WatchContext"
 
@@ -37,6 +38,6 @@ export const useUpdate = () => {
       }
       updateList()
     },[list])
-    
+
   return null
 }
