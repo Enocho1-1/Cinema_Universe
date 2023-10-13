@@ -9,7 +9,7 @@ import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
-    const {state,dispatch } = useWatch()
+    const {dispatch } = useWatch()
     const {myQuery} = useMatchMedia(870)
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
@@ -38,9 +38,8 @@ export const WatchList = ({title}) => {
       }
   }
 
-    const { isLoading, data} = useQuery("watchList", fetchWatchList)
+    const { isLoading, data } = useQuery("watchList", fetchWatchList)
   
-
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}

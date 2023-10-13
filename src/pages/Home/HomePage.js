@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { useQuery } from "react-query"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
@@ -11,9 +12,36 @@ export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
   const navigate= useNavigate()
+  const token = JSON.parse(sessionStorage.getItem("token"))
+  const userID = JSON.parse(sessionStorage.getItem("userID"))
 
   // Match Media Hook
   const {myQuery} = useMatchMedia(769)
+
+  const options = {
+    method: 'GET',
+    headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
+  }
+
+    // Fetch Watch List
+    const fetchWatchList = async () => {
+      try{
+          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+          if(!response.ok){
+              throw new Error(`${response.status}`)
+          } else {
+              const result = await response.json()
+              return result
+          }
+
+      }catch(error){
+          throw new Error(error.message)
+      }
+  }
+
+  const { isLoading, data } = useQuery("watchList", fetchWatchList)
+
+  const userWatchList = isLoading ? "" : sessionStorage.setItem("watchList", JSON.stringify(data.list))
 
 
 
