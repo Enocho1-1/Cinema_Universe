@@ -2,28 +2,15 @@
   "orders": [
     {
       "id": 1,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzEzMDkyMiwiZXhwIjoxNjk3MTM0NTIyLCJzdWIiOiIxIn0.xQywD9pSijfbSzEUCrObIzre_VB8A894ewP_hoyB65U",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzE3MzkzNSwiZXhwIjoxNjk3MTc3NTM1LCJzdWIiOiIxIn0.M9yakWFZV_NteTzYIcwrvQtyABSS35NI64L94FuwsDU",
       "userEmail": "naruto@example.com",
-      "list": [
-        {
-          "id": 926393,
-          "title": "The Equalizer 3",
-          "image": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
-          "type": "MOVIE"
-        },
-        {
-          "id": 951491,
-          "title": "Saw X",
-          "image": "/hYaKxnvqQt4pMtFy5KptUYJo1S0.jpg",
-          "type": "movie"
-        }
-      ]
+      "list": []
     }
   ],
   "users": [
     {
       "email": "naruto@example.com",
-      "password": "$2a$10$VbMYF0ljPIvOlKASW8TQo.N4tUEleJumFnuz9UPtHijJaEXEdeA3q",
+      "password": "$2a$10$eYBYoJOilbFEnJiZV6EewuqiRqfmaOpjqwa8SYf.zQedkDQfhfljO",
       "id": 1
     }
   ]

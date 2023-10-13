@@ -1,65 +1,29 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useQuery } from "react-query"
-import { useMatchMedia,useTitle, useUpdateList } from "../../hooks/index"
+import { useMatchMedia,useTitle,useUpdate } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
 import { WatchCard } from "./components/WatchCard"
 import play from "../../assets/play-button.png"
+
 export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
-    const { list,state,dispatch } = useWatch()
-    const [user, setUser] = useState({})
-    //  useUpdateList(list)
-
+    const {state,dispatch } = useWatch()
     const {myQuery} = useMatchMedia(870)
-
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
-    const email = JSON.parse(sessionStorage.getItem("username"))
 
-
-
- 
-
-    useEffect(() => {
-        // user watch list object
-      const userList = {
-        id:userID,
-        userToken: token,
-        userEmail: email ,
-        list: list
-      }
-
-
-      const options = {
-        method: "PUT",
-        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
-        body:JSON.stringify(userList)
-    }
-
-    const updateList = async () => {
-      try{
-          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
-          if(!response.ok){
-              throw new Error(`${response.status}`)
-          } else {
-              const result = await response.json()
-          }
-
-      }catch(error){
-          throw new Error(error.message)
-      }
-      }
-      updateList()
-    },[list])
+    // Update User Watch List Hook
+    useUpdate()
 
     const options = {
       method: 'GET',
       headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
     }
 
+    // Fetch Watch List
     const fetchWatchList = async () => {
       try{
           const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
@@ -77,12 +41,6 @@ export const WatchList = ({title}) => {
 
     const { isLoading, data} = useQuery("watchList", fetchWatchList)
   
-
-  
-
-
- 
-
 
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
