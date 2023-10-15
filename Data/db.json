@@ -2,48 +2,20 @@
   "orders": [
     {
       "id": 1,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzE4MTI1OCwiZXhwIjoxNjk3MTg0ODU4LCJzdWIiOiIxIn0.urz9z-dqzE37Hs83RGAdOq-a-Y-UviJCJ9Zq8e9wqgw",
-      "userEmail": "naruto@example.com",
-      "list": [
-        {
-          "id": 39323,
-          "title": "Dragon Ball Z: Bardock - The Father of Goku",
-          "image": "/docwOsWZuwJKQdwcYJtQPBcg6bm.jpg",
-          "type": "movie"
-        }
-      ]
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzMzNjE4NSwiZXhwIjoxNjk3MzM5Nzg1LCJzdWIiOiIxIn0.e6L7tcL5zW_d1cVxlAkwBs_HMRYDqra9YH8OfdGv4Uo",
+      "userEmail": "naruto@example.com"
     },
     {
       "id": 2,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzdGFAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTcxODEzMjksImV4cCI6MTY5NzE4NDkyOSwic3ViIjoiMiJ9.gvQakbub03riXGkcwsYmrzSjwDgls7Pk-vAeC88cXTo",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzdGFAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTczMzYyNjYsImV4cCI6MTY5NzMzOTg2Niwic3ViIjoiMiJ9.pLAc5fFTLmjjXi866woZpnSACd809NM01RPzACImeCY",
       "userEmail": "asta@example.com",
-      "list": [
-        {
-          "id": 39323,
-          "title": "Dragon Ball Z: Bardock - The Father of Goku",
-          "image": "/docwOsWZuwJKQdwcYJtQPBcg6bm.jpg",
-          "type": "movie"
-        }
-      ]
+      "list": []
     },
     {
       "id": 3,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndpbnJ5QGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3MTgwOTI3LCJleHAiOjE2OTcxODQ1MjcsInN1YiI6IjMifQ.If8XOXlzSzVINd5sOYJeyNTjV3IQhaGAMzHdMmdlPAQ",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IndpbnJ5QGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3MzE3MzI0LCJleHAiOjE2OTczMjA5MjQsInN1YiI6IjMifQ.TjdyiJZtrt6X05uz4AUeqOPg2_0k-XsYsPDvJKQ4dfM",
       "userEmail": "winry@example.com",
-      "list": [
-        {
-          "id": 968051,
-          "title": "The Nun II",
-          "image": "/5gzzkR7y3hnY8AD1wXjCnVlHba5.jpg",
-          "type": "MOVIE"
-        },
-        {
-          "id": 670292,
-          "title": "The Creator",
-          "image": "/vBZ0qvaRxqEhZwl6LWmruJqWE8Z.jpg",
-          "type": "movie"
-        }
-      ]
+      "list": []
     }
   ],
   "users": [
