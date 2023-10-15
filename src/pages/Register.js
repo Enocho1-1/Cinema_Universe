@@ -12,9 +12,9 @@ export const Register = () => {
 
   const user = JSON.parse(sessionStorage.getItem("username"))
 
-  const handleWatchList = async (id,token,email) => {
+  // User Watch List Function
+  const createWLObj = async (id,token,email) => {
 
-     // user watch list object
      const userList = {
       id :id,
       userToken: token,
@@ -32,8 +32,6 @@ export const Register = () => {
       const response = await fetch("http://localhost:34000/660/orders",options)
       if(!response){
         throw new Error(`${response.status}`)
-      } else{
-        const data = response.json()
       }
     } catch(error){
       throw new Error(error.message)
@@ -62,7 +60,7 @@ export const Register = () => {
       } else{
         const data = await response.json()
         // initialize user watch list function call
-        handleWatchList(data.user.id, data.accessToken, data.user.email )
+        createWLObj(data.user.id, data.accessToken, data.user.email )
         
         sessionStorage.setItem("userID", JSON.stringify(data.user.id))
         sessionStorage.setItem("token", JSON.stringify(data.accessToken))

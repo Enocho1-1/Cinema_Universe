@@ -9,37 +9,18 @@ import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
-    const {dispatch } = useWatch()
+    const {dispatch, list } = useWatch()
     const {myQuery} = useMatchMedia(870)
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
 
+    console.log(list)
+    console.log(list.length)
+    console.log(typeof list)
+
     // Update User Watch List Hook
-    useUpdate()
+    // useUpdate()
 
-    const options = {
-      method: 'GET',
-      headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
-    }
-
-    // Fetch Watch List
-    const fetchWatchList = async () => {
-      try{
-          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
-          if(!response.ok){
-              throw new Error(`${response.status}`)
-          } else {
-              const result = await response.json()
-              return result
-          }
-
-      }catch(error){
-          throw new Error(error.message)
-      }
-  }
-
-    const { isLoading, data } = useQuery("watchList", fetchWatchList)
-  
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
@@ -57,9 +38,9 @@ export const WatchList = ({title}) => {
             </aside> */}
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              { isLoading || data.list.length === 0 ? <EmptyList/> : data.list.map((item,index) => (
+              {/* { isLoading || data.list.length === 0 ? <EmptyList/> : data.list.map((item,index) => (
                 <WatchCard key={index} item={item} />
-              ))}
+              ))} */}
             </aside>
          </section>
 

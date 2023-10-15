@@ -2,6 +2,7 @@
 import { useQuery } from "react-query"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
+import { useWatch } from "../../context/WatchContext"
 import { DefaultCarousel,Trending, UpComing, NowPlaying, TopRated } from "./components/index"
 import { Header, Footer, MobileHeader } from "../../components/index"
 import play from "../../assets/play-button.png"
@@ -11,6 +12,7 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
+  const {  state,dispatch } = useWatch
   const navigate= useNavigate()
   const token = JSON.parse(sessionStorage.getItem("token"))
   const userID = JSON.parse(sessionStorage.getItem("userID"))
@@ -24,14 +26,14 @@ export const HomePage = () => {
   }
 
     // Fetch Watch List
-    const fetchWatchList = async () => {
+    const fetchUser = async () => {
       try{
           const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
           if(!response.ok){
               throw new Error(`${response.status}`)
           } else {
               const result = await response.json()
-              return result
+              dispatch({type:"ADD_WATCHLIST",payload:{list:result.list}})
           }
 
       }catch(error){
@@ -39,9 +41,8 @@ export const HomePage = () => {
       }
   }
 
-  const { isLoading, data } = useQuery("watchList", fetchWatchList)
+     useQuery("watchList", fetchUser)
 
-  const userWatchList = isLoading ? "" : sessionStorage.setItem("watchList", JSON.stringify(data.list))
 
 
 

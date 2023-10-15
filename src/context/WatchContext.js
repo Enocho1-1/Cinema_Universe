@@ -15,8 +15,8 @@ const WatchContext = createContext(initialState)
 export const WatchProvider = ({children}) => {
     const [state,dispatch] = useReducer(WatchReducer,initialState)
 
-    // Add to WatchList
-    function addToWatchlist (item){
+    // Add Item WatchList
+    function addToWatchlist(item){
         const duplicateItem = state.list.find( watchItem => watchItem.id === item.id)
 
         if(duplicateItem){
@@ -46,19 +46,19 @@ export const WatchProvider = ({children}) => {
     }
 
     // Filter Movies
-    function filterMovies(watchlist){
-        return state.movie ? watchlist.filter(item => item.type === "movie" || item.type === "MOVIE") : watchlist
-    }
+    // function filterMovies(watchlist){
+    //     return state.movie ? watchlist.filter(item => item.type === "movie" || item.type === "MOVIE") : watchlist
+    // }
 
      // Filter TV
-     function filterTV(watchlist){
-        return state.tv ? watchlist.filter(item => item.type === "tv" || item.type === "TV") : watchlist
-    }
+    //  function filterTV(watchlist){
+    //     return state.tv ? watchlist.filter(item => item.type === "tv" || item.type === "TV") : watchlist
+    // }
 
-    const filteredList = filterTV(filterMovies(state.list))
+    // const filteredList = filterTV(filterMovies(state.list))
     
     const value = {
-        list:filteredList,
+        list:state.list,
         state,
         dispatch,
         addToWatchlist,

@@ -52,7 +52,7 @@ export const Login = () => {
         <form  onSubmit={handleSignIn} className="mt-6 px-3">
           <div className="mb-6">
           <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
-          <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" required/>
+          <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" autoComplete="false" required/>
           </div> 
           <div className="mb-6">
               <label htmlFor="password" className="block mb-2 text-lg font-teko font-medium text-white">Password</label>
