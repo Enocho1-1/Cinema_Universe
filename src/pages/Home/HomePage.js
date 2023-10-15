@@ -26,7 +26,7 @@ export const HomePage = () => {
     headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
   }
 
-    // Fetch Watch List
+    // Fetch User Watch List
     const fetchUser = async () => {
       try{
           const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
