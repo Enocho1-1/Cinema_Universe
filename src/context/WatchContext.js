@@ -49,7 +49,7 @@ export const WatchProvider = ({children}) => {
         dispatch({
             type:"REMOVE_FROM_WATCHLIST",
             payload:{
-                list: updateList
+                list: updateList 
             }
         })
     }
@@ -67,7 +67,7 @@ export const WatchProvider = ({children}) => {
     // const filteredList = filterTV(filterMovies(state.list))
     
     const value = {
-        list:state.list,
+        list: state.list,
         state,
         dispatch,
         addWatchList,

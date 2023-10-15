@@ -1,6 +1,6 @@
 /* eslint-disable */
-import { useQuery } from "react-query"
-import { useMatchMedia,useTitle,useUpdate } from "../../hooks/index"
+import { useEffect } from "react"
+import { useMatchMedia,useTitle} from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
 import { WatchCard,EmptyList } from "./components/index"
@@ -9,14 +9,44 @@ import play from "../../assets/play-button.png"
 export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
-    const {dispatch, list } = useWatch()
+    const { dispatch, state, list } = useWatch()
     const {myQuery} = useMatchMedia(870)
+
     const token = JSON.parse(sessionStorage.getItem("token"))
     const userID = JSON.parse(sessionStorage.getItem("userID"))
+    const email = JSON.parse(sessionStorage.getItem("username"))
 
-    console.log(list)
-    console.log(list.length)
-    console.log(typeof list)
+ 
+
+    useEffect(() => {
+      // user watch list object
+      const userList = {
+        id:userID,
+        userToken: token,
+        userEmail: email ,
+        list: list
+      }
+
+
+      const options = {
+        method: "PUT",
+        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+        body:JSON.stringify(userList)
+    }
+
+    const updateList = async () => {
+      try{
+          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+          if(!response.ok){
+              throw new Error(`${response.status}`)
+          } 
+
+      }catch(error){
+          throw new Error(error.message)
+      }
+      }
+      updateList()
+    },[list])
 
     // Update User Watch List Hook
     // useUpdate()
