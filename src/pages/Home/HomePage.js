@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useQuery } from "react-query"
+import { useEffect } from "react"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
 import { useWatch } from "../../context/WatchContext"
@@ -12,7 +13,7 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
-  const {  state,dispatch } = useWatch
+  const {  addWatchList } = useWatch()
   const navigate= useNavigate()
   const token = JSON.parse(sessionStorage.getItem("token"))
   const userID = JSON.parse(sessionStorage.getItem("userID"))
@@ -33,7 +34,7 @@ export const HomePage = () => {
               throw new Error(`${response.status}`)
           } else {
               const result = await response.json()
-              dispatch({type:"ADD_WATCHLIST",payload:{list:result.list}})
+              addWatchList(result.list)
           }
 
       }catch(error){
@@ -41,8 +42,8 @@ export const HomePage = () => {
       }
   }
 
-     useQuery("watchList", fetchUser)
-
+   
+   useQuery("watchList", fetchUser)
 
 
 

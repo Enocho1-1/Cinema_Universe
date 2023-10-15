@@ -38,9 +38,9 @@ export const WatchList = ({title}) => {
             </aside> */}
 
             <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              {/* { isLoading || data.list.length === 0 ? <EmptyList/> : data.list.map((item,index) => (
+              { list.length === 0 ? <EmptyList/> : list.map((item,index) => (
                 <WatchCard key={index} item={item} />
-              ))} */}
+              ))}
             </aside>
          </section>
 

@@ -15,6 +15,15 @@ const WatchContext = createContext(initialState)
 export const WatchProvider = ({children}) => {
     const [state,dispatch] = useReducer(WatchReducer,initialState)
 
+    function addWatchList(userList){
+        dispatch({
+            type:"ADD_WATCHLIST",
+            payload:{
+                list:userList
+            }
+        })
+    }
+
     // Add Item WatchList
     function addToWatchlist(item){
         const duplicateItem = state.list.find( watchItem => watchItem.id === item.id)
@@ -61,6 +70,7 @@ export const WatchProvider = ({children}) => {
         list:state.list,
         state,
         dispatch,
+        addWatchList,
         addToWatchlist,
         removeFromWatchlist
     }

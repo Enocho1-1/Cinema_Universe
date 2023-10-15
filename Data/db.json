@@ -17,6 +17,12 @@
       "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkd2FyZEBleGFtcGxlLmNvbSIsImlhdCI6MTY5NzM4OTUzNywiZXhwIjoxNjk3MzkzMTM3LCJzdWIiOiIzIn0.Ajca1joDx29eTbDZ6g07RA0ngf7hSCqem8WStR9ZLN8",
       "userEmail": "edward@example.com",
       "list": []
+    },
+    {
+      "id": 4,
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTczOTAzNTMsImV4cCI6MTY5NzM5Mzk1Mywic3ViIjoiNCJ9.P4oSV0jGIaHN8nRJFdz71klwXob5p5EH1h_rkKAxwyU",
+      "userEmail": "goku@example.com",
+      "list": []
     }
   ],
   "users": [
@@ -34,6 +40,11 @@
       "email": "edward@example.com",
       "password": "$2a$10$SXJC.80c//n0W.qGO36AgOhPnNVTqqgXChRFHx1RzFBiHUMJKjP7G",
       "id": 3
+    },
+    {
+      "email": "goku@example.com",
+      "password": "$2a$10$E4UiHbWKRHS6XVLyHy8VYeDw8RfN2BYOVziRG7zUnKbUMF7P1k8ye",
+      "id": 4
     }
   ]
 }
