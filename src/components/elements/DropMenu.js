@@ -20,9 +20,12 @@ export const DropMenu = () => {
         <div className="py-3 px-4 text-sm text-gray-200">
             <div className="font-sans font-medium ">TV</div>
         </div>
-           <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
+           <ul className="py-1 font-sans text-sm text-gray-200" aria-labelledby="dropdownUserAvatarButton">
+            <li className="flex ">
+                <NavLink to="/TV/Popular" className="block py-2 px-4 hover:text-secondary-blue">Popular</NavLink>
+            </li>
             <li className="flex">
-                <NavLink to="/TV/TopRated" className="block py-2 px-4">Top Rated</NavLink>
+                <NavLink to="/TV/TopRated" className="block py-2 px-4 hover:text-secondary-blue">Top Rated</NavLink>
             </li>
         </ul>
     </div>
