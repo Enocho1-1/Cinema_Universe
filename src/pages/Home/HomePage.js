@@ -1,6 +1,5 @@
 /* eslint-disable */
 import { useQuery } from "react-query"
-import { useEffect } from "react"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
 import { useWatch } from "../../context/WatchContext"

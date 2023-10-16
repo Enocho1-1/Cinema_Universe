@@ -66,11 +66,8 @@ export const WatchList = ({title}) => {
               <span onClick={() => dispatch({type:"ALL_TV", payload:{value:!state.tv}})} className="font-sans font-semibold text-gray-300 text-xl hover:cursor-pointer hover:text-primary-blue mx-4">TV</span>
             </aside>
 
-            <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center">
-              { list.length === 0 ? <EmptyList/> : list.map((item,index) => (
-                <WatchCard key={index} item={item} />
-              ))}
-            </aside>
+              {list.length === 0 ? <EmptyList/> : ( <aside className="mt-12 px-4 grid grid-cols-fiveCols max-mobile:grid-cols-twoCols mobile:max-mobileLg:grid-cols-threeCols mobileLg:max-tablet:grid-cols-fourCols gap-y-6 place-content-center"> {  list.map((item,index) => (<WatchCard key={index} item={item} />))}</aside>)}
+           
          </section>
 
     </main>
