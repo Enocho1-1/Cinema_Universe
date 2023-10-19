@@ -26,3 +26,17 @@ export const registerUser = async (options, createWLObj, navigate,toast) => {
 
     }
 }
+
+// Login User
+export const loginUser = async (options, navigate,toast) => {
+    const response = await fetch("http://localhost:34000/signin", options)
+    if (!response.ok){
+      toast.error("Check Email or Password")
+    } else{
+      const data = await response.json()
+      sessionStorage.setItem("username", JSON.stringify(data.user.email))
+      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
+      sessionStorage.setItem("token", JSON.stringify(data.accessToken))
+      navigate("/home")
+    }
+}

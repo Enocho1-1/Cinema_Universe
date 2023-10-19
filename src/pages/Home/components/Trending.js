@@ -2,26 +2,15 @@
 import { useQuery } from "react-query"
 import { TrendingBtn } from "./TrendingBtn"
 import { Loader } from "../../../components/index"
+import { fetchTrending } from "../../../utility/DataServices"
 
 export const Trending = () => {
 
     // Async Function
-    const fetchData = async () => {
-              
-        const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        if(!response.ok){
-            throw new Error(`${response.status}`)
-          } else{
-            const result = await response.json()
-            const array = result.results.slice(11,15)
-            
-            return array
-          }
-        
-    }
+    fetchTrending()
 
     // Use Query Initialize
-    const { isLoading, error, data} = useQuery("trending", fetchData)
+    const { isLoading, error, data} = useQuery("trending",  fetchTrending)
 
     if(error){
         console.log(error)

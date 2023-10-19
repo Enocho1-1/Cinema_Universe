@@ -1,28 +1,18 @@
 import { useQuery } from "react-query"
 import { MovieCard } from "../../../components/index"
 import { Loader } from "../../../components/index"
+import { fetchUpComingMovies } from "../../../utility"
 
 
 export const UpComing = () => {
 
+  fetchUpComingMovies()
+  // Use Query Initialize
+  const { isLoading, error, data} = useQuery("upcoming", fetchUpComingMovies)
 
-    const fetchData = async () => {
-        const response = await fetch('https://api.themoviedb.org/3/movie/upcoming?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        if(!response.ok){
-          throw new Error(`${response.status}`)
-        } else{
-          const result = await response.json()
-          return result
-        }
-       
-    }
-
-      // Use Query Initialize
-      const { isLoading, error, data} = useQuery("upcoming", fetchData)
-
-      if(error){
-        console.log(error)
-    }
+  if(error){
+    console.log(error)
+  }
 
   return (
     <>
