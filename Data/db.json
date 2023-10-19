@@ -184,6 +184,12 @@
       "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvaGFuQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3NzM1MDExLCJleHAiOjE2OTc3Mzg2MTEsInN1YiI6IjYifQ.kZKOW5E1z7ut0Um8F0v50keYPZ90rgUvEgzKwhB3iVQ",
       "userEmail": "gohan@example.com",
       "list": []
+    },
+    {
+      "id": 7,
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bHBoaWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc3MzU2NDgsImV4cCI6MTY5NzczOTI0OCwic3ViIjoiNyJ9.1E277unkcXtLicHAdEA5BMah_Ptmfv8wWkcWyhdKQ2k",
+      "userEmail": "sylphie@example.com",
+      "list": []
     }
   ],
   "users": [
@@ -216,6 +222,11 @@
       "email": "gohan@example.com",
       "password": "$2a$10$Xn4K0Vgzdl56QaGsmXqmRuu3zKfNohnwaTNAZ8HxIPPf5k4OGbkm2",
       "id": 6
+    },
+    {
+      "email": "sylphie@example.com",
+      "password": "$2a$10$wT5xy0ZoLccqRB02adHQpOCCgTmTd1iJPswwg4E5ZL8uWGLC4Hise",
+      "id": 7
     }
   ]
 }

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
-import { postUserObj } from "../utility";
+import { postUserObj ,registerUser} from "../utility";
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 import { toast } from 'react-toastify';
 
@@ -47,22 +47,9 @@ export const Register = () => {
       body: JSON.stringify(authDetail)
     }
 
- 
-      const response = await fetch("http://localhost:34000/register", options)
-      if (!response.ok){
-        toast.error("User Already Exists")
-      } else{
-        const data = await response.json()
-        // initialize user watch list function call
-        createWLObj(data.user.id, data.accessToken, data.user.email )
-        
-        sessionStorage.setItem("userID", JSON.stringify(data.user.id))
-        sessionStorage.setItem("token", JSON.stringify(data.accessToken))
-        navigate("/home")
- 
-      }
+     // Register User
+    registerUser(options, createWLObj, navigate,toast)
      
-
   }
 
 
