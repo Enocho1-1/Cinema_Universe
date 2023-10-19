@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
+import { postUserObj } from "../utility";
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 import { toast } from 'react-toastify';
 
@@ -28,14 +29,7 @@ export const Register = () => {
       body:JSON.stringify(userList),
     }
 
-    try{
-      const response = await fetch("http://localhost:34000/660/orders",options)
-      if(!response){
-        throw new Error(`${response.status}`)
-      }
-    } catch(error){
-      throw new Error(error.message)
-    }
+    postUserObj(options)
     
   }
 

@@ -1,0 +1,1 @@
+export { postUserObj } from "./AuthDetail"
