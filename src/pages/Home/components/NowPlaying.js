@@ -1,24 +1,14 @@
 import { useQuery } from "react-query"
+import { fetchNowPlayingMovies } from "../../../utility"
 import { MovieCard } from "../../../components/index"
 import { Loader } from "../../../components/index"
 
 export const NowPlaying = () => {
 
-    const fetchData = async () => {
-        const response = await fetch('https://api.themoviedb.org/3/movie/now_playing?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
-        if(!response.ok){
-            throw new Error(`${response.status}`)
-          } else{
-            const result = await response.json()
-            const array = result.results.slice(0,14)
-           
-            return array
-          }
-     
-    }
-
+    // Async Function Call
+    fetchNowPlayingMovies()
     // Use Query Initialize
-    const { isLoading, error, data} = useQuery("NowPlaying", fetchData)
+    const { isLoading, error, data} = useQuery("NowPlaying", fetchNowPlayingMovies)
     
     if(error){
         console.log(error)
