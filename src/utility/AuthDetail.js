@@ -22,6 +22,7 @@ export const registerUser = async (options, createWLObj, navigate,toast) => {
       
       sessionStorage.setItem("userID", JSON.stringify(data.user.id))
       sessionStorage.setItem("token", JSON.stringify(data.accessToken))
+      setTimeout(() => {toast.success(`Welcome ${data.user.email}`)}, 2000)
       navigate("/home")
 
     }
@@ -37,6 +38,7 @@ export const loginUser = async (options, navigate,toast) => {
       sessionStorage.setItem("username", JSON.stringify(data.user.email))
       sessionStorage.setItem("userID", JSON.stringify(data.user.id))
       sessionStorage.setItem("token", JSON.stringify(data.accessToken))
+      setTimeout(() => {toast.success(`Welcome Back ${data.user.email}`)}, 2000)
       navigate("/home")
     }
 }

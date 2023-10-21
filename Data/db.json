@@ -2,7 +2,7 @@
   "orders": [
     {
       "id": 1,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzkwNjQ3OCwiZXhwIjoxNjk3OTEwMDc4LCJzdWIiOiIxIn0.06dO9bV3z5BBbPigBDCko3-Pqwh158GWe3atGnYUF-8",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5NzkxMTQ4OCwiZXhwIjoxNjk3OTE1MDg4LCJzdWIiOiIxIn0.JZtIeJ15aFwosGuFt7yCyRuf-3HPMMmVHi3AoXqbrDQ",
       "userEmail": "naruto@example.com",
       "list": [
         {
@@ -177,14 +177,27 @@
           "title": "Dragon Ball Super: Super Hero",
           "image": "/pi0iZOEHeA3ih4p1IwAG4x2DZNH.jpg",
           "type": "movie"
+        },
+        {
+          "id": 114410,
+          "title": "Chainsaw Man",
+          "image": "/npdB6eFzizki0WaZ1OvKcJrWe97.jpg",
+          "type": "tv"
         }
       ]
     },
     {
       "id": 7,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bHBoaWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc3MzY1MTgsImV4cCI6MTY5Nzc0MDExOCwic3ViIjoiNyJ9.a-5HbYI9524FMUuH2s4F1QhT3DqyVHsw9TIq4yT2Zbw",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bHBoaWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5MTE3NDQsImV4cCI6MTY5NzkxNTM0NCwic3ViIjoiNyJ9.CEzZremhvSyvJEuajlGraUDLRIe-GwioLVx_RPTpfVo",
       "userEmail": "sylphie@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 125988,
+          "title": "Silo",
+          "image": "/zBx1X06G1OlndbXTCZI13FECNz2.jpg",
+          "type": "tv"
+        }
+      ]
     }
   ],
   "users": [
