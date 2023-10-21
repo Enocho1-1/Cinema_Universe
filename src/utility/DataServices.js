@@ -1,4 +1,4 @@
-// BackDrop Images Async
+// BackDrop Images Async (Carousel)
 export  const fetchBackDrop = async () => {
     const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
     if(!response.ok){

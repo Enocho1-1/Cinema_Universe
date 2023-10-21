@@ -99,8 +99,9 @@ figcaption{
   height: 200px;
   width: inherit;
   border-radius: 0.75rem;
-  transition: ease-in-out 2ms;
 }
+
+
 
 .MovieCard a:hover::after{
   content: url("./assets/play-button-arrowhead.png");
@@ -108,12 +109,11 @@ figcaption{
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 0;
-  left: 0;
+  top: 7%;
+  left: 10%;
   height: inherit;
   width: inherit;
-  border-radius: 0.75rem;
-  transition: ease-in-out 2ms;
+  visibility: visible;
 }
 
 

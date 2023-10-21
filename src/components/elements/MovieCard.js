@@ -11,7 +11,7 @@ export const MovieCard = ({item, type=""}) => {
     }
     
   return (
-    <span className="MovieCard relative max-w-[170px] mx-4">
+    <span className="MovieCard relative max-w-[200px] mx-4">
         <Link to={`/${id}`} onClick={() => saveType(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
             <img className="rounded-xl" src={ poster_path ? posterImage: collage} alt="" />
         </Link>

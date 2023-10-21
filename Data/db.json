@@ -76,31 +76,19 @@
     },
     {
       "id": 3,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkd2FyZEBleGFtcGxlLmNvbSIsImlhdCI6MTY5NzczNzYxMCwiZXhwIjoxNjk3NzQxMjEwLCJzdWIiOiIzIn0.OC2KQcRiopEyBlhL56R7ahVtDb8lOdCe7eo4bNyJgvE",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkd2FyZEBleGFtcGxlLmNvbSIsImlhdCI6MTY5NzkwNDk4MywiZXhwIjoxNjk3OTA4NTgzLCJzdWIiOiIzIn0.bHB2x1ldkHEDd0HRQTnwMzdLfqAArIx-tsB2osTgnLo",
       "userEmail": "edward@example.com",
       "list": [
         {
-          "id": 14003,
-          "title": "Fullmetal Alchemist the Movie: Conqueror of Shamballa",
-          "image": "/rcfZPWcj5pE1CHeIrcUlqFkmeOw.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 426285,
-          "title": "Fullmetal Alchemist",
-          "image": "/1KGEyeCNyZFDZVDo1H0S87Re8qT.jpg",
-          "type": "movie"
+          "id": 31911,
+          "title": "Fullmetal Alchemist: Brotherhood",
+          "image": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
+          "type": "tv"
         },
         {
           "id": 37863,
           "title": "Fullmetal Alchemist",
           "image": "/nSRBXxU05zFCuU8SbcQkQyoXrVd.jpg",
-          "type": "tv"
-        },
-        {
-          "id": 31911,
-          "title": "Fullmetal Alchemist: Brotherhood",
-          "image": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
           "type": "tv"
         }
       ]
