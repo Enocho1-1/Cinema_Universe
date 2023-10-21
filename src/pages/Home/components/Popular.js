@@ -8,12 +8,11 @@ export const Popular = () => {
   
       // Async Function
       fetchPopularTVShows()
-
      // Use Query Initialize
      const { isLoading, error, data} = useQuery("Popular", fetchPopularTVShows)
     
      if(error){
-         console.log(error)
+        throw new Error(error.message)
      }
 
   return (

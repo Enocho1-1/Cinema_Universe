@@ -8,12 +8,11 @@ export const Trending = () => {
 
     // Async Function
     fetchTrending()
-
     // Use Query Initialize
     const { isLoading, error, data} = useQuery("trending",  fetchTrending)
 
     if(error){
-        console.log(error)
+        throw new Error(error.message)
     }
 
   return (

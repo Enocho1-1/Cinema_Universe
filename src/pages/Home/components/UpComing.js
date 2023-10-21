@@ -11,7 +11,7 @@ export const UpComing = () => {
   const { isLoading, error, data} = useQuery("upcoming", fetchUpComingMovies)
 
   if(error){
-    console.log(error)
+    throw new Error(error.message)
   }
 
   return (
