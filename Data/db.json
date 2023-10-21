@@ -95,7 +95,7 @@
     },
     {
       "id": 4,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc0MDAzNTIsImV4cCI6MTY5NzQwMzk1Miwic3ViIjoiNCJ9.4jYW7j1NcwulfT2zxgw8siVV5GOVwA2xU6p12ILUFN4",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5MDg4MDgsImV4cCI6MTY5NzkxMjQwOCwic3ViIjoiNCJ9.Zmsp-5YDg6Ug2zikeIzzIYGPbvViTa7zXyIaT1AnMwo",
       "userEmail": "goku@example.com",
       "list": [
         {
@@ -169,9 +169,16 @@
     },
     {
       "id": 6,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvaGFuQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3NzM1OTU3LCJleHAiOjE2OTc3Mzk1NTcsInN1YiI6IjYifQ.DJpcWGp6wDHg2DDUACAKih3Qo5BYzTgrUUzTGdfA11A",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvaGFuQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3OTEwMjc3LCJleHAiOjE2OTc5MTM4NzcsInN1YiI6IjYifQ.glWr8bnATHGhXlkA_GCYLDRNXyqeKitsPwZBvxeOqiQ",
       "userEmail": "gohan@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 610150,
+          "title": "Dragon Ball Super: Super Hero",
+          "image": "/pi0iZOEHeA3ih4p1IwAG4x2DZNH.jpg",
+          "type": "movie"
+        }
+      ]
     },
     {
       "id": 7,

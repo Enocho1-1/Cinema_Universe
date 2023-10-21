@@ -1,7 +1,7 @@
 
 /* eslint-disable */
 import { useState, useEffect } from "react"
-import { useFetch,useFetchTwo,useFetchThree,useTitle,useMatchMedia } from "../../hooks/index"
+import { useMovieList,useTitle,useMatchMedia } from "../../hooks/index"
 import { Pagination } from "./component/Pagination"
 import { Header, MobileHeader, Footer, Loader, MovieCard } from "../../components"
 import play from "../../assets/play-button.png"
@@ -14,11 +14,8 @@ export const MovieList = ({apiPath, title, type}) => {
 
   useEffect(() => { setPage(1) },[apiPath])
 
-  const {data : dataOne} = useFetch(apiPath)
-  const {data : dataTwo} = useFetchTwo(apiPath)
-  const {data : dataThree} = useFetchThree(apiPath)
-
-  const combineData = [...dataOne,...dataTwo, ...dataThree]
+  // Async Function Movie/TV List
+  const { combineData } = useMovieList(apiPath)
 
   const lastIndex = page * postperPage
   const firstIndex = lastIndex - postperPage
