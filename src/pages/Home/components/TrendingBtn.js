@@ -11,11 +11,12 @@ export const TrendingBtn = ({item,type}) => {
 
   return (
     <Link to={`/${id}`} onClick={() => saveType(type)} className=" relative h-[165px] w-[350px] rounded-xl max-tablet: mt-12">
+      <div id="trending_overlay"></div>
         <img className="h-fit w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
-        <span className="absolute px-2 top-[60%] left-0">
+        <span className="trendingInfo absolute px-2 top-[60%] left-0">
             <h1 className="font-sans text-md font-bold text-white">{title}</h1>
-            <aside className="m-2 flex">
-                <img src={star} className="h-4 ml-2 self-center" alt="" />
+            <aside className="mt-2 flex">
+                <img src={star} className="h-4  self-center" alt="" />
                 <p className="ml-2 text-md font-semibold text-white">{vote_average}/10</p>
                 <p className="ml-2 text-md font-semibold text-white">{release_date}</p>
             </aside>

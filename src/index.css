@@ -88,6 +88,10 @@ figcaption{
   background-color: rgba( 0, 0, 0, .35);
 }
 
+.trendingInfo{
+  z-index: 10;
+}
+
 .trendingBtn a:hover::after{
   content: url("./assets/play-button-arrowhead.png");
   position: absolute;
@@ -99,6 +103,7 @@ figcaption{
   height: 200px;
   width: inherit;
   border-radius: 0.75rem;
+  z-index: 20;
 }
 
 
@@ -137,6 +142,17 @@ figcaption{
   z-index: 5;
   background-color: rgba( 0, 0, 0, .75);
 }
+
+#trending_overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height:120%;
+  width: 100%;
+  z-index: 5;
+  background-color: rgba( 0, 0, 0, .55);
+}
+
 
 
 
