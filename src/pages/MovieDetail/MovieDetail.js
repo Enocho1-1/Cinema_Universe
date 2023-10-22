@@ -3,6 +3,7 @@ import { useEffect,useState } from "react"
 import { useParams } from "react-router"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
+import { updateWatchList } from "../../utility"
 import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
@@ -11,7 +12,7 @@ import bookmark from "../../assets/bookmark-white.png"
 
 export const MovieDetail = () => {
 
-    const { addToWatchlist } = useWatch()
+    const { addToWatchlist,list } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -76,6 +77,12 @@ export const MovieDetail = () => {
   }
 
     useTitle(`Cinema Universe | ${title ? title : name}`)
+
+    useEffect(() => {
+      // user watch list object
+      updateWatchList(list)
+   
+    },[list])
 
 
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`

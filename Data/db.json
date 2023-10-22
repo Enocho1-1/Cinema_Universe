@@ -2,9 +2,15 @@
   "orders": [
     {
       "id": 1,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5Nzk1NTYzNiwiZXhwIjoxNjk3OTU5MjM2LCJzdWIiOiIxIn0.aLBqBOg30-Pgu54SGTPyNux3d58TqeZO5ix8Lji5Uvo",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5Nzk5ODg4MywiZXhwIjoxNjk4MDAyNDgzLCJzdWIiOiIxIn0.jZ8WO9K99xKNJ0ZF_5RuF6Y-0q45Qpk04I0JOxq7TjY",
       "userEmail": "naruto@example.com",
       "list": [
+        {
+          "id": 31910,
+          "title": "Naruto Shippūden",
+          "image": "/kV27j3Nz4d5z8u6mN3EJw9RiLg2.jpg",
+          "type": "tv"
+        },
         {
           "id": 46260,
           "title": "Naruto",
@@ -12,196 +18,70 @@
           "type": "tv"
         },
         {
-          "id": 31910,
-          "title": "Naruto Shippūden",
-          "image": "/kV27j3Nz4d5z8u6mN3EJw9RiLg2.jpg",
+          "id": 95479,
+          "title": "Jujutsu Kaisen",
+          "image": "/hFWP5HkbVEe40hrXgtCeQxoccHE.jpg",
           "type": "tv"
+        },
+        {
+          "id": 1429,
+          "title": "Attack on Titan",
+          "image": "/8C5gYahMFmzHKGNID8QrG5t25WU.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 238,
+          "title": "The Godfather",
+          "image": "/3bhkrj58Vtu7enYsRolD1fZdja1.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 769,
+          "title": "GoodFellas",
+          "image": "/aKuFiU82s5ISJpGZp7YkIr3kCUd.jpg",
+          "type": "movie"
         }
       ]
     },
     {
       "id": 2,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzdGFAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc0Njg2OTUsImV4cCI6MTY5NzQ3MjI5NSwic3ViIjoiMiJ9.GCohOOfN2OZuFUPTpASUBqlas1DkfJyj9RxJ8h0wFm8",
-      "userEmail": "asta@example.com",
-      "list": [
-        {
-          "id": 812225,
-          "title": "Black Clover: Sword of the Wizard King",
-          "image": "/9YEGawvjaRgnyW6QVcUhFJPFDco.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 149,
-          "title": "Akira",
-          "image": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 9323,
-          "title": "Ghost in the Shell",
-          "image": "/9gC88zYUBARRSThcG93MvW14sqx.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 73223,
-          "title": "Black Clover",
-          "image": "/kaMisKeOoTBPxPkbC3OW7Wgt6ON.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 3,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImVkd2FyZEBleGFtcGxlLmNvbSIsImlhdCI6MTY5Nzk1NTU0NSwiZXhwIjoxNjk3OTU5MTQ1LCJzdWIiOiIzIn0.lKqAtPuJ9COWXJkZQr42iHxm4IvreJbG0I8mzKMZMic",
-      "userEmail": "edward@example.com",
-      "list": [
-        {
-          "id": 31911,
-          "title": "Fullmetal Alchemist: Brotherhood",
-          "image": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
-          "type": "tv"
-        },
-        {
-          "id": 37863,
-          "title": "Fullmetal Alchemist",
-          "image": "/nSRBXxU05zFCuU8SbcQkQyoXrVd.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 4,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5MDg4MDgsImV4cCI6MTY5NzkxMjQwOCwic3ViIjoiNCJ9.Zmsp-5YDg6Ug2zikeIzzIYGPbvViTa7zXyIaT1AnMwo",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5OTkwNjQsImV4cCI6MTY5ODAwMjY2NCwic3ViIjoiMiJ9.Kop__0npnCRYvFInqNY2oXB142mIyn7RJ9KPnUW2bg8",
       "userEmail": "goku@example.com",
       "list": [
         {
-          "id": 62715,
-          "title": "Dragon Ball Super",
-          "image": "/qEUrbXJ2qt4Rg84Btlx4STOhgte.jpg",
+          "id": 12971,
+          "title": "Dragon Ball Z",
+          "image": "/dBsDWUcdfbuZwglgyeeQ9ChRoS4.jpg",
           "type": "tv"
         },
         {
-          "id": 303857,
-          "title": "Dragon Ball Z: Resurrection 'F'",
-          "image": "/soq3AxjALdBfdPAm8H7yuMmNL5Y.jpg",
+          "id": 39108,
+          "title": "Dragon Ball Z: Wrath of the Dragon",
+          "image": "/4ybkLEVCvwQEzh7Lq1zsCmda5A4.jpg",
           "type": "movie"
         },
         {
-          "id": 126963,
-          "title": "Dragon Ball Z: Battle of Gods",
-          "image": "/nxZEdYcHMuD8SSuwusDnK9CD2H1.jpg",
+          "id": 24752,
+          "title": "Dragon Ball Z: Cooler's Revenge",
+          "image": "/sN4HyDkBFGtNNg9fm2iETQNUMSt.jpg",
           "type": "movie"
         },
         {
-          "id": 39323,
-          "title": "Dragon Ball Z: Bardock - The Father of Goku",
-          "image": "/docwOsWZuwJKQdwcYJtQPBcg6bm.jpg",
+          "id": 39105,
+          "title": "Dragon Ball Z: Bojack Unbound",
+          "image": "/iihTK9Af8G1ZzBjkIIAV4qQMkzF.jpg",
           "type": "movie"
         },
         {
-          "id": 39107,
-          "title": "Dragon Ball Z: Fusion Reborn",
-          "image": "/7AHvaEAeQfkfJ4OqcBePxa2ao09.jpg",
+          "id": 39101,
+          "title": "Dragon Ball Z: The Tree of Might",
+          "image": "/fDX4Dp8IKvjBAaEb5MOJrGkxWX0.jpg",
           "type": "movie"
         },
         {
-          "id": 80020,
-          "title": "Super Dragon Ball Heroes",
-          "image": "/8jq6xv5c1WK7KAPOXCsodm8eUxp.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 5,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbmppcm9AZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc0NzIzNzMsImV4cCI6MTY5NzQ3NTk3Mywic3ViIjoiNSJ9.lkxDyY9kCBrEzckztcHDsb-xWWW3qklfGj3Z-pPADfk",
-      "userEmail": "tanjiro@example.com",
-      "list": [
-        {
-          "id": 85937,
-          "title": "Demon Slayer: Kimetsu no Yaiba",
-          "image": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
-          "type": "tv"
-        },
-        {
-          "id": 635302,
-          "title": "Demon Slayer -Kimetsu no Yaiba- The Movie: Mugen Train",
-          "image": "/h8Rb9gBr48ODIwYUttZNYeMWeUU.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 895003,
-          "title": "Demon Slayer: Kimetsu no Yaiba - Asakusa Arc",
-          "image": "/9FFkgKTLXpTMJi8sodQWZmhpeHY.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 95479,
-          "title": "Jujutsu Kaisen",
-          "image": "/hFWP5HkbVEe40hrXgtCeQxoccHE.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 6,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvaGFuQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk3OTUzOTIyLCJleHAiOjE2OTc5NTc1MjIsInN1YiI6IjYifQ.-7fjzhSzy8a6wNnYuOCRuebXdzwci0-esVonhA-OlWk",
-      "userEmail": "gohan@example.com",
-      "list": [
-        {
-          "id": 299054,
-          "title": "Expend4bles",
-          "image": "/mOX5O6JjCUWtlYp5D8wajuQRVgy.jpg",
-          "type": "MOVIE"
-        },
-        {
-          "id": 1058694,
-          "title": "Radical",
-          "image": "/zwcmjn3qKhP7kUmpgNT0f61xzU3.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 565770,
-          "title": "Blue Beetle",
-          "image": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 1008042,
-          "title": "Talk to Me",
-          "image": "/kdPMUMJzyYAc4roD52qavX0nLIC.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 95479,
-          "title": "Jujutsu Kaisen",
-          "image": "/hFWP5HkbVEe40hrXgtCeQxoccHE.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 7,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InN5bHBoaWVAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5MTE3NDQsImV4cCI6MTY5NzkxNTM0NCwic3ViIjoiNyJ9.CEzZremhvSyvJEuajlGraUDLRIe-GwioLVx_RPTpfVo",
-      "userEmail": "sylphie@example.com",
-      "list": [
-        {
-          "id": 125988,
-          "title": "Silo",
-          "image": "/zBx1X06G1OlndbXTCZI13FECNz2.jpg",
-          "type": "tv"
-        }
-      ]
-    },
-    {
-      "id": 8,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vZWxsZVNAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5NTI2NjMsImV4cCI6MTY5Nzk1NjI2Mywic3ViIjoiOCJ9.V6egJAq099bOp7SFDMKKaj4fPNSLHtHCNijwQ3NLElM",
-      "userEmail": "noelleS@example.com",
-      "list": [
-        {
-          "id": 466420,
-          "title": "Killers of the Flower Moon",
-          "image": "/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
+          "id": 614930,
+          "title": "Teenage Mutant Ninja Turtles: Mutant Mayhem",
+          "image": "/ueO9MYIOHO7M1PiMUeX74uf8fB9.jpg",
           "type": "movie"
         }
       ]
@@ -210,43 +90,13 @@
   "users": [
     {
       "email": "naruto@example.com",
-      "password": "$2a$10$vkeIek98hNbLX194ltHMOOH8V9ZHCSPQ3ny0wlV8.J6pOQZhkqn.u",
+      "password": "$2a$10$KfdHRKH1LG6Abbwoj.Lb3eD.v9sxlmUnLMP.VlWijM4yoJKRYh/Fy",
       "id": 1
     },
     {
-      "email": "asta@example.com",
-      "password": "$2a$10$FhhKg/n6.BGAl8D7N4.z/OA6NaL843KU50nVd2pAjVY6pTcU7mJsq",
-      "id": 2
-    },
-    {
-      "email": "edward@example.com",
-      "password": "$2a$10$SXJC.80c//n0W.qGO36AgOhPnNVTqqgXChRFHx1RzFBiHUMJKjP7G",
-      "id": 3
-    },
-    {
       "email": "goku@example.com",
-      "password": "$2a$10$E4UiHbWKRHS6XVLyHy8VYeDw8RfN2BYOVziRG7zUnKbUMF7P1k8ye",
-      "id": 4
-    },
-    {
-      "email": "tanjiro@example.com",
-      "password": "$2a$10$f6LxT.HrelbVaACYF1xPcejPYHPg296dWtgTb/Pclr75..48Yhs6a",
-      "id": 5
-    },
-    {
-      "email": "gohan@example.com",
-      "password": "$2a$10$Xn4K0Vgzdl56QaGsmXqmRuu3zKfNohnwaTNAZ8HxIPPf5k4OGbkm2",
-      "id": 6
-    },
-    {
-      "email": "sylphie@example.com",
-      "password": "$2a$10$wT5xy0ZoLccqRB02adHQpOCCgTmTd1iJPswwg4E5ZL8uWGLC4Hise",
-      "id": 7
-    },
-    {
-      "email": "noelleS@example.com",
-      "password": "$2a$10$eWdZixa1CVRJk1jC3/2EW.GXeoPomX1Ko60zkfjpCmV/qJaPWvRXS",
-      "id": 8
+      "password": "$2a$10$7/bJ4hHvkv.WKH3pI.c5Z./.zNfj4jnfElBpTXa8B8PJltISml39e",
+      "id": 2
     }
   ]
 }

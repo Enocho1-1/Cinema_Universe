@@ -1,3 +1,12 @@
+// User Data
+ const userData = () => {
+    const token = JSON.parse(sessionStorage.getItem("token"))
+    const userID = JSON.parse(sessionStorage.getItem("userID"))
+    const email = JSON.parse(sessionStorage.getItem("username"))
+
+    return {token, userID , email }
+ }
+
 // BackDrop Images Async (Carousel)
 export  const fetchBackDrop = async () => {
     const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')
@@ -82,9 +91,7 @@ export const fetchTopRatedTVShows = async () => {
 // Update Watch List
 export const updateWatchList = async (list) => {
 
-  const token = JSON.parse(sessionStorage.getItem("token"))
-  const userID = JSON.parse(sessionStorage.getItem("userID"))
-  const email = JSON.parse(sessionStorage.getItem("username"))
+  const { token, userID, email} = userData()
 
   const userList = {
     id:userID,
