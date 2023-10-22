@@ -26,6 +26,8 @@ export const CarouselSlide = ({item,type}) => {
         sessionStorage.setItem("type",JSON.stringify(type))
     }
 
+
+
   return (
     <figure>
         <img  className="mainImg" src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="..."/>
@@ -53,7 +55,7 @@ export const CarouselSlide = ({item,type}) => {
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
           
-                <button onClick={() => {addToWatchlist(watchListItem),updateWatchList(list)}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
+                <button onClick={() => {addToWatchlist(watchListItem),  updateWatchList(list)}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
                 </button>

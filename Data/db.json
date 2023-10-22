@@ -45,7 +45,7 @@
     },
     {
       "id": 2,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgwMDY4OTUsImV4cCI6MTY5ODAxMDQ5NSwic3ViIjoiMiJ9.zWcR7Wn5_6R8250e8ypbs0Z-KeFMasihnw0sZ-O1yjY",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgwMDc1MDgsImV4cCI6MTY5ODAxMTEwOCwic3ViIjoiMiJ9.H6klmsQuw3s3UCoJLexgq1ILZMl-96z8KWPNz35_w2I",
       "userEmail": "goku@example.com",
       "list": [
         {
@@ -95,12 +95,24 @@
           "title": "Expend4bles",
           "image": "/mOX5O6JjCUWtlYp5D8wajuQRVgy.jpg",
           "type": "MOVIE"
+        },
+        {
+          "id": 554600,
+          "title": "Uri: The Surgical Strike",
+          "image": "/yNySAgpAnWmPpYinim9E0tUzJWG.jpg",
+          "type": "MOVIE"
+        },
+        {
+          "id": 926393,
+          "title": "The Equalizer 3",
+          "image": "/b0Ej6fnXAP8fK75hlyi2jKqdhHz.jpg",
+          "type": "MOVIE"
         }
       ]
     },
     {
       "id": 3,
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbmppcm9AZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgwMDY4NDUsImV4cCI6MTY5ODAxMDQ0NSwic3ViIjoiMyJ9.64ySrGWakHYbPf4PfP6N2xwx2n4Jb_UEjBQ3w5I2VNc",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRhbmppcm9AZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgwMDc1NzIsImV4cCI6MTY5ODAxMTE3Miwic3ViIjoiMyJ9.4OO7CbJJKmPewLzgasCsGWCQ4pAX2_M45z3_s8LqIh0",
       "userEmail": "tanjiro@example.com",
       "list": [
         {
