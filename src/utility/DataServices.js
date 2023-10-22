@@ -78,3 +78,16 @@ export const fetchTopRatedTVShows = async () => {
     }
   
 }
+
+// Update Watch List
+export const updateWatchList = async (userID,options) => {
+  try{
+    const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+    if(!response.ok){
+        throw new Error(`${response.status}`)
+    } 
+
+}catch(error){
+    throw new Error(error.message)
+}
+}

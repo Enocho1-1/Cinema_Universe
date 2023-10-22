@@ -3,6 +3,7 @@ import { useEffect } from "react"
 import { useMatchMedia,useTitle} from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
+import { updateWatchList } from "../../utility"
 import { WatchCard,EmptyList } from "./components/index"
 import play from "../../assets/play-button.png"
 
@@ -36,15 +37,7 @@ export const WatchList = ({title}) => {
     }
 
     const updateList = async () => {
-      try{
-          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
-          if(!response.ok){
-              throw new Error(`${response.status}`)
-          } 
-
-      }catch(error){
-          throw new Error(error.message)
-      }
+        updateWatchList (userID,options)
       }
       updateList()
     },[list])

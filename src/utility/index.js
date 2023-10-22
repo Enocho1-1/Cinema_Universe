@@ -1,12 +1,6 @@
 // Authorization Detail
-export { postUserObj } from "./AuthDetail"
-export { registerUser } from "./AuthDetail"
-export { loginUser } from "./AuthDetail"
+export { postUserObj, registerUser,loginUser  } from "./AuthDetail"
+
 
 // Data Services
-export { fetchBackDrop } from "./DataServices"
-export { fetchTrending } from "./DataServices"
-export { fetchUpComingMovies } from "./DataServices"
-export { fetchNowPlayingMovies } from "./DataServices"
-export { fetchPopularTVShows } from "./DataServices"
-export { fetchTopRatedTVShows } from "./DataServices"
+export { fetchBackDrop , fetchTrending , fetchUpComingMovies, fetchNowPlayingMovies, fetchPopularTVShows,fetchTopRatedTVShows,updateWatchList  } from "./DataServices"
