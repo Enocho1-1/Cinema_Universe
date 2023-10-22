@@ -198,6 +198,91 @@
           "type": "tv"
         }
       ]
+    },
+    {
+      "id": 8,
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vZWxsZVNAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTc5NDg3NDAsImV4cCI6MTY5Nzk1MjM0MCwic3ViIjoiOCJ9.qX2n3MaVqNMXxCAVvAFCYwNgSXdOXgxVS5NImDDdjrQ",
+      "userEmail": "noelleS@example.com",
+      "list": [
+        {
+          "id": 16136,
+          "title": "Juice",
+          "image": "/fLOB1MdIf2jWexxOzq441lNTIpW.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 9516,
+          "title": "Menace II Society",
+          "image": "/nS7yqmSVeNoH22VXj69JoFCxW1h.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 11443,
+          "title": "Dead Presidents",
+          "image": "/wRLepMZoUCwjLFb1WSbuUT6uVWR.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 293863,
+          "title": "The Age of Adaline",
+          "image": "/MbILysGhjAbnZi1Okae9wYqLMx.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 1027014,
+          "title": "Entergalactic",
+          "image": "/cfXbwPWwlmMhC45asWxCWq3Utwa.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 1402,
+          "title": "The Pursuit of Happyness",
+          "image": "/f6l9rghSHORkWLurUGJhaKAiyjY.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 1151534,
+          "title": "Nowhere",
+          "image": "/uldNFFKNXNvwss0MIZErMSFkBJZ.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 508883,
+          "title": "The Boy and the Heron",
+          "image": "/ojWgbvGGAHDXlGqNq4SsBuUSJYO.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 585378,
+          "title": "After Yang",
+          "image": "/qjEuDeKOhA7JqaaqhLSfoS9titb.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 54650,
+          "title": "Power",
+          "image": "/ctftzvyj8b0odco7EoS9VfJhf7K.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 60574,
+          "title": "Peaky Blinders",
+          "image": "/vUUqzWa2LnHIVqkaKVlVGkVcZIW.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 93405,
+          "title": "Squid Game",
+          "image": "/dDlEmu3EZ0Pgg93K2SVNLCjCSvE.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 286565,
+          "title": "Paper Towns",
+          "image": "/eoF6wYVj1vbrCWjL0rBkdZpgrxS.jpg",
+          "type": "movie"
+        }
+      ]
     }
   ],
   "users": [
@@ -235,6 +320,11 @@
       "email": "sylphie@example.com",
       "password": "$2a$10$wT5xy0ZoLccqRB02adHQpOCCgTmTd1iJPswwg4E5ZL8uWGLC4Hise",
       "id": 7
+    },
+    {
+      "email": "noelleS@example.com",
+      "password": "$2a$10$eWdZixa1CVRJk1jC3/2EW.GXeoPomX1Ko60zkfjpCmV/qJaPWvRXS",
+      "id": 8
     }
   ]
 }
