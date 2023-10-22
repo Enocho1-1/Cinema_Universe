@@ -14,27 +14,9 @@ export const WatchList = ({title}) => {
     const { dispatch, state, list } = useWatch()
  
 
-    const token = JSON.parse(sessionStorage.getItem("token"))
-    const userID = JSON.parse(sessionStorage.getItem("userID"))
-    const email = JSON.parse(sessionStorage.getItem("username"))
-
-    const userList = {
-      id:userID,
-      userToken: token,
-      userEmail: email ,
-      list: list
-    }
-
-    const options = {
-      method: "PUT",
-      headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
-      body:JSON.stringify(userList)
-  }
-
-
     useEffect(() => {
         // user watch list object
-        updateWatchList(userID,options)
+        updateWatchList(list)
      
       },[list])
 
