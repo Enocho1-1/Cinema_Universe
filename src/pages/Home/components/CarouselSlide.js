@@ -1,17 +1,18 @@
 /* eslint-disable */
 import { useWatch } from "../../../context/WatchContext";
+import { useEffect } from "react";
 import { Link } from "react-router-dom"
-import { toast } from 'react-toastify';
+import { updateWatchList } from "../../../utility";
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
 import bookmark from "../../../assets/bookmark-white.png"
 
 export const CarouselSlide = ({item,type}) => {
 
-    const { addToWatchlist } = useWatch()
+    const { addToWatchlist,list } = useWatch()
     const {id, title, release_date, backdrop_path,poster_path,vote_average, adult, overview} = item
 
-    // const media_type = JSON.parse(sessionStorage.getItem("type"))
+  
 
     const watchListItem = {
         id: id,
@@ -24,8 +25,6 @@ export const CarouselSlide = ({item,type}) => {
     const saveType = (type) => {
         sessionStorage.setItem("type",JSON.stringify(type))
     }
-
-
 
   return (
     <figure>
@@ -54,7 +53,7 @@ export const CarouselSlide = ({item,type}) => {
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
           
-                <button onClick={() => addToWatchlist(watchListItem)} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
+                <button onClick={() => {addToWatchlist(watchListItem),updateWatchList(list)}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
                 </button>
