@@ -18,29 +18,25 @@ export const WatchList = ({title}) => {
     const userID = JSON.parse(sessionStorage.getItem("userID"))
     const email = JSON.parse(sessionStorage.getItem("username"))
 
- 
-
-    useEffect(() => {
-      // user watch list object
-      const userList = {
-        id:userID,
-        userToken: token,
-        userEmail: email ,
-        list: list
-      }
-
-
-      const options = {
-        method: "PUT",
-        headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
-        body:JSON.stringify(userList)
+    const userList = {
+      id:userID,
+      userToken: token,
+      userEmail: email ,
+      list: list
     }
 
-    const updateList = async () => {
-        updateWatchList (userID,options)
-      }
-      updateList()
-    },[list])
+    const options = {
+      method: "PUT",
+      headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+      body:JSON.stringify(userList)
+  }
+
+
+    useEffect(() => {
+        // user watch list object
+        updateWatchList(userID,options)
+     
+      },[list])
 
 
   return (
