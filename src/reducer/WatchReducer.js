@@ -9,6 +9,16 @@ export const WatchReducer = (state,action) => {
             return { ...state, list: payload.list}
         case "REMOVE_FROM_WATCHLIST":
             return { ...state, list: payload.list}
+        case "ADD_NAME":
+            return { ...state, name: payload.value}
+        case "ADD_USER_NAME":
+            return { ...state, userName: payload.value}
+        case "ADD_ID":
+            return { ...state, id: payload.value}
+        case "ADD_ACCESS_TOKEN":
+            return { ...state, accessToken: payload.value}
+        case "ADD_PASSWORD":
+            return { ...state, passWord: payload.value}
         case "ALL":
             return { ...state, movie: false, tv:false}
         case "ALL_MOVIES":

@@ -6,6 +6,11 @@ import { toast } from "react-toastify";
 
 const initialState ={
     list:[],
+    name:null,
+    userName:null,
+    id:null,
+    accessToken:null,
+    passWord:null,
     movie: false,
     tv:false
 }
