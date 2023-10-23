@@ -20,6 +20,7 @@ export const registerUser = async (options, createWLObj,dispatch, navigate,toast
       // initialize user watch list function call
       createWLObj(data.user.id, data.user.name,data.accessToken, data.user.email )
 
+      dispatch({type:"ADD_EMAIL", payload:{value:data.user.email}})
       dispatch({type:"ADD_NAME",payload:{value:data.user.name}})
       dispatch({type:"ADD_ID",payload:{value:data.user.id}})
       dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:data.accessToken}})

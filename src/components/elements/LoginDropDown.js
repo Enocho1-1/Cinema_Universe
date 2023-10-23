@@ -6,13 +6,21 @@ import Bookmark from "../../assets/bookmark-white.png"
 import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {
-    const { state } = useWatch()
+    const { state, dispatch } = useWatch()
     const userName = state.email
     const navigate=useNavigate()
 
+    const clearState = () => {
+        dispatch({type:"ADD_NAME",payload:{value:""}})
+        dispatch({type:"ADD_EMAIL",payload:{value:""}})
+        dispatch({type:"ADD_ID",payload:{value:""}})
+        dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:""}})
+        dispatch({type:"ADD_PASSWORD",payload:{value:""}})
+    }
+
     const handleLogout = (event) => {
         event.preventDefault()
-
+        clearState()
         sessionStorage.clear()
         navigate("/")
     }

@@ -3,8 +3,91 @@
     {
       "id": 1,
       "name": "yusuke",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1c3VrZUBleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MDE5NywiZXhwIjoxNjk4MDgzNzk3LCJzdWIiOiIxIn0.EFF09VUIhmLli0omtHVBa1fmDIhpROYKW5-KcDhmT4c",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Inl1c3VrZUBleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MTM2NCwiZXhwIjoxNjk4MDg0OTY0LCJzdWIiOiIxIn0.3FN7JCD_hG1PfdjhglwbwakL0FXkMUvW9f1HMd8idF4",
       "userEmail": "yusuke@example.com",
+      "list": [
+        {
+          "id": 30669,
+          "title": "Yu Yu Hakusho",
+          "image": "/qyqnXUsMSCWXL5vHLRhu6xiNdmK.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 45279,
+          "title": "Yu Yu Hakusho: Poltergeist Report",
+          "image": "/fOD3EVUGWLxmeAfdloBjLwaucGC.jpg",
+          "type": "movie"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Yagami Light",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpZ2h0QGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgwOTI0LCJleHAiOjE2OTgwODQ1MjQsInN1YiI6IjIifQ.fEydeN9fPTI6xDZyciPpn3ViVstOAfxP8sq1HeFj9j0",
+      "userEmail": "light@example.com",
+      "list": [
+        {
+          "id": 13916,
+          "title": "Death Note",
+          "image": "/iigTJJskR1PcjjXqxdyJwVB3BoU.jpg",
+          "type": "tv"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Trunks Briefs",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRydW5rc0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MTYzNSwiZXhwIjoxNjk4MDg1MjM1LCJzdWIiOiIzIn0.rl-znOdL5JBpw0wuK7vTjjQ86OGZn3ZclQf13meyFLc",
+      "userEmail": "trunks@example.com",
+      "list": []
+    },
+    {
+      "id": 4,
+      "name": "Son Goku",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imdva3VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgwODIwMDgsImV4cCI6MTY5ODA4NTYwOCwic3ViIjoiNCJ9.tsvlXWJOFT9nAUzISkR7gi57o4k9Q-RZEPOk4GfvwT4",
+      "userEmail": "goku@example.com",
+      "list": []
+    },
+    {
+      "id": 5,
+      "name": "Son Gohan",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImdvaGFuQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgyMTgxLCJleHAiOjE2OTgwODU3ODEsInN1YiI6IjUifQ.GoMjb5kdbjA0IUJjPPZP6g830HZ1RoXqg3EGS5UQoqI",
+      "userEmail": "gohan@example.com",
+      "list": []
+    },
+    {
+      "id": 6,
+      "name": "Noelle Silva",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5vZWxsZUBleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MzQ0OSwiZXhwIjoxNjk4MDg3MDQ5LCJzdWIiOiI2In0.mvi36o39xO9Fd_4MJZAOUK-Yl2PwU0sbik5_vapWfnQ",
+      "userEmail": "noelle@example.com",
+      "list": []
+    },
+    {
+      "id": 7,
+      "name": "Bulma Briefs",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImJ1bG1hQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgyNzAyLCJleHAiOjE2OTgwODYzMDIsInN1YiI6IjcifQ.0RV6fR4xkLcadBufDmxnwnYMouAqj6LM58ogHWSrQfU",
+      "userEmail": "bulma@example.com",
+      "list": []
+    },
+    {
+      "id": 8,
+      "name": " Keiko Yukimura",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlaWtvQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgyOTQ0LCJleHAiOjE2OTgwODY1NDQsInN1YiI6IjgifQ.t549onzyqB5QcHKdQ9hMmJ7ahDxJkEqZmPsd5ykE9Xg",
+      "userEmail": "keiko@example.com",
+      "list": []
+    },
+    {
+      "id": 9,
+      "name": "Naruto Uzamaki",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MzQxNiwiZXhwIjoxNjk4MDg3MDE2LCJzdWIiOiI5In0.9WKDe5LT2-yPu-0Xfqd4CZuSZ-4ScbShuQRTWNhI5kE",
+      "userEmail": "naruto@example.com",
+      "list": []
+    },
+    {
+      "id": 10,
+      "name": "Sasuke Uchiha",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InNhc3VrZUBleGFtcGxlLmNvbSIsImlhdCI6MTY5ODA4MzM0MywiZXhwIjoxNjk4MDg2OTQzLCJzdWIiOiIxMCJ9.2_pgMNXSSjMVV89QdZH46r2QNQid2op8ahhtLglA8X0",
+      "userEmail": "sasuke@example.com",
       "list": []
     }
   ],
@@ -14,6 +97,60 @@
       "password": "$2a$10$y8rOaee3aX83du0tARBZBeuE10/csKs3a546OLZDQcGWctKAy21Pu",
       "name": "yusuke",
       "id": 1
+    },
+    {
+      "email": "light@example.com",
+      "password": "$2a$10$sk4i7NnzQzVkKy49o5xJQ.xQtiI8YppxurFWFVvUbLRQTQ1OfDGsy",
+      "name": "Yagami Light",
+      "id": 2
+    },
+    {
+      "email": "trunks@example.com",
+      "password": "$2a$10$2rfExpzgEFsh9lrlLMwTvuI.OTcqhGHnc/0K4mHr8Ti7BQhWpbsVW",
+      "name": "Trunks Briefs",
+      "id": 3
+    },
+    {
+      "email": "goku@example.com",
+      "password": "$2a$10$5Ph8kBY5RWXe4Mm9NYweX.Ovn9BHhh9t..zT.lN0aLOS5bRRn05RC",
+      "name": "Son Goku",
+      "id": 4
+    },
+    {
+      "email": "gohan@example.com",
+      "password": "$2a$10$P3d.QLTegmuHQUb6weUwp.vcthS8EFhoRaR66qXtVzvnTKxegPqx6",
+      "name": "Son Gohan",
+      "id": 5
+    },
+    {
+      "email": "noelle@example.com",
+      "password": "$2a$10$PgQ1x35RLziwMyf3/7AWze77Fy5tF0J.AzJDhp8QWZBcfuP2Xvglq",
+      "name": "Noelle Silva",
+      "id": 6
+    },
+    {
+      "email": "bulma@example.com",
+      "password": "$2a$10$ZeFz2p/7G/V/RmkCDX.1luu9xvdTErH0KtIkKdpHHbLCBiRMy036K",
+      "name": "Bulma Briefs",
+      "id": 7
+    },
+    {
+      "email": "keiko@example.com",
+      "password": "$2a$10$RkXD9iD1NMEMP2RA7eONfeeWH/tb7BzY.Q.V.gcKfXwPbe13V0zUW",
+      "name": " Keiko Yukimura",
+      "id": 8
+    },
+    {
+      "email": "naruto@example.com",
+      "password": "$2a$10$zaGWhcVa6Ttc0qop.VC.IOLy/kKS2xC7LOX7.LK2PBDdcTy99WUD6",
+      "name": "Naruto Uzamaki",
+      "id": 9
+    },
+    {
+      "email": "sasuke@example.com",
+      "password": "$2a$10$9QTsBTHIhPoie0K9lyR8o.D7qgpnvGzNAO/1BKUdSMZG26FvVi..K",
+      "name": "Sasuke Uchiha",
+      "id": 10
     }
   ]
 }

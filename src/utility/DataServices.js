@@ -1,11 +1,3 @@
-// User Data
-//  const userData = () => {
-//     const token = JSON.parse(sessionStorage.getItem("token"))
-//     const userID = JSON.parse(sessionStorage.getItem("userID"))
-//     const email = JSON.parse(sessionStorage.getItem("username"))
-
-//     return {token, userID , email }
-//  }
 
 // BackDrop Images Async (Carousel)
 export  const fetchBackDrop = async () => {
@@ -88,7 +80,7 @@ export const fetchTopRatedTVShows = async () => {
   
 }
 
-// Update Watch List
+// Update User Watch List
 export const updateWatchList = async (list,state) => {
 
   const userList = {

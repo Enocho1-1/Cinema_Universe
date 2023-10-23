@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { useState } from "react";
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
 import { useWatch } from "../context/WatchContext";
@@ -9,11 +10,12 @@ import { toast } from 'react-toastify';
 
 export const Register = () => {
   useTitle("Cinema Universe | Sign-Up")
-
+  
   // useContext Destructure
   const { state, dispatch} = useWatch()
+  const [email, setUEmail] = useState("")
   const navigate = useNavigate()
-  const user = state.email
+ 
 
   // Create Watch List Obj Literal Notation/POST Method
   const createWLObj = async (id,name,token,email) => {
@@ -42,7 +44,7 @@ export const Register = () => {
 
     const authDetail = {
       name: event.target.name.value,
-      email: event.target.email.value,
+      email:  state.email ?  state.email : email,
       password: event.target.password.value
     }
 
@@ -56,6 +58,8 @@ export const Register = () => {
     registerUser(options, createWLObj,dispatch, navigate,toast)
      
   }
+
+  console.log(email)
 
 
   return (
@@ -75,7 +79,7 @@ export const Register = () => {
           </div> 
           <div className="mb-6">
           <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
-          <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" defaultValue={user || ""} required/>
+          <input onChange={e => setUEmail(e.target.value)} type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" value={ state.email ? state.email : email} required/>
           </div> 
           <div className="mb-6">
               <label htmlFor="password" className="block mb-2 text-lg font-teko font-medium text-white">Password</label>
