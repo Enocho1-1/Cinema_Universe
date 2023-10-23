@@ -23,13 +23,19 @@
     {
       "id": 2,
       "name": "Yagami Light",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpZ2h0QGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgwOTI0LCJleHAiOjE2OTgwODQ1MjQsInN1YiI6IjIifQ.fEydeN9fPTI6xDZyciPpn3ViVstOAfxP8sq1HeFj9j0",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImxpZ2h0QGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgzNjc2LCJleHAiOjE2OTgwODcyNzYsInN1YiI6IjIifQ.IMZfTQSxo0YLr8XygaT2jCbiXqe762y4HOWO9ZS6-YQ",
       "userEmail": "light@example.com",
       "list": [
         {
           "id": 13916,
           "title": "Death Note",
           "image": "/iigTJJskR1PcjjXqxdyJwVB3BoU.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 1429,
+          "title": "Attack on Titan",
+          "image": "/8C5gYahMFmzHKGNID8QrG5t25WU.jpg",
           "type": "tv"
         }
       ]
@@ -72,9 +78,16 @@
     {
       "id": 8,
       "name": " Keiko Yukimura",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlaWtvQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgyOTQ0LCJleHAiOjE2OTgwODY1NDQsInN1YiI6IjgifQ.t549onzyqB5QcHKdQ9hMmJ7ahDxJkEqZmPsd5ykE9Xg",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImtlaWtvQGV4YW1wbGUuY29tIiwiaWF0IjoxNjk4MDgzNzI1LCJleHAiOjE2OTgwODczMjUsInN1YiI6IjgifQ.DnW6Zr1-CbuINDeqHtEhEPBuoZ_1TmabD8Rs2k_jahY",
       "userEmail": "keiko@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 11036,
+          "title": "The Notebook",
+          "image": "/rNzQyW4f8B8cQeg7Dgj3n6eT5k9.jpg",
+          "type": "movie"
+        }
+      ]
     },
     {
       "id": 9,
