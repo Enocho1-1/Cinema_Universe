@@ -1,13 +1,16 @@
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
+import { useWatch } from "../context/WatchContext"
 import { Link } from "react-router-dom"
 import { loginUser } from "../utility"
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 import { toast } from 'react-toastify';
 
 export const Login = () => {
-
   useTitle("Cinema Universe | Login")
+  
+  // useContext Destructure
+  const { dispatch } = useWatch()
   const navigate = useNavigate()
 
   const handleSignIn  = async (event) => {
@@ -24,7 +27,7 @@ export const Login = () => {
       body: JSON.stringify(authDetail)
     }
 
-    loginUser(options, navigate,toast)
+    loginUser(options, navigate,dispatch,toast)
  
   }
 

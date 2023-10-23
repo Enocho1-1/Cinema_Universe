@@ -11,34 +11,39 @@ export const postUserObj = async (options) => {
 }
 
 // Register User
-export const registerUser = async (options, createWLObj, navigate,toast) => {
+export const registerUser = async (options, createWLObj,dispatch, navigate,toast) => {
     const response = await fetch("http://localhost:34000/register", options)
     if (!response.ok){
       toast.error("User Already Exists")
     } else{
       const data = await response.json()
       // initialize user watch list function call
-      createWLObj(data.user.id, data.accessToken, data.user.email )
+      createWLObj(data.user.id, data.user.name,data.accessToken, data.user.email )
+
+      dispatch({type:"ADD_NAME",payload:{value:data.user.name}})
+      dispatch({type:"ADD_ID",payload:{value:data.user.id}})
+      dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:data.accessToken}})
       
-      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
-      sessionStorage.setItem("token", JSON.stringify(data.accessToken))
-      setTimeout(() => {toast.success(`Welcome ${data.user.email}`)}, 2000)
+      setTimeout(() => {toast.success(`Welcome ${data.user.name}`)}, 2000)
       navigate("/home")
 
     }
 }
 
 // Login User
-export const loginUser = async (options, navigate,toast) => {
+export const loginUser = async (options, navigate,dispatch,toast) => {
     const response = await fetch("http://localhost:34000/signin", options)
     if (!response.ok){
       toast.error("Check Email or Password")
     } else{
       const data = await response.json()
-      sessionStorage.setItem("username", JSON.stringify(data.user.email))
-      sessionStorage.setItem("userID", JSON.stringify(data.user.id))
-      sessionStorage.setItem("token", JSON.stringify(data.accessToken))
-      setTimeout(() => {toast.success(`Welcome Back ${data.user.email}`)}, 2000)
+
+      dispatch({type:"ADD_NAME",payload:{value:data.user.name}})
+      dispatch({type:"ADD_EMAIL",payload:{value:data.user.email}})
+      dispatch({type:"ADD_ID",payload:{value:data.user.id}})
+      dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:data.accessToken}})
+
+      setTimeout(() => {toast.success(`Welcome Back ${data.user.name}`)}, 2000)
       navigate("/home")
     }
 }

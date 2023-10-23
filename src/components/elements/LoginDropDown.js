@@ -1,11 +1,13 @@
 
 import { useNavigate } from "react-router-dom"
+import { useWatch } from "../../context/WatchContext"
 import { Link } from "react-router-dom"
 import Bookmark from "../../assets/bookmark-white.png"
 import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {
-    const userName = JSON.parse(sessionStorage.getItem("username"))
+    const { state } = useWatch()
+    const userName = state.email
     const navigate=useNavigate()
 
     const handleLogout = (event) => {

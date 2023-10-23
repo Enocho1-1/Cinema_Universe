@@ -1,11 +1,11 @@
 // User Data
- const userData = () => {
-    const token = JSON.parse(sessionStorage.getItem("token"))
-    const userID = JSON.parse(sessionStorage.getItem("userID"))
-    const email = JSON.parse(sessionStorage.getItem("username"))
+//  const userData = () => {
+//     const token = JSON.parse(sessionStorage.getItem("token"))
+//     const userID = JSON.parse(sessionStorage.getItem("userID"))
+//     const email = JSON.parse(sessionStorage.getItem("username"))
 
-    return {token, userID , email }
- }
+//     return {token, userID , email }
+//  }
 
 // BackDrop Images Async (Carousel)
 export  const fetchBackDrop = async () => {
@@ -89,26 +89,25 @@ export const fetchTopRatedTVShows = async () => {
 }
 
 // Update Watch List
-export const updateWatchList = async (list) => {
-
-  const { token, userID, email} = userData()
+export const updateWatchList = async (list,state) => {
 
   const userList = {
-    id:userID,
-    userToken: token,
-    userEmail: email ,
+    id:state.id,
+    name:state.name,
+    userToken: state.accessToken,
+    userEmail: state.email,
     list: list
   }
 
   const options = {
     method: "PUT",
-    headers:{"Content-Type": "application/json", Authorization: `Bearer ${token}`},
+    headers:{"Content-Type": "application/json", Authorization: `Bearer ${state.accessToken}`},
     body:JSON.stringify(userList)
 }
 
 
   try{
-    const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+    const response = await fetch(`http://localhost:34000/660/orders/${state.id}`, options)
     if(!response.ok){
         throw new Error(`${response.status}`)
     } 

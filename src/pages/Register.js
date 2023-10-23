@@ -1,23 +1,26 @@
 /* eslint-disable */
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
+import { useWatch } from "../context/WatchContext";
 import { postUserObj ,registerUser} from "../utility";
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 import { toast } from 'react-toastify';
 
 
 export const Register = () => {
-
   useTitle("Cinema Universe | Sign-Up")
+
+  // useContext Destructure
+  const { state, dispatch} = useWatch()
   const navigate = useNavigate()
+  const user = state.email
 
-  const user = JSON.parse(sessionStorage.getItem("username"))
-
-  // User Watch List Function
-  const createWLObj = async (id,token,email) => {
+  // Create Watch List Obj Literal Notation/POST Method
+  const createWLObj = async (id,name,token,email) => {
 
      const userList = {
       id :id,
+      name: name,
       userToken: token,
       userEmail: email,
       list: []
@@ -33,10 +36,12 @@ export const Register = () => {
     
   }
 
+// Handle Registration Func
   const handleRegister = async (event) => {
     event.preventDefault()
 
     const authDetail = {
+      name: event.target.name.value,
       email: event.target.email.value,
       password: event.target.password.value
     }
@@ -48,7 +53,7 @@ export const Register = () => {
     }
 
      // Register User
-    registerUser(options, createWLObj, navigate,toast)
+    registerUser(options, createWLObj,dispatch, navigate,toast)
      
   }
 
@@ -57,13 +62,17 @@ export const Register = () => {
     <main className="relative initial h-screen w-screen">
       <InitialSecondHead/>
 
-      <div className="inputFieldContain max-h-[500px] w-[500px] max-md:w-[350px] min-xl:mt-[120px]">
+      <div className="inputFieldContain max-h-[600px] w-[500px] max-md:w-[350px] min-xl:mt-[120px]">
         <span className="text-white font-sans mt-6 px-4">
           <h1 className="font-semibold text-2xl">Create a password to start your membership</h1>
           <p className="text-lg mt-4">One step closer to entering the Cinema Universe 🚀</p>
         </span>
         
-        <form onSubmit={handleRegister} className="mt-6 px-3">
+        <form onSubmit={handleRegister} className="mt-6 px-3 py-2">
+        <div className="mb-6">
+          <label htmlFor="name" className="block mb-2 text-lg font-teko font-medium text-white">Name</label>
+          <input type="name" id="name" name="name" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" placeholder="Enter Name" required/>
+          </div> 
           <div className="mb-6">
           <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
           <input type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" defaultValue={user || ""} required/>

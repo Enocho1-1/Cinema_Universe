@@ -7,7 +7,7 @@ import { toast } from "react-toastify";
 const initialState ={
     list:[],
     name:null,
-    userName:null,
+    email:null,
     id:null,
     accessToken:null,
     passWord:null,

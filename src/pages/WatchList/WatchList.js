@@ -16,7 +16,7 @@ export const WatchList = ({title}) => {
 
     useEffect(() => {
         // user watch list object
-        updateWatchList(list)
+        updateWatchList(list,state)
      
       },[list])
 

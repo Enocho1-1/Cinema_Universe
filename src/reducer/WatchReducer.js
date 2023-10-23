@@ -11,8 +11,8 @@ export const WatchReducer = (state,action) => {
             return { ...state, list: payload.list}
         case "ADD_NAME":
             return { ...state, name: payload.value}
-        case "ADD_USER_NAME":
-            return { ...state, userName: payload.value}
+        case "ADD_EMAIL":
+            return { ...state, email: payload.value}
         case "ADD_ID":
             return { ...state, id: payload.value}
         case "ADD_ACCESS_TOKEN":
@@ -28,7 +28,7 @@ export const WatchReducer = (state,action) => {
         case "CLEAR":
             return { ...state, list: []}
         default:
-            console.log("No Watch List")
+            throw new Error("No Watch List")
 
     }
  

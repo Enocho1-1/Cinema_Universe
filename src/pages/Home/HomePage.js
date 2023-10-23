@@ -12,10 +12,10 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
-  const {  addWatchList } = useWatch()
+  const {  addWatchList,state } = useWatch()
   const navigate= useNavigate()
-  const token = JSON.parse(sessionStorage.getItem("token"))
-  const userID = JSON.parse(sessionStorage.getItem("userID"))
+  const token = state.accessToken
+  const userID = state.id
 
   // Match Media Hook
   const {myQuery} = useMatchMedia(769)
@@ -44,7 +44,7 @@ export const HomePage = () => {
  
    useQuery("watchList", fetchUser)
 
-  // console.log(list)
+
 
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">

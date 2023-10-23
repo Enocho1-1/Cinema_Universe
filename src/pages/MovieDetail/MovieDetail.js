@@ -12,7 +12,7 @@ import bookmark from "../../assets/bookmark-white.png"
 
 export const MovieDetail = () => {
 
-    const { addToWatchlist,list } = useWatch()
+    const { addToWatchlist,state,list } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -80,7 +80,7 @@ export const MovieDetail = () => {
 
     useEffect(() => {
       // user watch list object
-      updateWatchList(list)
+      updateWatchList(list,state)
    
     },[list])
 
