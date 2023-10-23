@@ -27,6 +27,12 @@ export const CarouselSlide = ({item,type}) => {
     }
 
 
+    const handleUpdateList = () => {
+        addToWatchlist(watchListItem)
+
+        setTimeout(() => {updateWatchList(list)},10000)
+    }
+
 
   return (
     <figure>
@@ -54,11 +60,11 @@ export const CarouselSlide = ({item,type}) => {
                     <img src={play} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
-          
-                <button onClick={() => {addToWatchlist(watchListItem),  updateWatchList(list)}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
+{/*           
+                <button onClick={() => {handleUpdateList}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
                     <img src={bookmark} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
-                </button>
+                </button> */}
             </aside>
 
         </figcaption>
