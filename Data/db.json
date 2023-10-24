@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Itadori Yuji",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml0YWRvcmlAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgxNjExOTYsImV4cCI6MTY5ODE2NDc5Niwic3ViIjoiMSJ9.niNeRCv0sVwTcOAXYyazyJ5-kJyD8HIUektgj6oDWds",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml0YWRvcmlAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgxNjMxMDMsImV4cCI6MTY5ODE2NjcwMywic3ViIjoiMSJ9.FerE_tT8s5BVOdRzvxAhliCxo-PmFYug9HqUzElZHAE",
       "userEmail": "itadori@example.com",
       "list": [
         {
@@ -17,6 +17,32 @@
           "title": "Enter the Dragon",
           "image": "/fyrh2ULEcmLpGTVLPQqFW45hqr5.jpg",
           "type": "movie"
+        },
+        {
+          "id": 11713,
+          "title": "Fist of Fury",
+          "image": "/dlcipCOa9hlfBBz7kCAyjsf3q0E.jpg",
+          "type": "movie"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Leopold Vermillion",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODE2MTY0MSwiZXhwIjoxNjk4MTY1MjQxLCJzdWIiOiIyIn0.vaSMioySf0sHKFrdF3Rt33xs2sAt0syjRojrK-Dl1rs",
+      "userEmail": "leo@example.com",
+      "list": [
+        {
+          "id": 565770,
+          "title": "Blue Beetle",
+          "image": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 1008042,
+          "title": "Talk to Me",
+          "image": "/kdPMUMJzyYAc4roD52qavX0nLIC.jpg",
+          "type": "movie"
         }
       ]
     }
@@ -27,6 +53,12 @@
       "password": "$2a$10$Pui6ZfUvhDWw37eZwf42g.kmpBNlnmCVKCNYtHZRzPbORmoL8C9sm",
       "name": "Itadori Yuji",
       "id": 1
+    },
+    {
+      "email": "leo@example.com",
+      "password": "$2a$10$lIa750bELiNuQiRvxabS6eQm.l0F01IiY7aq5DY4ghnZM8MQV47aS",
+      "name": "Leopold Vermillion",
+      "id": 2
     }
   ]
 }

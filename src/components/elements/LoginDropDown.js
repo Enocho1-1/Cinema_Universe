@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router-dom"
 import { useWatch } from "../../context/WatchContext"
 import { Link } from "react-router-dom"
-import Bookmark from "../../assets/bookmark-white.png"
+import Bookmark from "../../assets/bookmark1.png"
 import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {

@@ -1,11 +1,10 @@
 /* eslint-disable */
 import { useWatch } from "../../../context/WatchContext";
-import { useEffect } from "react";
 import { Link } from "react-router-dom"
 import { updateWatchList } from "../../../utility";
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
-import bookmark from "../../../assets/bookmark-white.png"
+
 
 export const CarouselSlide = ({item,type}) => {
 

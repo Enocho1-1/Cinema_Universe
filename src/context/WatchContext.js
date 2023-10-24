@@ -32,21 +32,15 @@ export const WatchProvider = ({children}) => {
 
     // Add Item WatchList
     function addToWatchlist(item){
-        const duplicateItem = state.list.find( watchItem => watchItem.id === item.id)
-
-        if(duplicateItem){
-            toast.error(`Already in Watch List`)
-        } else{
-            const updateList = state.list.concat(item)
-            toast.success(`Added to watchlist`)
-            dispatch({
-                type:"ADD_TO_WATCHLIST",
-                payload:{
-                    list: updateList
-                }
-            })
-        }
-   
+    
+        const updateList = state.list.concat(item)
+        dispatch({
+            type:"ADD_TO_WATCHLIST",
+            payload:{
+                list: updateList
+            }
+        })
+    
     }
 
     // Remove from WatchList

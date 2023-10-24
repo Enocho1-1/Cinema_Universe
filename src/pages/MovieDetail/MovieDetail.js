@@ -9,11 +9,12 @@ import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
 import star from "../../assets/star.png"
-import bookmark from "../../assets/bookmark-white.png"
+import bookmark from "../../assets/bookmark1.png"
+import bookmark_blue from "../../assets/bookmark-blue.png"
 
 export const MovieDetail = () => {
 
-    const { addToWatchlist,state,list } = useWatch()
+    const { addToWatchlist, removeFromWatchlist,state,list } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -54,6 +55,8 @@ export const MovieDetail = () => {
    
     },[list])
 
+    const inWatchList = list.find(item => item.id === watchListItem .id)
+
     // Movie/TV Cover
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
 
@@ -73,10 +76,7 @@ export const MovieDetail = () => {
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <aside className="flex justify-between ">
                     <h1 className="max-w-[700px] font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
-                    <button onClick={() => addToWatchlist(watchListItem)}>
-                      <img src={bookmark} className="h-6 pr-8" alt="" />
-                    </button>
-                
+                    { inWatchList ? (<button onClick={() => removeFromWatchlist(watchListItem)}> <img src={bookmark_blue} className="h-6 pr-8" alt="" /></button>) : (<button onClick={() => addToWatchlist(watchListItem)}> <img src={bookmark} className="h-6 pr-8" alt="" /></button>)}
                   </aside>
         
 
