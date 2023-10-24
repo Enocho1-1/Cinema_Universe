@@ -80,6 +80,37 @@ export const fetchTopRatedTVShows = async () => {
   
 }
 
+
+
+// Fetch Movie or TV
+export  const fetchMovieOrTV = async (data,movie_id,setIsShown,setInfo) => {
+
+  const type = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
+  const response = await fetch(type)
+  if (!response.ok){
+    throw new Error(`${response.status}`)
+  }else{
+    const result = await response.json()
+    setIsShown(false)
+    setInfo(result)
+  }
+}
+
+// Fetch Movie or TV Recommendations
+export  const fetchRecommended = async (data,movie_id,setRecommend) => {
+
+  const path = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
+  const response = await fetch(path)
+  if (!response.ok){
+    throw new Error(`${response.status}`)
+  }else{
+    const result = await response.json()
+    const array = result.results.slice(0,10)
+    setRecommend(array)
+  }
+  
+}
+
 // Update User Watch List
 export const updateWatchList = async (list,state) => {
 

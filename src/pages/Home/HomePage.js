@@ -17,7 +17,6 @@ export const HomePage = () => {
   const token = state.accessToken
   const userID = state.id
 
-  console.log(state.email)
   // Match Media Hook
   const {myQuery} = useMatchMedia(769)
 

@@ -4,6 +4,7 @@ import { useParams } from "react-router"
 import { useMatchMedia,useTitle } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { updateWatchList } from "../../utility"
+import { fetchMovieOrTV,fetchRecommended } from "../../utility"
 import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
@@ -16,7 +17,7 @@ export const MovieDetail = () => {
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
-    const [recommendList , setRecommend]  =useState([])
+    const [recommendList , setRecommend] = useState([])
     const Params = useParams() 
     const movie_id = Params.id
     const {myQuery} = useMatchMedia(769)
@@ -26,45 +27,14 @@ export const MovieDetail = () => {
     useEffect(() => {
  
       try{
-        const fetchData = async () => {
-          const type = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
-          const response = await fetch(type)
-          if (!response.ok){
-            throw new Error(`${response.status}`)
-          }else{
-            const result = await response.json()
-            setIsShown(false)
-            setInfo(result)
-          }
-        }
-        fetchData()
+       fetchMovieOrTV(data,movie_id,setIsShown,setInfo)
+       fetchRecommended(data,movie_id,setRecommend)
       }catch(error){
-        console.log(error)
+        throw new Error(error.message)
       }
       
-   
     },[movie_id])
 
-        // Recommendation useEffect
-        useEffect(() => {
-          try{
-              const fetchRecommended = async () => {
-                  const path = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`: `https://api.themoviedb.org/3/tv/${movie_id}/recommendations?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
-                  const response = await fetch(path)
-                  if (!response.ok){
-                    throw new Error(`${response.status}`)
-                  }else{
-                    const result = await response.json()
-                    const array = result.results.slice(0,10)
-                    setRecommend(array)
-                  }
-                  
-              }
-              fetchRecommended()
-          }catch(error){
-              console.log(error.message)
-          }
-      },[movie_id])
 
     const {id, title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
 
@@ -84,7 +54,7 @@ export const MovieDetail = () => {
    
     },[list])
 
-
+    // Movie/TV Cover
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
 
 
