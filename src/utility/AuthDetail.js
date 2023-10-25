@@ -2,7 +2,7 @@
 // Post Unique User Obj
 export const postUserObj = async (options) => {
     try{
-        const response = await fetch("http://localhost:34000/660/orders",options)
+        const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders`,options)
         if(!response){
           throw new Error(`${response.status}`)
         }
@@ -13,7 +13,7 @@ export const postUserObj = async (options) => {
 
 // Register User
 export const registerUser = async (options, createWLObj,dispatch, navigate,toast) => {
-    const response = await fetch("http://localhost:34000/register", options)
+    const response = await fetch(`${process.env.REACT_APP_HOST}/register`, options)
     if (!response.ok){
       toast.error("User Already Exists")
     } else{
@@ -34,7 +34,7 @@ export const registerUser = async (options, createWLObj,dispatch, navigate,toast
 
 // Login User
 export const loginUser = async (options, navigate,dispatch,toast) => {
-    const response = await fetch("http://localhost:34000/signin", options)
+    const response = await fetch(`${process.env.REACT_APP_HOST}/signin`, options)
     if (!response.ok){
       toast.error("Check Email or Password")
     } else{

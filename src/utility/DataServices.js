@@ -130,7 +130,7 @@ export const updateWatchList = async (list,state) => {
 
 
   try{
-    const response = await fetch(`http://localhost:34000/660/orders/${state.id}`, options)
+    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${state.id}`, options)
     if(!response.ok){
         throw new Error(`${response.status}`)
     } 

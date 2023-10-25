@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Itadori Yuji",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml0YWRvcmlAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgxNjMxMDMsImV4cCI6MTY5ODE2NjcwMywic3ViIjoiMSJ9.FerE_tT8s5BVOdRzvxAhliCxo-PmFYug9HqUzElZHAE",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Iml0YWRvcmlAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgyNTMzOTQsImV4cCI6MTY5ODI1Njk5NCwic3ViIjoiMSJ9.kzkOkMJ84vJlGOKAxN-NniHJX61Pvv_lF8CO6HiNWu4",
       "userEmail": "itadori@example.com",
       "list": [
         {
@@ -23,25 +23,37 @@
           "title": "Fist of Fury",
           "image": "/dlcipCOa9hlfBBz7kCAyjsf3q0E.jpg",
           "type": "movie"
+        },
+        {
+          "id": 85937,
+          "title": "Demon Slayer: Kimetsu no Yaiba",
+          "image": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+          "type": "tv"
         }
       ]
     },
     {
       "id": 2,
       "name": "Leopold Vermillion",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODE2MTY0MSwiZXhwIjoxNjk4MTY1MjQxLCJzdWIiOiIyIn0.vaSMioySf0sHKFrdF3Rt33xs2sAt0syjRojrK-Dl1rs",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imxlb0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODI1MzMxNywiZXhwIjoxNjk4MjU2OTE3LCJzdWIiOiIyIn0.9vXjI2_IO_LRpis7LeDBLjXWvo1rlr1Fn2PUhI-o7oo",
       "userEmail": "leo@example.com",
       "list": [
-        {
-          "id": 565770,
-          "title": "Blue Beetle",
-          "image": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
-          "type": "movie"
-        },
         {
           "id": 1008042,
           "title": "Talk to Me",
           "image": "/kdPMUMJzyYAc4roD52qavX0nLIC.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 1151534,
+          "title": "Nowhere",
+          "image": "/k2kbdwwmVKJp6VMUcJYKlL9jQ7d.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 980489,
+          "title": "Gran Turismo",
+          "image": "/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg",
           "type": "movie"
         }
       ]
