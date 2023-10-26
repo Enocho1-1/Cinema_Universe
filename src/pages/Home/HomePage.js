@@ -28,7 +28,7 @@ export const HomePage = () => {
     // Fetch User Watch List
     const fetchUser = async () => {
       try{
-          const response = await fetch(`http://localhost:34000/660/orders/${userID}`, options)
+          const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${userID}`, options)
           if(!response.ok){
               throw new Error(`${response.status}`)
           } else {
