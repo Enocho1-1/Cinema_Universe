@@ -59,7 +59,7 @@ export const Register = () => {
      
   }
 
-  console.log(email)
+ 
 
 
   return (
