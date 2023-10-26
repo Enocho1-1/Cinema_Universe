@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzNDA1NDYsImV4cCI6MTY5ODM0NDE0Niwic3ViIjoiMSJ9.mV4_ax6YA_7-OIUfzu4PV11hkbFqEG9KRL3DYqmk4Oc",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzNDExMzEsImV4cCI6MTY5ODM0NDczMSwic3ViIjoiMSJ9.xAb7Mcip2s64OwqDfW9WDX2sR5T_hxZBTajxrYH2ZE0",
       "userEmail": "JaneDoe@example.com",
       "list": [
         {
@@ -35,6 +35,18 @@
           "title": "Trolls Band Together",
           "image": "/kaQwboGvF6wZ4hYIvMYMFBgUCp5.jpg",
           "type": "movie"
+        },
+        {
+          "id": 9469,
+          "title": "He Got Game",
+          "image": "/kd8hRaysUQOz7AvSorZDJHuihcJ.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 85937,
+          "title": "Demon Slayer: Kimetsu no Yaiba",
+          "image": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
+          "type": "tv"
         }
       ]
     }
