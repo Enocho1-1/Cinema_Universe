@@ -8,7 +8,7 @@ const initialState ={
     list:[],
     name:"",
     email:"",
-    id:"",
+    id:Number,
     accessToken:"",
     passWord:"",
     movie: false,

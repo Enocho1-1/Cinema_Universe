@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzMzYwNDcsImV4cCI6MTY5ODMzOTY0Nywic3ViIjoiMSJ9.yWYZTK0yaaVylR3oP3_qLgzHssCM3NijKOL6e0vbNhg",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzMzk2NTgsImV4cCI6MTY5ODM0MzI1OCwic3ViIjoiMSJ9.Tu9k3zK2RNT9vKP8LMggLiNmGdF1oME54qnDEYV9Hck",
       "userEmail": "JaneDoe@example.com",
       "list": [
         {
