@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzMzk2NTgsImV4cCI6MTY5ODM0MzI1OCwic3ViIjoiMSJ9.Tu9k3zK2RNT9vKP8LMggLiNmGdF1oME54qnDEYV9Hck",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzNDA1NDYsImV4cCI6MTY5ODM0NDE0Niwic3ViIjoiMSJ9.mV4_ax6YA_7-OIUfzu4PV11hkbFqEG9KRL3DYqmk4Oc",
       "userEmail": "JaneDoe@example.com",
       "list": [
         {
@@ -29,6 +29,12 @@
           "title": "Fullmetal Alchemist: Brotherhood",
           "image": "/5ZFUEOULaVml7pQuXxhpR2SmVUw.jpg",
           "type": "tv"
+        },
+        {
+          "id": 901362,
+          "title": "Trolls Band Together",
+          "image": "/kaQwboGvF6wZ4hYIvMYMFBgUCp5.jpg",
+          "type": "movie"
         }
       ]
     }

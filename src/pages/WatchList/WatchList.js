@@ -1,9 +1,7 @@
 /* eslint-disable */
-import { useEffect } from "react"
 import { useMatchMedia,useTitle} from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
-import { updateWatchList } from "../../utility"
 import { WatchCard,EmptyList } from "./components/index"
 import play from "../../assets/play-button.png"
 
@@ -13,14 +11,6 @@ export const WatchList = ({title}) => {
     const {myQuery} = useMatchMedia(870)
     const { dispatch, state, list } = useWatch()
  
-
-    useEffect(() => {
-        // user watch list object
-        updateWatchList(list,state)
-     
-      },[list])
-
-
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
