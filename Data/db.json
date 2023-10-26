@@ -49,6 +49,32 @@
           "type": "tv"
         }
       ]
+    },
+    {
+      "id": 2,
+      "name": "Mike Doe ",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTgzNDI3MzUsImV4cCI6MTY5ODM0NjMzNSwic3ViIjoiMiJ9.XrN_vp24bjK_ksMbhPBNWRCjcqlRVQYHa_mF_mPpPsQ",
+      "userEmail": "MikeDoe@example.com",
+      "list": [
+        {
+          "id": 980489,
+          "title": "Gran Turismo",
+          "image": "/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 557,
+          "title": "Spider-Man",
+          "image": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 37854,
+          "title": "One Piece",
+          "image": "/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+          "type": "tv"
+        }
+      ]
     }
   ],
   "users": [
@@ -57,6 +83,12 @@
       "password": "$2a$10$DMShnFV.Oc4tOGbsa59GyOmtS8nrqywRCmJXUlRAoXtfho7rXG26G",
       "name": "Jane Doe",
       "id": 1
+    },
+    {
+      "email": "MikeDoe@example.com",
+      "password": "$2a$10$Ufg11vjH3M9UIKqORgNVX.TSFhJ.bG59Eq3iPlOyrdEuEVTVwh9sa",
+      "name": "Mike Doe ",
+      "id": 2
     }
   ]
 }
