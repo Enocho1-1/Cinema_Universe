@@ -2,8 +2,6 @@ import { createContext, useContext,useReducer } from "react";
 import { WatchReducer } from "../reducer/WatchReducer";
 
 
-
-
 const initialState ={
     list:[],
     // name:"",

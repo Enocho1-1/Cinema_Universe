@@ -1,4 +1,10 @@
-
+// User Data Session Storage 
+const storeUserData = (name,email,id,accessToken) => {
+  sessionStorage.setItem("userName", name);
+  sessionStorage.setItem("userId", id);
+  sessionStorage.setItem("userEmail", email);
+  sessionStorage.setItem("accessToken", accessToken);
+}
 // Post Unique User Obj
 export const postUserObj = async (options) => {
     try{
@@ -12,7 +18,7 @@ export const postUserObj = async (options) => {
 }
 
 // Register User
-export const registerUser = async (options, createWLObj,dispatch, navigate,toast) => {
+export const registerUser = async (options, createWLObj, navigate,toast) => {
     const response = await fetch(`${process.env.REACT_APP_HOST}/register`, options)
     if (!response.ok){
       toast.error("User Already Exists")
@@ -20,12 +26,9 @@ export const registerUser = async (options, createWLObj,dispatch, navigate,toast
       const data = await response.json()
       // initialize user watch list function call
       createWLObj(data.user.id, data.user.name,data.accessToken, data.user.email )
+      // Store User Data in session storage
+      storeUserData(data.user.name,data.user.email,data.user.id,data.accessToken)
 
-      dispatch({type:"ADD_EMAIL", payload:{value:data.user.email}})
-      dispatch({type:"ADD_NAME",payload:{value:data.user.name}})
-      dispatch({type:"ADD_ID",payload:{value:data.user.id}})
-      dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:data.accessToken}})
-      
       setTimeout(() => {toast.success(`Welcome ${data.user.name}`)}, 2000)
       navigate("/home")
 
@@ -33,17 +36,14 @@ export const registerUser = async (options, createWLObj,dispatch, navigate,toast
 }
 
 // Login User
-export const loginUser = async (options, navigate,dispatch,toast) => {
+export const loginUser = async (options, navigate,toast) => {
     const response = await fetch(`${process.env.REACT_APP_HOST}/signin`, options)
     if (!response.ok){
       toast.error("Check Email or Password")
     } else{
       const data = await response.json()
-
-      dispatch({type:"ADD_NAME",payload:{value:data.user.name}})
-      dispatch({type:"ADD_EMAIL",payload:{value:data.user.email}})
-      dispatch({type:"ADD_ID",payload:{value:data.user.id}})
-      dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:data.accessToken}})
+      // Store User Data in session storage
+      storeUserData(data.user.name,data.user.email,data.user.id,data.accessToken)
 
       setTimeout(() => {toast.success(`Welcome Back ${data.user.name}`)}, 2000)
       navigate("/home")

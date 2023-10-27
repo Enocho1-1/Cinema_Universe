@@ -1,19 +1,17 @@
 import { useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router"
-import { useWatch } from "../../context/WatchContext"
 import { InitialHeader } from "./components/InitialHeader"
 import arrow from "../../assets/right-arrow.png"
 
 export const InitialPage = () => {
 
-  const { dispatch } = useWatch()
   useTitle("Cinema Universe | Watch Movies and TV Shows")
   const navigate = useNavigate()
 
   const initialSubmit = (event) => {
     event.preventDefault()
     const userEmail = event.target.email.value
-    dispatch({type:"ADD_EMAIL", payload:{value:userEmail}})
+    sessionStorage.setItem("userEmail", userEmail);
     event.target.reset()
     navigate("/register")
   }
