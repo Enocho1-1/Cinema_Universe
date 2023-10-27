@@ -4,19 +4,23 @@ import { WatchReducer } from "../reducer/WatchReducer";
 
 const initialState ={
     list:[],
-    // name:"",
-    // email:"",
-    // id:Number,
-    // accessToken:"",
-    // passWord:"",
-    // movie: false,
-    // tv:false
+    movie: false,
+    tv:false
 }
 
 const WatchContext = createContext(initialState)
 
 export const WatchProvider = ({children}) => {
     const [state,dispatch] = useReducer(WatchReducer,initialState)
+
+    function retrieveUserData(){
+        const userName = sessionStorage.getItem("userName")
+        const userID = sessionStorage.getItem("userId")
+        const userEmail = sessionStorage.getItem("userEmail")
+        const userToken= sessionStorage.getItem("accessToken")
+
+        return  {userName,userID, userEmail, userToken}
+    }
 
     // Add Custom User List
     function addWatchList(userList){
@@ -68,6 +72,7 @@ export const WatchProvider = ({children}) => {
         list: filteredList,
         state,
         dispatch,
+        retrieveUserData,
         addWatchList,
         addToWatchlist,
         removeFromWatchlist

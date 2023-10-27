@@ -12,17 +12,17 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
-  const {  addWatchList,state } = useWatch()
+  const {  addWatchList, retrieveUserData} = useWatch()
   const navigate= useNavigate()
-  const token = state.accessToken
-  const userID = state.id
+
+  const{ userID, userToken } = retrieveUserData()
 
   // Match Media Hook
   const {myQuery} = useMatchMedia(769)
 
   const options = {
     method: 'GET',
-    headers:{ "Content-Type": "application/json", Authorization: `Bearer ${token}`}
+    headers:{ "Content-Type": "application/json", Authorization: `Bearer ${userToken}`}
   }
 
     // Fetch User Watch List

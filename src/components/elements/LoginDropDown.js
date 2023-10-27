@@ -6,21 +6,12 @@ import Bookmark from "../../assets/bookmark1.png"
 import Logout from "../../assets/logout.png"
 
 export const LoginDropDown = () => {
-    const { state, dispatch } = useWatch()
-    const userName = state.email
-    const navigate=useNavigate()
-
-    const clearState = () => {
-        dispatch({type:"ADD_NAME",payload:{value:""}})
-        dispatch({type:"ADD_EMAIL",payload:{value:""}})
-        dispatch({type:"ADD_ID",payload:{value:""}})
-        dispatch({type:"ADD_ACCESS_TOKEN",payload:{value:""}})
-        dispatch({type:"ADD_PASSWORD",payload:{value:""}})
-    }
-
+    const { retrieveUserData } = useWatch()
+    const { userEmail } = retrieveUserData()
+    const navigate = useNavigate()
+    
     const handleLogout = (event) => {
         event.preventDefault()
-        clearState()
         sessionStorage.clear()
         navigate("/")
     }
@@ -28,7 +19,7 @@ export const LoginDropDown = () => {
   return (
     <div id="dropdownAvatar" className="loginMenu select-none	absolute top-[100%] right-5 z-10 w-44 divide-y divide-gray-100 shadow">
       <div className="py-3 px-4 text-sm text-gray-200">
-          <div className="font-sans font-medium truncate">{userName}</div>
+          <div className="font-sans font-medium truncate">{userEmail}</div>
       </div>
       <ul className="py-1 font-sans text-sm text-gray-200 hover:text-secondary-blue" aria-labelledby="dropdownUserAvatarButton">
           <li className="flex">
