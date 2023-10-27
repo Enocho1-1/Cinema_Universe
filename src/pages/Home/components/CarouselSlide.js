@@ -15,7 +15,7 @@ export const CarouselSlide = ({item,type}) => {
     <figure>
         <img  className="mainImg" src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="..."/>
         <figcaption className="carouselCaption font-sans ">
-            <h1 className="font-semibold text-gray-200 text-6xl max-lg:text-3xl ">{title}</h1>
+            <h1 className="max-w-6xl truncate... font-semibold text-gray-200 text-5xl max-lg:text-3xl ">{title}</h1>
             <aside className="text-md mt-6 max-w-6xl flex max-tablet:justify-center">
                 <div className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</div>
                 <div className="font-semibold text-sm ml-3 px-2 rounded-lg border border-gray-200 text-gray-200">{ adult ? "R" : "PG-13"}</div>
@@ -27,8 +27,8 @@ export const CarouselSlide = ({item,type}) => {
             </aside>
 
             {/* OverView */}
-            <aside className="max-h-60 max-w-4xl mt-4 ">
-                <p className="text-gray-200 max-xl:hidden">{overview}</p>
+            <aside className="max-h-[350px] max-w-[900px] whitespace-normal mt-4">
+                <p className=" text-gray-200  max-xl:hidden">{overview}</p>
             </aside> 
 
             {/* Buttons */}
