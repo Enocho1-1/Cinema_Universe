@@ -65,34 +65,9 @@
     {
       "id": 2,
       "name": "Mike Doe ",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MjAyNDEsImV4cCI6MTY5ODQyMzg0MSwic3ViIjoiMiJ9.V4qRmgNBuc3s7PsRQcOdLzlIfWEB3N1H8WrIFrKtzsI",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MjA4NzgsImV4cCI6MTY5ODQyNDQ3OCwic3ViIjoiMiJ9.tjShmvJnPsUoSMLKAHHoq6rruBcYmdpbb-woDNCYYgo",
       "userEmail": "MikeDoe@example.com",
-      "list": [
-        {
-          "id": 558,
-          "title": "Spider-Man 2",
-          "image": "/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 293863,
-          "title": "The Age of Adaline",
-          "image": "/MbILysGhjAbnZi1Okae9wYqLMx.jpg",
-          "type": "movie"
-        },
-        {
-          "id": 1396,
-          "title": "Breaking Bad",
-          "image": "/3xnWaLQjelJDDF7LT1WBo6f4BRe.jpg",
-          "type": "tv"
-        },
-        {
-          "id": 66732,
-          "title": "Stranger Things",
-          "image": "/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
-          "type": "tv"
-        }
-      ]
+      "list": []
     }
   ],
   "users": [

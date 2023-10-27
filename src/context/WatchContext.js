@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { createContext, useContext,useReducer } from "react";
 import { WatchReducer } from "../reducer/WatchReducer";
 
@@ -20,6 +21,10 @@ export const WatchProvider = ({children}) => {
         const userToken= sessionStorage.getItem("accessToken")
 
         return  {userName,userID, userEmail, userToken}
+    }
+
+    function saveMovie_TV_type(type){
+        sessionStorage.setItem("type",JSON.stringify(type))
     }
 
     // Add Custom User List
@@ -73,6 +78,7 @@ export const WatchProvider = ({children}) => {
         state,
         dispatch,
         retrieveUserData,
+        saveMovie_TV_type,
         addWatchList,
         addToWatchlist,
         removeFromWatchlist

@@ -1,37 +1,15 @@
 /* eslint-disable */
-import { useWatch } from "../../../context/WatchContext";
+import { useWatch } from "../../../context/WatchContext"
 import { Link } from "react-router-dom"
-import { updateWatchList } from "../../../utility";
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
 
 
 export const CarouselSlide = ({item,type}) => {
 
-    const { addToWatchlist,list } = useWatch()
-    const {id, title, release_date, backdrop_path,poster_path,vote_average, adult, overview} = item
-
-  
-
-    const watchListItem = {
-        id: id,
-        title: title,
-        image: poster_path,
-        type: type 
-
-    }
-
-    const saveType = (type) => {
-        sessionStorage.setItem("type",JSON.stringify(type))
-    }
-
-
-    const handleUpdateList = () => {
-        addToWatchlist(watchListItem)
-
-        setTimeout(() => {updateWatchList(list)},10000)
-    }
-
+    const { saveMovie_TV_type } = useWatch()
+    const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
+    
 
   return (
     <figure>
@@ -55,15 +33,10 @@ export const CarouselSlide = ({item,type}) => {
 
             {/* Buttons */}
             <aside className="mt-6 max-w-2xl flex max-tablet:justify-center">
-                <Link to={`/${id}`} onClick={() => saveType(type)} className="bg-primary-blue rounded-xl p-2 flex items-center">
+                <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className="bg-primary-blue rounded-xl p-2 flex items-center">
                     <img src={play} className="h-6" alt="" />
                     <p className="font-semibold text-md ml-2">Watch Now</p> 
                 </Link>
-{/*           
-                <button onClick={() => {handleUpdateList}} className="ml-3 rounded-xl p-2 flex items-center max-tablet:justify-center "> 
-                    <img src={bookmark} className="h-6" alt="" />
-                    <p className="font-semibold text-md ml-2 text-gray-200">Bookmark</p> 
-                </button> */}
             </aside>
 
         </figcaption>
