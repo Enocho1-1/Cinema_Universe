@@ -6,13 +6,13 @@ import { WatchReducer } from "../reducer/WatchReducer";
 
 const initialState ={
     list:[],
-    name:"",
-    email:"",
-    id:Number,
-    accessToken:"",
-    passWord:"",
-    movie: false,
-    tv:false
+    // name:"",
+    // email:"",
+    // id:Number,
+    // accessToken:"",
+    // passWord:"",
+    // movie: false,
+    // tv:false
 }
 
 const WatchContext = createContext(initialState)

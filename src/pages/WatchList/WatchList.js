@@ -1,4 +1,5 @@
 /* eslint-disable */
+import { useEffect } from "react"
 import { useMatchMedia,useTitle} from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
