@@ -47,13 +47,25 @@
           "title": "Akira",
           "image": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
           "type": "movie"
+        },
+        {
+          "id": 95479,
+          "title": "Jujutsu Kaisen",
+          "image": "/hFWP5HkbVEe40hrXgtCeQxoccHE.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 610150,
+          "title": "Dragon Ball Super: Super Hero",
+          "image": "/pi0iZOEHeA3ih4p1IwAG4x2DZNH.jpg",
+          "type": "movie"
         }
       ]
     },
     {
       "id": 2,
       "name": "Mike Doe ",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MTgzMjUsImV4cCI6MTY5ODQyMTkyNSwic3ViIjoiMiJ9.0igB6cenfC5V1e6tFp7iznzLFPB7fOje9JSK00W_MJY",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MjAyNDEsImV4cCI6MTY5ODQyMzg0MSwic3ViIjoiMiJ9.V4qRmgNBuc3s7PsRQcOdLzlIfWEB3N1H8WrIFrKtzsI",
       "userEmail": "MikeDoe@example.com",
       "list": [
         {
