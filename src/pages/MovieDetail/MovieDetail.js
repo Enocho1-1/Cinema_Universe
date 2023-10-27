@@ -14,7 +14,7 @@ import bookmark_blue from "../../assets/bookmark-blue.png"
 
 export const MovieDetail = () => {
 
-    const { addToWatchlist, removeFromWatchlist,state,list } = useWatch()
+    const { addToWatchlist, removeFromWatchlist,retrieveUserData,list } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -23,7 +23,6 @@ export const MovieDetail = () => {
     const movie_id = Params.id
     const {myQuery} = useMatchMedia(769)
 
-   
 
     useEffect(() => {
  
@@ -39,6 +38,7 @@ export const MovieDetail = () => {
 
     const {id, title, name, release_date,first_air_date, poster_path,backdrop_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
 
+    // Movie/TV Obj Literal
     const watchListItem = {
       id: id,
       title: title ? title : name,
@@ -51,7 +51,7 @@ export const MovieDetail = () => {
 
     useEffect(() => {
       // user watch list object
-      updateWatchList(list,state)
+      updateWatchList(list,retrieveUserData)
    
     },[list])
 

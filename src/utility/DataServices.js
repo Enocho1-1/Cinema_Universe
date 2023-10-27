@@ -112,25 +112,27 @@ export  const fetchRecommended = async (data,movie_id,setRecommend) => {
 }
 
 // Update User Watch List
-export const updateWatchList = async (list,state) => {
+export const updateWatchList = async (list,retrieveUserData) => {
+
+  const {userName,userID, userEmail, userToken} = retrieveUserData()
 
   const userList = {
-    id:state.id,
-    name:state.name,
-    userToken: state.accessToken,
-    userEmail: state.email,
+    id:userID,
+    name:userName,
+    userToken: userToken,
+    userEmail: userEmail,
     list: list
   }
 
   const options = {
     method: "PUT",
-    headers:{"Content-Type": "application/json", Authorization: `Bearer ${state.accessToken}`},
+    headers:{"Content-Type": "application/json", Authorization: `Bearer ${userToken}`},
     body:JSON.stringify(userList)
 }
 
 
   try{
-    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${state.id}`, options)
+    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${userID}`, options)
     if(!response.ok){
         throw new Error(`${response.status}`)
     } 

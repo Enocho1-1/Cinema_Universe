@@ -11,12 +11,13 @@ export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
     const {myQuery} = useMatchMedia(870)
-    const { dispatch, state, list } = useWatch()
+    const { dispatch, state, list,retrieveUserData } = useWatch()
 
     
+   
     useEffect(() => {
       // user watch list object
-      updateWatchList(list,state)
+      updateWatchList(list,retrieveUserData)
    
     },[list])
  

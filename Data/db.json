@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MTQ3NzYsImV4cCI6MTY5ODQxODM3Niwic3ViIjoiMSJ9.QFKRIrqxhqi0CfhhUziCR3ckLimD_QzSQwSXEDfpC70",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MTg0MzgsImV4cCI6MTY5ODQyMjAzOCwic3ViIjoiMSJ9.lnfDlT_PCuFqGSI0w41SH6pdPuwZvnB_OimWUKupRQY",
       "userEmail": "JaneDoe@example.com",
       "list": [
         {
@@ -17,12 +17,6 @@
           "title": "The Marvels",
           "image": "/y4YMYsGSMwu8e985g0Zbumvqxld.jpg",
           "type": "movie"
-        },
-        {
-          "id": 1396,
-          "title": "Breaking Bad",
-          "image": "/3xnWaLQjelJDDF7LT1WBo6f4BRe.jpg",
-          "type": "tv"
         },
         {
           "id": 31911,
@@ -47,31 +41,43 @@
           "title": "Demon Slayer: Kimetsu no Yaiba",
           "image": "/xUfRZu2mi8jH6SzQEJGP6tjBuYj.jpg",
           "type": "tv"
+        },
+        {
+          "id": 149,
+          "title": "Akira",
+          "image": "/neZ0ykEsPqxamsX6o5QNUFILQrz.jpg",
+          "type": "movie"
         }
       ]
     },
     {
       "id": 2,
       "name": "Mike Doe ",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MTQ3MzgsImV4cCI6MTY5ODQxODMzOCwic3ViIjoiMiJ9.bFw30CJ5pbfF-Ozf4l1maGH30h6if2BlemaZmXIW6iQ",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg0MTgzMjUsImV4cCI6MTY5ODQyMTkyNSwic3ViIjoiMiJ9.0igB6cenfC5V1e6tFp7iznzLFPB7fOje9JSK00W_MJY",
       "userEmail": "MikeDoe@example.com",
       "list": [
         {
-          "id": 980489,
-          "title": "Gran Turismo",
-          "image": "/51tqzRtKMMZEYUpSYkrUE7v9ehm.jpg",
+          "id": 558,
+          "title": "Spider-Man 2",
+          "image": "/olxpyq9kJAZ2NU1siLshhhXEPR7.jpg",
           "type": "movie"
         },
         {
-          "id": 557,
-          "title": "Spider-Man",
-          "image": "/gh4cZbhZxyTbgxQPxD0dOudNPTn.jpg",
+          "id": 293863,
+          "title": "The Age of Adaline",
+          "image": "/MbILysGhjAbnZi1Okae9wYqLMx.jpg",
           "type": "movie"
         },
         {
-          "id": 37854,
-          "title": "One Piece",
-          "image": "/fcXdJlbSdUEeMSJFsXKsznGwwok.jpg",
+          "id": 1396,
+          "title": "Breaking Bad",
+          "image": "/3xnWaLQjelJDDF7LT1WBo6f4BRe.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 66732,
+          "title": "Stranger Things",
+          "image": "/49WJfeN0moxb9IPfGn8AIqMGskD.jpg",
           "type": "tv"
         }
       ]
