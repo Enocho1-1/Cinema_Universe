@@ -26,7 +26,7 @@ export const Login = () => {
       body: JSON.stringify(authDetail)
     }
 
-    loginUser(options, navigate,toast)
+    loginUser(options,navigate,toast)
  
   }
 
