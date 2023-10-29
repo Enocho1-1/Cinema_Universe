@@ -9,8 +9,7 @@ export const CarouselSlide = ({item,type}) => {
 
     const { saveMovie_TV_type } = useWatch()
     const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
-    
-
+ 
   return (
     <figure>
         <img  className="mainImg" src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="..."/>
@@ -21,7 +20,7 @@ export const CarouselSlide = ({item,type}) => {
                 <div className="font-semibold text-sm ml-3 px-2 rounded-lg border border-gray-200 text-gray-200">{ adult ? "R" : "PG-13"}</div>
                 <>
                     <img src={star} className="h-4 ml-2 self-center" alt="" />
-                    <p className="ml-2 text-sm text-gray-200">{vote_average}/10</p>
+                    <p className="ml-2 text-sm text-gray-200">{Math.floor(vote_average)}/10</p>
                 </>
                 <p className="ml-2 text-sm text-gray-200">{release_date}</p>
             </aside>
