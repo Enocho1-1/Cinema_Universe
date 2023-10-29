@@ -18,7 +18,7 @@ export const InitialPage = () => {
 
 
   return (
-    <main className="initial h-screen w-screen">
+    <main className="initial min-h-[100vh] w-screen">
         < InitialHeader/>
 
         <section className="relative z-10 mt-[125px] min-xl:mt-[175px] flex flex-col items-center justify-center max-md:text-center">
