@@ -26,8 +26,8 @@ export const CarouselSlide = ({item,type}) => {
             </aside>
 
             {/* OverView */}
-            <aside className="max-h-[350px] max-w-4xl whitespace-normal mt-4">
-                <p className=" text-gray-200  max-xl:hidden">{overview}</p>
+            <aside className="max-2xl:max-h-[200px]  2xl:max-h-[250px]  max-xl:hidden max-w-4xl  whitespace-normal mt-4 ">
+                <p className=" text-gray-200 max-2xl:line-clamp-2 2xl:line-clamp-4">{overview}</p>
             </aside> 
 
             {/* Buttons */}
