@@ -8,11 +8,11 @@ export const TrendingBtn = ({item,type}) => {
 
 
   return (
-    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative h-[165px] w-[350px] rounded-xl max-tablet: mt-12">
+    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative min-h-[250px] w-[400px] rounded-xl max-tablet: mt-2">
       <div id="trending_overlay"></div>
-        <img className="h-fit w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
+        <img className="min-h-[100%] w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
         <span className="trendingInfo absolute px-2 top-[60%] left-0">
-            <h1 className="font-sans text-md font-bold text-white">{title}</h1>
+            <h1 className="max-w-[250px] truncate ... font-sans text-md font-bold text-white">{title}</h1>
             <aside className="mt-2 flex">
                 <img src={star} className="h-4  self-center" alt="" />
                 <p className="ml-2 text-md font-semibold text-white">{Math.floor(vote_average)}/10</p>

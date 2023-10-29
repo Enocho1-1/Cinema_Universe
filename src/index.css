@@ -147,8 +147,8 @@ figcaption{
   position: absolute;
   top: 0;
   left: 0;
-  height:120%;
-  width: 100%;
+  min-height:100%;
+  min-width: 100%;
   z-index: 5;
   background-color: rgba( 0, 0, 0, .55);
 }

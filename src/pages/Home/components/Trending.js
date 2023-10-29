@@ -16,20 +16,27 @@ export const Trending = () => {
     }
 
   return (
-    <>
+    <div className="flex">
         {
             isLoading 
             ? 
             <Loader/>
             :
-            (  
-            <div className="trendingBtn my-[30px] px-2 flex justify-around max-tablet:flex-col max-tablet:items-center tablet:max-[1545px]:grid tablet:max-[1545px]:grid-cols-twoCols tablet:max-[1545px]:gap-x-20 tablet:max-[1545px]:place-content-center ">
-                { data.map( (item,index) => (
-                    <TrendingBtn key={index} item={item} type="movie"/>
-                ))}
-            </div>
+            ( 
+                <>
+                    <div className="trendingBtn my-[0.625rem] p-[0.5rem] relative  flex gap-x-8 overflow-x-hidden overflow-y-hidden" id="slider">
+                        { data.map( (item,index) => (
+                            <TrendingBtn key={index} item={item} type="movie"/>
+                        ))}
+                    </div>
+                    <div className="mt-10 flex flex-col justify-center">
+                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px] rounded-md"><i class="bi bi-caret-right-fill"></i></button>
+                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px]  rounded-md mt-2 "><i class="bi bi-caret-left-fill"></i></button>
+                    </div>
+                </> 
+            
             )
         }
-    </>
+    </div>
   )
 }
