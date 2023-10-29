@@ -12,10 +12,10 @@ export const Register = () => {
   useTitle("Cinema Universe | Sign-Up")
   
   // useContext Destructure
-  const { state} = useWatch()
+  // const { state} = useWatch()
   const [email, setUEmail] = useState("")
   const navigate = useNavigate()
-  const userName = JSON.parse(sessionStorage.getItem("userName"))
+  const userEmail = sessionStorage.getItem("userEmail")
  
 
   // Create Watch List Obj Literal Notation/POST Method
@@ -80,7 +80,7 @@ export const Register = () => {
             </div> 
             <div className="mb-6">
             <label htmlFor="email" className="block mb-2 text-lg font-teko font-medium text-white">Email address</label>
-            <input onChange={e => setUEmail(e.target.value)} type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" value={ userName  ? userName  : email} required/>
+            <input onChange={e => setUEmail(e.target.value)} type="email" id="email" name="email" className=" bg-slate-700 border border-gray-300 text-white text-sm rounded-lg  block w-full p-2.5" value={ userEmail ?  userEmail  : email} required/>
             </div> 
             <div className="mb-6">
                 <label htmlFor="password" className="block mb-2 text-lg font-teko font-medium text-white">Password</label>
