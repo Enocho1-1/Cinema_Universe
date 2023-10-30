@@ -35,12 +35,12 @@ export const Trending = () => {
             :
             ( 
                 <>
-                    <div className="trendingBtn my-[0.625rem] p-[0.5rem] relative  flex gap-x-8 overflow-x-hidden overflow-y-hidden" id="slider">
+                    <div className="trendingBtn my-[0.625rem] p-[0.5rem] relative  flex gap-x-8 overflow-x-hidden overflow-y-hidden max-mobile:overflow-x-scroll" id="slider">
                         { data.map( (item,index) => (
                             <TrendingBtn key={index} item={item} type="movie"/>
                         ))}
                     </div>
-                    <div className="btns mt-10 ml-4 flex flex-col justify-center">
+                    <div className="btns  mx-4 flex flex-col justify-center">
                         <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px] rounded-md right" onClick={slideRight}><i className="bi bi-caret-right-fill"></i></button>
                         <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px]  rounded-md mt-2 left" onClick={slideLeft}><i className="bi bi-caret-left-fill"></i></button>
                     </div>
