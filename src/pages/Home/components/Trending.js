@@ -15,6 +15,17 @@ export const Trending = () => {
         throw new Error(error.message)
     }
 
+    const slideLeft = () => {
+        let slider = document.getElementById("slider");
+        slider.scrollLeft = slider.scrollLeft - 300;
+      }
+
+    const slideRight = () => {
+        let slider = document.getElementById("slider");
+        slider.scrollLeft = slider.scrollLeft + 300;
+    }
+
+
   return (
     <div className="flex">
         {
@@ -29,9 +40,9 @@ export const Trending = () => {
                             <TrendingBtn key={index} item={item} type="movie"/>
                         ))}
                     </div>
-                    <div className="mt-10 flex flex-col justify-center">
-                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px] rounded-md"><i class="bi bi-caret-right-fill"></i></button>
-                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px]  rounded-md mt-2 "><i class="bi bi-caret-left-fill"></i></button>
+                    <div className="btns mt-10 ml-4 flex flex-col justify-center">
+                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px] rounded-md right" onClick={slideRight}><i className="bi bi-caret-right-fill"></i></button>
+                        <button className="bg-gray-300 hover:bg-primary-blue py-10 px-[2px]  rounded-md mt-2 left" onClick={slideLeft}><i className="bi bi-caret-left-fill"></i></button>
                     </div>
                 </> 
             

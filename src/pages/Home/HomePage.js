@@ -54,7 +54,7 @@ export const HomePage = () => {
         < DefaultCarousel/>
 
         {/* Trending Movies Section */}
-        <section className="mt-6 m-auto max-w-[1380px]">
+        <section className="mt-6 m-auto max-w-[1750px]">
           <h1 className="font-sans font-semibold text-xl text-gray-300 text-center"><i className="bi bi-fire"></i>Trending Now<i className="bi bi-fire"></i></h1>
           <Trending />
         </section>

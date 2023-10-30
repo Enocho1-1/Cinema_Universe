@@ -21,7 +21,7 @@ export const fetchTrending = async () => {
         throw new Error(`${response.status}`)
       } else{
         const result = await response.json()
-        const array = result.results.slice(11,15)
+        const array = result.results.slice(11,20)
         
         return array
       }

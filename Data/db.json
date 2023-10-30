@@ -65,7 +65,7 @@
     {
       "id": 2,
       "name": "Mike Doe ",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2MTc3NzcsImV4cCI6MTY5ODYyMTM3Nywic3ViIjoiMiJ9.-q7K0kNC-l42So_8XbIm_7h60nQi6txaYMpzv0u6zyo",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2MjQxNDksImV4cCI6MTY5ODYyNzc0OSwic3ViIjoiMiJ9.VP44DtKVU-sfqi3HkB2W6OMvCo52876JC2YVORSCxEg",
       "userEmail": "MikeDoe@example.com",
       "list": []
     }
