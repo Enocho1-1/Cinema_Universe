@@ -45,7 +45,7 @@ export const Register = () => {
 
     const authDetail = {
       name: event.target.name.value,
-      email:  userName  ? userName  : email,
+      email:  userEmail  ? userEmail : email,
       password: event.target.password.value
     }
 

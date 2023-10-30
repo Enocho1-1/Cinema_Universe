@@ -73,6 +73,32 @@
           "title": "Killers of the Flower Moon",
           "image": "/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
           "type": "movie"
+        },
+        {
+          "id": 1151534,
+          "title": "Nowhere",
+          "image": "/zwKaPkkLizCg1onpHQq89LWugkS.jpg",
+          "type": "movie"
+        },
+        {
+          "id": 565770,
+          "title": "Blue Beetle",
+          "image": "/mXLOHHc1Zeuwsl4xYKjKh2280oL.jpg",
+          "type": "movie"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Naruto Uzamaki",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODY4MjAzNSwiZXhwIjoxNjk4Njg1NjM1LCJzdWIiOiIzIn0.wom-srDHmNQDCbIsVJfWAETWGGuGmDDBa9JzkpvKwGA",
+      "userEmail": "naruto@example.com",
+      "list": [
+        {
+          "id": 60625,
+          "title": "Rick and Morty",
+          "image": "/gdIrmf2DdY5mgN6ycVP0XlzKzbE.jpg",
+          "type": "tv"
         }
       ]
     }
@@ -89,6 +115,12 @@
       "password": "$2a$10$Ufg11vjH3M9UIKqORgNVX.TSFhJ.bG59Eq3iPlOyrdEuEVTVwh9sa",
       "name": "Mike Doe ",
       "id": 2
+    },
+    {
+      "email": "naruto@example.com",
+      "password": "$2a$10$nIGl2/mCDzq7FUs1geYAhOq/QQ8HZtyg/dKXTT./FQVPnkGYxnlV2",
+      "name": "Naruto Uzamaki",
+      "id": 3
     }
   ]
 }
