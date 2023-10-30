@@ -10,7 +10,7 @@ export const VideoPlayer = ({backdrop}) => {
 
     useEffect(() => {setPlayButton(false)},[backdrop])
   return (
-        <section className="relative h-[100vh] max-mobileLg:h-[55%] w-full" style={ {
+        <section className="videoImg relative h-[100vh] max-mobileLg:h-[55%] w-full" style={ {
                 backgroundImage: `url( ${backdrop ? backdropImage : collage})`,
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat"
@@ -19,9 +19,9 @@ export const VideoPlayer = ({backdrop}) => {
 
             <button onClick={() => setPlayButton(!playbutton)} className=""><img src={play} className="h-[35px] w-[35px]" alt="" /></button>
             { playbutton && 
-            // Video Player
-                <div className="absolute top-[25%]  h-[31.25rem] w-[56.25rem] max-2xl:top-[15%] max-2xl:w-[46.875rem] flex justify-center items-center bg-black">
-                <img src={gif} alt="" />
+                 // Video Player
+                <div className="absolute top-[25%]  h-[31.25rem] w-[56.25rem] mobile:max-2xl:top-[15%] mobile:max-2xl:w-[46.875rem] max-mobile:top-[18%] max-mobile:h-[250px] flex justify-center items-center bg-black">
+                  <img src={gif} alt="" />
                 </div>
             }
             

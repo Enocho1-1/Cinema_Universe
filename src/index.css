@@ -173,6 +173,10 @@ figcaption{
     height: 70vh;
   }
 
+  .videoImg{
+    background-position-x: center;
+  }
+
 }
 
 
@@ -207,7 +211,7 @@ figcaption{
     height:450px;
     padding:10px
   }
-  
+
 }
 /* Media Query for low resolution  Tablets, Ipads */
 @media  (max-width: 1350px) {

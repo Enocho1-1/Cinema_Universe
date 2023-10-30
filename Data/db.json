@@ -93,7 +93,14 @@
       "name": "Naruto Uzamaki",
       "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODY4NDQwMSwiZXhwIjoxNjk4Njg4MDAxLCJzdWIiOiIzIn0.v1eBlKJBRodhpFas0DT7ueh63QD8xQuJ6dAJfiSnxN8",
       "userEmail": "naruto@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 569094,
+          "title": "Spider-Man: Across the Spider-Verse",
+          "image": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
+          "type": "movie"
+        }
+      ]
     }
   ],
   "users": [
