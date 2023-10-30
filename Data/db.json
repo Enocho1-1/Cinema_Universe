@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Jane Doe",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2MTk5MDMsImV4cCI6MTY5ODYyMzUwMywic3ViIjoiMSJ9._sNHEKTEcmYFFgVKWxgyiOAELekChOleNFUoX34Nlbg",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6IkphbmVEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2ODY1MTksImV4cCI6MTY5ODY5MDExOSwic3ViIjoiMSJ9.N_2aP57AJx6_1npCdDkeQZf8gOCjDc4PPdcGqQ7xkEg",
       "userEmail": "JaneDoe@example.com",
       "list": [
         {
@@ -99,6 +99,30 @@
           "title": "Spider-Man: Across the Spider-Verse",
           "image": "/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg",
           "type": "movie"
+        },
+        {
+          "id": 54650,
+          "title": "Power",
+          "image": "/ctftzvyj8b0odco7EoS9VfJhf7K.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 97890,
+          "title": "Power Book II: Ghost",
+          "image": "/8rbxvwGpPd9MWjdhAoSBj016cns.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 124394,
+          "title": "Power Book III: Raising Kanan",
+          "image": "/b0OCAxrI9TT3C2MputjTNfE4n68.jpg",
+          "type": "tv"
+        },
+        {
+          "id": 101591,
+          "title": "BMF",
+          "image": "/g2juyqFlVTbKqCSm6Xsh23HnBF7.jpg",
+          "type": "tv"
         }
       ]
     }
