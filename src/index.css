@@ -114,10 +114,10 @@ figcaption{
   display: flex;
   justify-content: center;
   align-items: center;
-  top: 7%;
-  left: 10%;
-  height: inherit;
-  width: inherit;
+  top: 0;
+  left: 0;
+  height: 90%;
+  width: 100%;
   visibility: visible;
 }
 

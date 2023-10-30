@@ -65,9 +65,16 @@
     {
       "id": 2,
       "name": "Mike Doe ",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2MjQxNDksImV4cCI6MTY5ODYyNzc0OSwic3ViIjoiMiJ9.VP44DtKVU-sfqi3HkB2W6OMvCo52876JC2YVORSCxEg",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Ik1pa2VEb2VAZXhhbXBsZS5jb20iLCJpYXQiOjE2OTg2MjUzOTcsImV4cCI6MTY5ODYyODk5Nywic3ViIjoiMiJ9.WuhCLZ2ncc9PIeSKqorRXrifV2pfplyPIuTQFDjE830",
       "userEmail": "MikeDoe@example.com",
-      "list": []
+      "list": [
+        {
+          "id": 466420,
+          "title": "Killers of the Flower Moon",
+          "image": "/dB6Krk806zeqd0YNp2ngQ9zXteH.jpg",
+          "type": "movie"
+        }
+      ]
     }
   ],
   "users": [
