@@ -91,16 +91,9 @@
     {
       "id": 3,
       "name": "Naruto Uzamaki",
-      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODY4MjAzNSwiZXhwIjoxNjk4Njg1NjM1LCJzdWIiOiIzIn0.wom-srDHmNQDCbIsVJfWAETWGGuGmDDBa9JzkpvKwGA",
+      "userToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5hcnV0b0BleGFtcGxlLmNvbSIsImlhdCI6MTY5ODY4NDQwMSwiZXhwIjoxNjk4Njg4MDAxLCJzdWIiOiIzIn0.v1eBlKJBRodhpFas0DT7ueh63QD8xQuJ6dAJfiSnxN8",
       "userEmail": "naruto@example.com",
-      "list": [
-        {
-          "id": 60625,
-          "title": "Rick and Morty",
-          "image": "/gdIrmf2DdY5mgN6ycVP0XlzKzbE.jpg",
-          "type": "tv"
-        }
-      ]
+      "list": []
     }
   ],
   "users": [

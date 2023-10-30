@@ -15,12 +15,12 @@ export const VideoPlayer = ({backdrop}) => {
                 backgroundSize:"cover",
                 backgroundRepeat: "no-repeat"
         }}>
-            <aside  className="relative flex justify-center items-center" id="overlay">
+            <aside  className="relative flex justify-center items-center" id="video_player_overlay">
 
             <button onClick={() => setPlayButton(!playbutton)} className=""><img src={play} className="h-[35px] w-[35px]" alt="" /></button>
             { playbutton && 
             // Video Player
-                <div className="absolute top-[25%]  h-[500px] w-[900px] flex justify-center items-center bg-black">
+                <div className="absolute top-[25%]  h-[31.25rem] w-[56.25rem] max-2xl:top-[15%] max-2xl:w-[46.875rem] flex justify-center items-center bg-black">
                 <img src={gif} alt="" />
                 </div>
             }

@@ -74,8 +74,8 @@ export const MovieDetail = () => {
                 <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
 
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
-                  <aside className="flex justify-between ">
-                    <h1 className="max-w-[700px] font-sans font-semibold text-5xl max-mobile:text-center max-xl:text-3xl text-gray-200">{title ? title : name}</h1>
+                  <aside className="flex max-mobile:justify-around mobile:justify-between ">
+                    <h1 className="2xl:max-w-[43.75rem]  mobile:max-2xl:max-w-[31.25rem] max-mobile:max-w-[17.188rem] font-sans font-semibold text-3xl  text-gray-200">{title ? title : name}</h1>
                     { inWatchList ? (<button onClick={() => removeFromWatchlist(watchListItem)}> <img src={bookmark_blue} className="h-6 pr-8" alt="" /></button>) : (<button onClick={() => addToWatchlist(watchListItem)}> <img src={bookmark} className="h-6 pr-8" alt="" /></button>)}
                   </aside>
         
