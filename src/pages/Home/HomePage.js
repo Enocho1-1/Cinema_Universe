@@ -3,7 +3,7 @@ import { useQuery } from "react-query"
 import { useMatchMedia, useTitle } from "../../hooks/index"
 import { useNavigate } from "react-router-dom"
 import { useWatch } from "../../context/WatchContext"
-import { DefaultCarousel,Trending, UpComing, NowPlaying, Popular, TopRated } from "./components/index"
+import { DefaultCarousel, SectionContainer ,Trending, UpComing, NowPlaying, Popular, TopRated } from "./components/index"
 import { Header, Footer, MobileHeader } from "../../components/index"
 import play from "../../assets/play-button.png"
 
@@ -66,22 +66,22 @@ export const HomePage = () => {
         </section>
 
          {/* Now Playing Movies Section */}
-          <section className="relative mt-[100px]   px-6">
+          <SectionContainer >
             <div className="max-w-[95%] flex justify-between max-[600px]:flex-col max-[600px]:items-center">
               <h1 className="font-bold text-4xl text-gray-300 flex ml-6 "><img src={play} className="h-8 self-center mr-2"/>Now Playing</h1>
               <button  onClick={() => navigate(`/NowPlaying`)} className="w-fit max-[600px]:mt-4  px-4 hover:text-primary-blue hover:border-primary-blue hover:bg-primary-blue/25 rounded-3xl border border-gray-400 text-gray-400 text-sm">View More <i className="bi bi-arrow-up-right"></i></button>
             </div>
             <NowPlaying/>
-          </section>
+          </SectionContainer >
 
            {/* Popular TV Section */}
-           <section className="relative mt-[100px]   px-6">
+           <SectionContainer >
               <div className="max-w-[95%] flex justify-between max-[600px]:flex-col max-[600px]:items-center">
                 <h1 className="font-bold text-4xl text-gray-300 flex ml-6 "><img src={play} className="h-8 self-center mr-2"/>Popular</h1>
                 <button  onClick={() => navigate(`/TV/Popular`)} className="w-fit max-[600px]:mt-4  px-4 hover:text-primary-blue hover:border-primary-blue hover:bg-primary-blue/25 rounded-3xl border border-gray-400 text-gray-400 text-sm">View More <i className="bi bi-arrow-up-right"></i></button>
               </div>
               <Popular/>
-            </section>
+            </SectionContainer >
 
             {/* Top Rated Section */}
             <section className="relative my-[100px] px-6">
