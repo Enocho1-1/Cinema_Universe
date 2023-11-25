@@ -1,16 +1,19 @@
 import { useWatch } from "../../context/WatchContext"
 import { Link } from "react-router-dom"
 import collage from "../../assets/collage.jpg"
+import bookmark_blue from "../../assets/bookmark-blue.png"
 
 export const MovieCard = ({item, type=""}) => {
-    const { saveMovie_TV_type } = useWatch()
+    const { state,saveMovie_TV_type } = useWatch()
     const {id, title, name, release_date,first_air_date, poster_path,media_type} = item
 
     const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
+    const itemInWatchList = state.list.find(movie => movie.id === item.id)
 
    
   return (
     <span className="MovieCard relative max-w-[200px] mx-4">
+        { itemInWatchList && (<img className="absolute top-2 right-2 h-4 w-4" src={bookmark_blue} alt="" />)}
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
             <img className="rounded-xl" src={ poster_path ? posterImage: collage} alt="" />
         </Link>
