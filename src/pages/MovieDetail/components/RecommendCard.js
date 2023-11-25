@@ -15,7 +15,7 @@ export const RecommendCard = ({item}) => {
                 <img src={poster_path ? posterImage : collage} className="max-h-[9.375rem] min-w-[7.5rem] max-lg:h-[15.625rem] max-lg:w-fit" alt="" />
                 <aside className="mt-1 ml-2 px-2 text-ellipsis overflow-hidden ... max-mobileLg:py-4 flex flex-col">
                     <p className="font-sans text-md text-gray-500">{media_type}/ { release_date ? release_date : first_air_date} </p>
-                    <h1 className="mt-2 font-sans text-lg text-gray-200 line-clamp-1 ">{title ? title : name}</h1>
+                    <h1 className="max-w-[200px] mt-2 font-sans text-lg text-gray-200 truncate ..." title={title ? title : name} >{title ? title : name}</h1>
                 </aside>
             </Link>
     </>
