@@ -8,7 +8,7 @@ export const TrendingBtn = ({item,type}) => {
 
 
   return (
-    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative min-h-[250px] min-w-[400px] rounded-xl max-tablet: mt-2">
+    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative min-h-[250px] min-w-[400px] max-mobile:min-h-[150px] max-mobile:min-w-[250px]  rounded-xl max-tablet: mt-2">
       <div id="trending_overlay"></div>
         <img className="min-h-[100%] w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
         <span className="trendingInfo absolute px-2 top-[60%] left-0">
