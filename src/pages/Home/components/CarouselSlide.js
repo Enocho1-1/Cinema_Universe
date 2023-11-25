@@ -3,17 +3,19 @@ import { useWatch } from "../../../context/WatchContext"
 import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
+import generic from "../../../assets/movieCollage.jpg"
 
 
 export const CarouselSlide = ({item,type}) => {
 
     const { saveMovie_TV_type } = useWatch()
     const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
+    const backdropImage = backdrop_path
  
   return (
     <figure>
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)}>
-            <img  className="mainImg" src={`https://image.tmdb.org/t/p/original${backdrop_path}`} alt="..."/>
+            <img  className="mainImg" src={backdropImage ? (`https://image.tmdb.org/t/p/original${backdropImage}`) : generic} alt="..."/>
         </Link>
         <figcaption className="carouselCaption font-sans ">
             <h1 className="max-w-6xl font-semibold text-gray-200 text-5xl max-lg:text-3xl ">{title}</h1>
