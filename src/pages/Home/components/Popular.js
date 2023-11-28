@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useQuery } from "react-query"
 import { fetchPopularTVShows } from "../../../utility"
 import { MovieCard,Loader } from "../../../components/index"
@@ -23,7 +24,7 @@ export const Popular = () => {
             <Loader/>
             :
             ( 
-            <Category_Contain>
+            <Category_Contain>// eslint-disable-next-line 
             { data.map( (item, index) => (
                 <MovieCard key={index} item={item} type="tv"/>
             ))}

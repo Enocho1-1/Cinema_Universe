@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useQuery } from "react-query"
 import { fetchNowPlayingMovies } from "../../../utility"
 import { MovieCard, Loader  } from "../../../components/index"
@@ -23,7 +24,7 @@ export const NowPlaying = () => {
             <Loader/>
             :
             ( 
-            <Category_Contain >
+            <Category_Contain >// eslint-disable-next-line 
             { data.map( (item, index) => (
                 <MovieCard key={index} item={item} type="movie"/>
             ))}

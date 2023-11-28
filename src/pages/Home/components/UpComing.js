@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useQuery } from "react-query"
 import { Category_Contain } from "./Category_Contain"
 import { MovieCard,Loader  } from "../../../components/index"

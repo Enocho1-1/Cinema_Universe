@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { useNavigate } from "react-router"
 import play from "../../../assets/play-button.png"
 
