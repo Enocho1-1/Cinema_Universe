@@ -1,16 +1,17 @@
 import { useWatch } from "../../../context/WatchContext"
 import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
+import collage from "../../../assets/movieCollage.jpg"
 
 export const TrendingBtn = ({item,type}) => {
     const { saveMovie_TV_type } = useWatch()
     const { id, title, release_date, backdrop_path,vote_average} = item
-
+    const backdropImage = backdrop_path
 
   return (
     <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative min-h-[250px] min-w-[400px] max-mobile:min-h-[150px] max-mobile:min-w-[250px]  rounded-xl max-tablet: mt-2">
       <div id="trending_overlay"></div>
-        <img className="min-h-[100%] w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" />
+        <img className="min-h-[100%] w-fit  rounded-xl" src={backdropImage ? (`https://image.tmdb.org/t/p/original${backdropImage}`) : collage}alt="" />
         <span className="trendingInfo absolute px-2 top-[60%] left-0">
             <h1 className="max-w-[250px] truncate ... font-sans text-md font-bold text-white">{title}</h1>
             <aside className="mt-2 flex">

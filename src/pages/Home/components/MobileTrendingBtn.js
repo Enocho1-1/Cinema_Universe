@@ -9,7 +9,7 @@ export const MobileTrendingBtn = ({item,type}) => {
   }
   return (
     <Link to={`/${id}`} onClick={() => saveType(type)} className=" relative rounded-xl mx-4 max-tablet: mt-12">
-        <div className="relative  rounded-xl" style={{
+        {/* <div className="relative  rounded-xl" style={{
             backgroundImage:`url(${backdropImage})`,
             backgroundSize:"contain",
             backgroundRepeat: "no-repeat",
@@ -25,8 +25,8 @@ export const MobileTrendingBtn = ({item,type}) => {
                 </aside>
                 
             </span>
-        </div>
-        {/* <img className="h-[200px] w-fit  rounded-xl" src={`https://image.tmdb.org/t/p/original${backdrop_path}`}alt="" /> */}
+        </div> */}
+   
        
     </Link>
   )
