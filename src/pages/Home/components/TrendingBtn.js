@@ -19,7 +19,6 @@ export const TrendingBtn = ({item,type}) => {
                 <p className="ml-2 text-md font-semibold text-white">{Math.floor(vote_average)}/10</p>
                 <p className="ml-2 text-md font-semibold text-white">{release_date}</p>
             </aside>
-            
         </span>
     </Link>
   )
