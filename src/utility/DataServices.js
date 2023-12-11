@@ -135,9 +135,9 @@ export const updateWatchList = async (list,retrieveUserData) => {
     const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${userID}`, options)
     if(!response.ok){
         throw new Error(`${response.status}`)
-    } 
+    }
 
-}catch(error){
-    throw new Error(error.message)
-}
+    }catch(error){
+        throw new Error(error.message)
+    }
 }

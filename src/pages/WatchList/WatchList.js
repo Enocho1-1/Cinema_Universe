@@ -13,13 +13,7 @@ export const WatchList = ({title}) => {
     const {myQuery} = useMatchMedia(870)
     const { dispatch, state, list,retrieveUserData } = useWatch()
 
-    
-   
-    useEffect(() => {
-      // user watch list object
-      updateWatchList(list,retrieveUserData)
-   
-    },[list])
+    useEffect(() => {updateWatchList(list,retrieveUserData) },[list])
  
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
