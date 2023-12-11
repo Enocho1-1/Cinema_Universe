@@ -24,7 +24,7 @@ export const NowPlaying = () => {
             <Loader/>
             :
             ( 
-            <Category_Contain >// eslint-disable-next-line 
+            <Category_Contain >
             { data.map( (item, index) => (
                 <MovieCard key={index} item={item} type="movie"/>
             ))}

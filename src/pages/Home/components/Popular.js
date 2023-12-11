@@ -24,7 +24,7 @@ export const Popular = () => {
             <Loader/>
             :
             ( 
-            <Category_Contain>// eslint-disable-next-line 
+            <Category_Contain>
             { data.map( (item, index) => (
                 <MovieCard key={index} item={item} type="tv"/>
             ))}
