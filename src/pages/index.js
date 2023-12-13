@@ -1,4 +1,4 @@
-export { InitialPage } from "./Initial/InitialPage"
+export { WelcomePage } from "./Initial/WelcomePage"
 export { Login } from "./Login"
 export { Register } from "./Register"
 

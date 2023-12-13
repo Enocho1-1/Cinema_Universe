@@ -36,8 +36,8 @@ export const Header = () => {
 
     
   return (
-    <header className="absolute top-0 mainHead z-10 w-full px-2" id="top">
-        <div className=" flex justify-between px-12 py-4">
+    <header className="absolute top-0 mainHead z-10 w-full px-2" id="top" >
+        <div className=" flex justify-between px-12 py-4" data-testid="desktop-header">
             <span className="flex">
                 <button onClick={() => setDropHidden(!dropHidden)} className="hover:cursor-pointer mr-4">
                     <img src={menu} className="h-10 w-8" alt="" />

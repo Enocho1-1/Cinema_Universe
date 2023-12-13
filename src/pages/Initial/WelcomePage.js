@@ -3,7 +3,7 @@ import { useNavigate } from "react-router"
 import { InitialHeader } from "./components/InitialHeader"
 import arrow from "../../assets/right-arrow.png"
 
-export const InitialPage = () => {
+export const WelcomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
   const navigate = useNavigate()

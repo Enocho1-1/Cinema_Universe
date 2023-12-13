@@ -14,7 +14,6 @@ export const HomePage = () => {
   useTitle("Cinema Universe | Watch Movies and TV Shows")
   const {  addWatchList, retrieveUserData} = useWatch()
   const navigate= useNavigate()
-
   const{ userID, userToken } = retrieveUserData()
 
   // Match Media Hook
@@ -51,7 +50,7 @@ export const HomePage = () => {
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
 
         {/* Carousel */}
-        < DefaultCarousel/>
+        < DefaultCarousel />
 
         {/* Trending Movies Section */}
         <section className="mt-6 m-auto max-2xl:max-w-[1500px] 2xl:max-w-[1750px]">

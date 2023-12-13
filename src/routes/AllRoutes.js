@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom"
-import { InitialPage, Login, Register , HomePage , MovieList, MovieDetail,Search, WatchList} from "../pages/index"
+import { WelcomePage, Login, Register , HomePage , MovieList, MovieDetail,Search, WatchList} from "../pages/index"
 
 export const AllRoutes = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<InitialPage />} />
+        <Route path="/" element={<WelcomePage />} />
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
         <Route path='/home' element={<HomePage/>}/>
