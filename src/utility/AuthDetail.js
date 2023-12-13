@@ -6,6 +6,12 @@ const storeUserData = (name,email,id,accessToken) => {
   sessionStorage.setItem("accessToken", accessToken);
 }
 
+// New User Initial Form Submit
+export const initialSubmit = (email,navigate) => {
+    sessionStorage.setItem("userEmail", email);
+    email = ""
+    navigate("/register")
+}
 
 // Post Unique User Obj
 export const postUserObj = async (options) => {

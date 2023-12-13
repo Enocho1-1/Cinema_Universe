@@ -27,8 +27,21 @@ describe("Renders WelcomePage Components", () => {
             )
     
         const returnHomeBtn = getByTestId("welcomepage-return")
-
         expect(returnHomeBtn).toBeInstanceOf(HTMLAnchorElement)
     })
 
+    test("Renders the Welcome text & form component correctly",() => {
+        const { getByTestId } = render(
+            <BrowserRouter>
+             <WelcomeForm/>
+            </BrowserRouter>
+            )
+
+        const userInput = getByTestId("newuser-input")
+        const getStartedBtn = getByTestId("get-started")
+
+        expect(userInput).toBeInstanceOf(HTMLInputElement)
+        expect(getStartedBtn).toBeInstanceOf(HTMLButtonElement)
+
+    })
 })
