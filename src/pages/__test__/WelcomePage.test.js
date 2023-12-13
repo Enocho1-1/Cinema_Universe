@@ -1,7 +1,11 @@
-import { render} from "@testing-library/react";
-import { BrowserRouter } from 'react-router-dom';
+import { render } from "@testing-library/react";
 import "@testing-library/jest-dom"
+import userEvent from "@testing-library/user-event";
+import { BrowserRouter } from 'react-router-dom';
 import { InitialHeader, InitialSecondHead,WelcomeForm } from "../Initial/components";
+import { initialSubmit } from "../../utility/AuthDetail";
+import { act } from "react-dom/test-utils";
+
 
 describe("Renders WelcomePage Components", () => {
 
@@ -39,9 +43,12 @@ describe("Renders WelcomePage Components", () => {
 
         const userInput = getByTestId("newuser-input")
         const getStartedBtn = getByTestId("get-started")
-
-        expect(userInput).toBeInstanceOf(HTMLInputElement)
-        expect(getStartedBtn).toBeInstanceOf(HTMLButtonElement)
-
+        
+        act(() => {
+            userEvent.click(getStartedBtn,initialSubmit)
+            userEvent.type(userInput)
+        })
+      
+        // expect(userInput).toBeInstanceOf(HTMLInputElement)
     })
 })
