@@ -1,7 +1,7 @@
 import { render} from "@testing-library/react";
 import { BrowserRouter } from 'react-router-dom';
 import "@testing-library/jest-dom"
-import { InitialHeader,WelcomeForm } from "../Initial/components";
+import { InitialHeader, InitialSecondHead,WelcomeForm } from "../Initial/components";
 
 describe("Renders WelcomePage Components", () => {
 
@@ -17,6 +17,18 @@ describe("Renders WelcomePage Components", () => {
 
         expect(languageBtn).toBeInstanceOf(HTMLButtonElement)
         expect(signinBtn).toBeInstanceOf(HTMLAnchorElement)
+    })
+
+    test("Renders the secondary header component correctly",() => {
+        const { getByTestId } = render(
+            <BrowserRouter>
+             <InitialSecondHead/>
+            </BrowserRouter>
+            )
+    
+        const returnHomeBtn = getByTestId("welcomepage-return")
+
+        expect(returnHomeBtn).toBeInstanceOf(HTMLAnchorElement)
     })
 
 })
