@@ -14,7 +14,7 @@ export const InitialHeader = () => {
             <span className="flex">
                 {/* Language Dropdown */}
                 <div className="relative">
-                    <button onClick={() => setIsHidden(!isHidden)} id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white font-teko border border-white font-medium rounded-lg text-md mr-3 px-8 max-md:px-4 py-1.5 text-center inline-flex items-center" type="button">{language} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                    <button onClick={() => setIsHidden(!isHidden)} data-testid="language-button" id="dropdownDefaultButton" data-dropdown-toggle="dropdown" className="text-white font-teko border border-white font-medium rounded-lg text-md mr-3 px-8 max-md:px-4 py-1.5 text-center inline-flex items-center" type="button">{language} <svg className="w-2.5 h-2.5 ml-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                         <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m1 1 4 4 4-4"/>
                     </svg></button>
 
@@ -33,7 +33,7 @@ export const InitialHeader = () => {
 
                 {/* Sign In Button */}
                 <div className="mt-1">
-                    <Link to={"/login"} type="button" className="text-white bg-primary-blue hover:bg-secondary-blue  font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
+                    <Link to="/login" data-testid="signin-button" type="button" className="text-white bg-primary-blue hover:bg-secondary-blue  font-teko rounded-lg text-md px-5 py-1.5">Sign In</Link>
                 </div>
               
             </span>

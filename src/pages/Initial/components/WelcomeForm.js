@@ -7,7 +7,7 @@ export const WelcomeForm = () => {
   const user = useRef()
 
   const initialSubmit = () => {
-    const userEmail = user.current.value
+    let userEmail = user.current.value
     sessionStorage.setItem("userEmail", userEmail);
     user.current.value = ""
     navigate("/register")
