@@ -9,7 +9,7 @@ export const InitialHeader = () => {
     <header className="relative z-10 max-[480px]:flex max-[480px]:justify-center m-auto max-w-7xl px-2">
         <div className="my-8 flex justify-between tablet:px-24">
             <span>
-                <h1 className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary-blue">Cinema-U</h1>
+                <h1 data-testid="heading" className="font-teko  text-5xl max-md:text-4xl max-[480px]:mr-10 text-primary-blue">Cinema-U</h1>
             </span>
             <span className="flex">
                 {/* Language Dropdown */}
