@@ -2,7 +2,6 @@
 import { useState } from "react";
 import { useTitle } from "../hooks/index"
 import { useNavigate } from "react-router"
-import { useWatch } from "../context/WatchContext";
 import { postUserObj ,registerUser} from "../utility";
 import { InitialSecondHead } from "./Initial/components/InitialSecondHead"
 import { toast } from 'react-toastify';
@@ -12,7 +11,6 @@ export const Register = () => {
   useTitle("Cinema Universe | Sign-Up")
   
   // useContext Destructure
-  // const { state} = useWatch()
   const [email, setUEmail] = useState("")
   const navigate = useNavigate()
   const userEmail = sessionStorage.getItem("userEmail")
