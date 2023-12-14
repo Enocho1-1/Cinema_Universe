@@ -8,10 +8,10 @@ export const WelcomePage = () => {
   
 
   return (
-    <main className="initial min-h-[100vh] w-screen">
+    <main data-testid="welcome-container" className="initial min-h-[100vh] w-screen">
         <InitialHeader/>
         <WelcomeForm />
-        <div id="overlay"></div>
+        <div data-testid="overlay-container" id="overlay"></div>
     </main>
 
     
