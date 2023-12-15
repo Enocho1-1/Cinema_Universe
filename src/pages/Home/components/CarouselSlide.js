@@ -13,7 +13,7 @@ export const CarouselSlide = ({item,type}) => {
     const backdropImage = backdrop_path
  
   return (
-    <figure>
+    <figure data-testid="poster-carousel">
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)}>
             <img  className="mainImg" src={backdropImage ? (`https://image.tmdb.org/t/p/original${backdropImage}`) : generic} alt="..."/>
         </Link>

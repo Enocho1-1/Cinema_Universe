@@ -25,7 +25,7 @@ export const DefaultCarousel = () => {
         :
         ( <Carousel>
             { data.map( (item, index) => (
-             <CarouselSlide key={index} item= {item} data-testid="poster-carousel" type="MOVIE"/>
+             <CarouselSlide key={index} item= {item}  type="MOVIE"/>
             ))}
          </Carousel>
          )
