@@ -1,5 +1,7 @@
 /* eslint-disable */
 import { useWatch } from "../../../context/WatchContext"
+import { useBlurImg } from "../../../hooks"
+import { Blurhash } from "react-blurhash"
 import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
@@ -10,12 +12,27 @@ export const CarouselSlide = ({item,type}) => {
 
     const { saveMovie_TV_type } = useWatch()
     const {id, title, release_date, backdrop_path,vote_average, adult, overview} = item
-    const backdropImage = backdrop_path
+    const backdropImage = backdrop_path ? (`https://image.tmdb.org/t/p/original${backdrop_path}`) : generic
+    const {imgloaded} = useBlurImg(backdropImage)
  
   return (
     <figure data-testid="poster-carousel">
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)}>
-            <img  className="mainImg" src={backdropImage ? (`https://image.tmdb.org/t/p/original${backdropImage}`) : generic} loading="lazy" alt="movie-poster"/>
+            {!imgloaded
+            ?
+            (
+            <Blurhash
+                hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
+                width={"100%"}
+                height={700}
+                resolutionX={32}
+                resolutionY={32}
+                punch={1}
+            />
+            ):
+            (<img  className="mainImg" src={backdropImage} loading="lazy" alt="movie-poster"/>)
+            }
+          
         </Link>
         <figcaption className="carouselCaption font-sans ">
             <h1 className="max-w-6xl font-semibold text-gray-200 text-5xl max-lg:text-3xl ">{title}</h1>
