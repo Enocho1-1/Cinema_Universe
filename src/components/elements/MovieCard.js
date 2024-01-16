@@ -15,7 +15,7 @@ export const MovieCard = ({item, type=""}) => {
     <span className="MovieCard relative max-w-[200px] mx-4">
         { itemInWatchList && (<img className="absolute top-2 right-2 h-4 w-4" src={bookmark_blue} alt="" />)}
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
-            <img className="rounded-xl"  src={ poster_path ? posterImage: collage} alt="" />
+            <img className="rounded-xl"  src={ poster_path ? posterImage: collage} loading="lazy" alt="movie-poster" />
         </Link>
         <aside className="mt-2 flex flex-col">
             <div className="flex max-w-auto">
