@@ -1,4 +1,6 @@
 import { useWatch } from "../../context/WatchContext"
+import { useBlurImg } from "../../hooks"
+import { Blurhash } from "react-blurhash"
 import { Link } from "react-router-dom"
 import collage from "../../assets/collage.jpg"
 import bookmark_blue from "../../assets/bookmark-blue.png"
@@ -7,15 +9,28 @@ export const MovieCard = ({item, type=""}) => {
     const { state,saveMovie_TV_type } = useWatch()
     const {id, title, name, release_date,first_air_date, poster_path,media_type} = item
 
-    const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
+    const posterImage = poster_path ? (`https://image.tmdb.org/t/p/original/${poster_path}`) : collage
     const itemInWatchList = state.list.find(movie => movie.id === item.id)
-
-   
+    const {imgloaded} = useBlurImg(posterImage)
   return (
     <span className="MovieCard relative max-w-[200px] mx-4">
         { itemInWatchList && (<img className="absolute top-2 right-2 h-4 w-4" src={bookmark_blue} alt="" />)}
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
-            <img className="rounded-xl"  src={ poster_path ? posterImage: collage} loading="lazy" alt="movie-poster" />
+        {!imgloaded
+            ?
+            (
+            <Blurhash
+                hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
+                width={250}
+                height={250}
+                resolutionX={32}
+                resolutionY={32}
+                punch={1}
+            />
+            ):
+            (<img className="rounded-xl"  src={posterImage} loading="lazy" alt="movie-poster" />)
+            }
+          
         </Link>
         <aside className="mt-2 flex flex-col">
             <div className="flex max-w-auto">
