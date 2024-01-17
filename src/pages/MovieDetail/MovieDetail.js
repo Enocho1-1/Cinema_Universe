@@ -1,10 +1,11 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
-import { useMatchMedia,useTitle } from "../../hooks/index"
+import { useMatchMedia,useTitle,useBlurImg } from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { updateWatchList } from "../../utility"
 import { fetchMovieOrTV,fetchRecommended } from "../../utility"
+import { Blurhash } from "react-blurhash"
 import { Recommend,VideoPlayer } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
 import collage from "../../assets/movieCollage.jpg"
@@ -58,8 +59,8 @@ export const MovieDetail = () => {
     const inWatchList = list.find(item => item.id === watchListItem .id)
 
     // Movie/TV Cover
-    const posterImage = `https://image.tmdb.org/t/p/original/${poster_path}`
-
+    const posterImage = poster_path ? (`https://image.tmdb.org/t/p/original/${poster_path}`) : collage
+    const {imgloaded} = useBlurImg(posterImage)
 
   return (
     <main className="relative overflow-x-hidden h-screen w-screen bg-primary-black">
@@ -71,7 +72,20 @@ export const MovieDetail = () => {
               {/* Movie/TV Info */}
            
               <section className="my-10 flex justify-evenly max-mobile:my-8 max-lg:flex-col  p-2 ">
-                <img src={poster_path ? posterImage : collage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden" alt="" />
+              {!imgloaded?
+                (
+                  <Blurhash
+                      hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
+                      width={200}
+                      height={250}
+                      resolutionX={32}
+                      resolutionY={32}
+                      punch={1}
+                  />
+                  ):
+                  ( <img src={posterImage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden"  loading="lazy" alt="movie-poster" />)
+              }
+               
 
                 <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
                   <aside className="flex max-mobile:justify-around mobile:justify-between ">

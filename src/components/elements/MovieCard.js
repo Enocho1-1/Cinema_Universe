@@ -16,18 +16,18 @@ export const MovieCard = ({item, type=""}) => {
     <span className="MovieCard relative max-w-[200px] mx-4">
         { itemInWatchList && (<img className="absolute top-2 right-2 h-4 w-4" src={bookmark_blue} alt="" />)}
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
-        {!imgloaded?
-            (
-            <Blurhash
-                hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
-                width={200}
-                height={250}
-                resolutionX={32}
-                resolutionY={32}
-                punch={1}
-            />
-            ):
-            (<img className="rounded-xl"  src={posterImage} loading="lazy" alt="movie-poster" />)
+            {!imgloaded?
+                (
+                <Blurhash
+                    hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
+                    width={200}
+                    height={250}
+                    resolutionX={32}
+                    resolutionY={32}
+                    punch={1}
+                />
+                ):
+                (<img className="rounded-xl"  src={posterImage} loading="lazy" alt="movie-poster" />)
             }
           
         </Link>
