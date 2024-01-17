@@ -10,6 +10,6 @@ export const useBlurImg = (src) => {
             setImgloaded(true)
         }
         image.src = src
-    },[])
+    },[src])
   return {imgloaded}
 }
