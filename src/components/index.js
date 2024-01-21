@@ -10,4 +10,5 @@ export { LoginDropDown } from "./elements/LoginDropDown"
 export { MovieCard } from "./elements/MovieCard"
 export { PageNotFound } from "./elements/PageNotFound"
 
+export {BlurEffect} from "./elements/BlurEffect"
 export { ScrollTop } from "./misc/ScrollTop"

@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useWatch } from "../../../context/WatchContext"
 import { useBlurImg } from "../../../hooks"
-import { Blurhash } from "react-blurhash"
+import { BlurEffect } from "../../../components"
 import { Link } from "react-router-dom"
 import star from "../../../assets/star.png"
 import play from "../../../assets/play-button(1).png"
@@ -21,14 +21,7 @@ export const CarouselSlide = ({item,type}) => {
             {!imgloaded
             ?
             (
-            <Blurhash
-                hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
-                width={"100%"}
-                height={700}
-                resolutionX={32}
-                resolutionY={32}
-                punch={1}
-            />
+            < BlurEffect css="mainImg"/>
             ):
             (<img  className="mainImg" src={backdropImage} loading="lazy" alt="movie-poster"/>)
             }

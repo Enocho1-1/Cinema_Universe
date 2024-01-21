@@ -1,6 +1,7 @@
 import { useWatch } from "../../context/WatchContext"
 import { useBlurImg } from "../../hooks"
 import { Blurhash } from "react-blurhash"
+import { BlurEffect } from "./BlurEffect"
 import { Link } from "react-router-dom"
 import collage from "../../assets/collage.jpg"
 import bookmark_blue from "../../assets/bookmark-blue.png"
@@ -18,14 +19,7 @@ export const MovieCard = ({item, type=""}) => {
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(`${type ? type : media_type}`)} className="h-[250px] w-[170px] rounded-xl">
             {!imgloaded?
                 (
-                <Blurhash
-                    hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
-                    width={200}
-                    height={250}
-                    resolutionX={32}
-                    resolutionY={32}
-                    punch={1}
-                />
+                <BlurEffect css="h-[250px] w-[170px] rounded-xl"/>
                 ):
                 (<img className="rounded-xl"  src={posterImage} loading="lazy" alt="movie-poster" />)
             }
