@@ -18,10 +18,7 @@ export const HomePage = () => {
   const {myQuery} = useMatchMedia(769)
 
   // Fetch User Watch List
-  fetchUser(addWatchList, retrieveUserData)
-
- 
-  useQuery("watchList", fetchUser)
+  useQuery("watchList", () =>  fetchUser(addWatchList, retrieveUserData))
 
 
 
