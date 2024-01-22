@@ -7,7 +7,6 @@ export const useMovieTV = (id) => {
     const [info, setInfo] = useState([])
     const [recommend , setRecommend] = useState([])
 
-
     useEffect(() => {
  
         try{
