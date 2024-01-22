@@ -1,6 +1,5 @@
 import { useWatch } from "../../context/WatchContext"
 import { useBlurImg } from "../../hooks"
-import { Blurhash } from "react-blurhash"
 import { BlurEffect } from "./BlurEffect"
 import { Link } from "react-router-dom"
 import collage from "../../assets/collage.jpg"

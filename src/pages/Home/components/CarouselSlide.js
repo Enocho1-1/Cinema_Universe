@@ -18,10 +18,10 @@ export const CarouselSlide = ({item,type}) => {
   return (
     <figure data-testid="poster-carousel">
         <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)}>
-            {imgloaded
+            {!imgloaded
             ?
             (
-            < BlurEffect css="h-[70vh] w-[100]"/>
+            < BlurEffect css="h-[85vh] w-[100]"/>
             ):
             (<img  className="mainImg" src={backdropImage} loading="lazy" alt="movie-poster"/>)
             }
