@@ -1,4 +1,25 @@
 
+export const fetchUser = async (addWatchList,retrieveUserData) => {
+  const{ userID, userToken } = retrieveUserData()
+
+  const options = {
+    method: 'GET',
+    headers:{ "Content-Type": "application/json", Authorization: `Bearer ${userToken}`}
+  }
+
+  try{
+    const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${userID}`, options)
+    if(!response.ok){
+        throw new Error(`${response.status}`)
+    } else {
+        const result = await response.json()
+        addWatchList(result.list)
+    }
+
+  }catch(error){
+      throw new Error(error.message)
+  }
+} 
 // BackDrop Images Async (Carousel)
 export  const fetchBackDrop = async () => {
     const response = await fetch('https://api.themoviedb.org/3/movie/popular?api_key=b80d59c33d6d57ed9c7e3713f91c188a')

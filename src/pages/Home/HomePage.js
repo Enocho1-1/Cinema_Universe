@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { useQuery } from "react-query"
 import { useMatchMedia, useTitle } from "../../hooks/index"
+import { fetchUser } from "../../utility"
 import { useWatch } from "../../context/WatchContext"
 import { DefaultCarousel, SectionContainer ,SectionTitle ,Trending, UpComing, NowPlaying, Popular, TopRated } from "./components/index"
 import { Header, Footer, MobileHeader } from "../../components/index"
@@ -11,35 +12,16 @@ import play from "../../assets/play-button.png"
 export const HomePage = () => {
 
   useTitle("Cinema Universe | Watch Movies and TV Shows")
-  const {  addWatchList, retrieveUserData} = useWatch()
-  const{ userID, userToken } = retrieveUserData()
+  const {addWatchList, retrieveUserData} = useWatch()
 
   // Match Media Hook
   const {myQuery} = useMatchMedia(769)
 
-  const options = {
-    method: 'GET',
-    headers:{ "Content-Type": "application/json", Authorization: `Bearer ${userToken}`}
-  }
-
-    // Fetch User Watch List
-    const fetchUser = async () => {
-      try{
-          const response = await fetch(`${process.env.REACT_APP_HOST}/660/orders/${userID}`, options)
-          if(!response.ok){
-              throw new Error(`${response.status}`)
-          } else {
-              const result = await response.json()
-              addWatchList(result.list)
-          }
-
-      }catch(error){
-          throw new Error(error.message)
-      }
-  }
+  // Fetch User Watch List
+  fetchUser(addWatchList, retrieveUserData)
 
  
-   useQuery("watchList", fetchUser)
+  useQuery("watchList", fetchUser)
 
 
 
