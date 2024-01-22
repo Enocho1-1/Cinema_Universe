@@ -83,7 +83,7 @@ export const fetchTopRatedTVShows = async () => {
 
 
 // Fetch Movie or TV
-export  const fetchMovieOrTV = async (data,movie_id,setIsShown,setInfo) => {
+export  const fetchMovieOrTV = async (data,movie_id,setInfo) => {
 
   const type = data === "MOVIE" || data === "movie" ? `https://api.themoviedb.org/3/movie/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a` : `https://api.themoviedb.org/3/tv/${movie_id}?api_key=b80d59c33d6d57ed9c7e3713f91c188a`
   const response = await fetch(type)
@@ -91,7 +91,6 @@ export  const fetchMovieOrTV = async (data,movie_id,setIsShown,setInfo) => {
     throw new Error(`${response.status}`)
   }else{
     const result = await response.json()
-    setIsShown(false)
     setInfo(result)
   }
 }
