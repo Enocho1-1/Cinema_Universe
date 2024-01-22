@@ -1,9 +1,9 @@
 /* eslint-disable */
 import { useEffect,useState } from "react"
 import { useParams } from "react-router"
-import { useMatchMedia,useTitle} from "../../hooks/index"
-import { useWatch } from "../../context/WatchContext"
-import { updateWatchList } from "../../utility"
+import { useMatchMedia,useTitle,useUpdateUser} from "../../hooks/index"
+// import { useWatch } from "../../context/WatchContext"
+// import { updateWatchList } from "../../utility"
 import { fetchMovieOrTV,fetchRecommended } from "../../utility"
 import { Recommend,VideoPlayer,MovieTVInfo } from "./components/index"
 import { Header, MobileHeader,Loader } from "../../components"
@@ -11,7 +11,6 @@ import { Header, MobileHeader,Loader } from "../../components"
 
 export const MovieDetail = () => {
 
-    const {retrieveUserData,list } = useWatch()
     const [data] = useState(JSON.parse(sessionStorage.getItem("type")))
     const [isShown, setIsShown] = useState(true)
     const [info, setInfo] = useState([])
@@ -36,12 +35,8 @@ export const MovieDetail = () => {
     const {title, name,backdrop_path} = info
 
     useTitle(`Cinema Universe | ${title ? title : name}`)
-
-    useEffect(() => {
-      // user watch list object
-      updateWatchList(list,retrieveUserData)
-   
-    },[list])
+     // Update User Watch List Hook
+     useUpdateUser()
 
 
 

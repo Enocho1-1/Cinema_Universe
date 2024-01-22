@@ -1,20 +1,18 @@
 /* eslint-disable */
-import { useEffect } from "react"
-import { useMatchMedia,useTitle} from "../../hooks/index"
+import { useMatchMedia,useTitle,useUpdateUser} from "../../hooks/index"
 import { useWatch } from "../../context/WatchContext"
 import { Header, MobileHeader } from "../../components/index"
 import { WatchCard,EmptyList } from "./components/index"
-import { updateWatchList} from "../../utility"
+
 import play from "../../assets/play-button.png"
 
 export const WatchList = ({title}) => {
 
     useTitle( `Cinema Universe | ${title}`)
     const {myQuery} = useMatchMedia(870)
-    const { dispatch, state, list,retrieveUserData } = useWatch()
-
-    useEffect(() => {updateWatchList(list,retrieveUserData) },[list])
- 
+    const { dispatch, state, list} = useWatch()
+    // Update User Watch List Hook
+    useUpdateUser()
   return (
     <main className="relative overflow-x-hidden h-screen bg-primary-black">
         { myQuery && !myQuery.matches ? <Header/> : <MobileHeader/>}
