@@ -106,6 +106,20 @@ figcaption{
   z-index: 20;
 }
 
+.trendingBtn a:hover::after{
+  content: url("./assets/play-button-arrowhead.png");
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  min-height: 100%;
+  width: 100%;
+  border-radius: 0.75rem;
+  z-index: 20;
+}
+
 
 
 .MovieCard a:hover::after{
