@@ -1,10 +1,11 @@
 import { useWatch } from "../../../context/WatchContext"
 import { useBlurImg } from "../../../hooks"
-import { Blurhash } from "react-blurhash"
+import { BlurEffect } from "../../../components"
 import star from "../../../assets/star.png"
 import bookmark from "../../../assets/bookmark1.png"
 import bookmark_blue from "../../../assets/bookmark-blue.png"
 import generic from "../../../assets/collage.jpg"
+
 export const MovieTVInfo = ({info,type}) => {
     const {id, title, name, release_date,first_air_date, poster_path,overview,vote_average,number_of_episodes,runtime,production_countries,genres} = info
     const { addToWatchlist, removeFromWatchlist,list } = useWatch()
@@ -18,27 +19,17 @@ export const MovieTVInfo = ({info,type}) => {
         type: type
     }
 
+    // Condition Checks if  Movie/TV show is in Watch List
     const inWatchList = list.find(item => item.id === watchListItem .id)
+
+    // Hook Checks if Poster Image is loaded
     const {imgloaded} = useBlurImg(posterImage)
+
+
   return (
     <>
-        {
-        !imgloaded
-        ?
-        (
-        <Blurhash
-            hash="L45Y4%_NM_IA?w%gV@M_WCazWBae"
-            width={200}
-            height={250}
-            resolutionX={32}
-            resolutionY={32}
-            punch={1}
-        />
-        ):
-        ( <img src={posterImage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden"  loading="lazy" alt="movie-poster" />)
-      }
-       
-
+        {!imgloaded? (<BlurEffect css="h-[420px] w-[300px] mr-10 rounded-lg" />) : ( <img src={posterImage} className="h-fit w-[300px] mr-10 rounded-lg max-xl:hidden"  loading="lazy" alt="movie-poster" />)}
+    
         <div className="flex flex-col max-w-4xl max-lg:justify-center lg:justify-center">
           <aside className="flex max-mobile:justify-around mobile:justify-between ">
             <h1 className="2xl:max-w-[43.75rem]  mobile:max-2xl:max-w-[31.25rem] max-mobile:max-w-[17.188rem] font-sans font-semibold text-3xl  text-gray-200">{title ? title : name}</h1>
