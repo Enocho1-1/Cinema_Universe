@@ -2,7 +2,7 @@
 import { useNavigate } from "react-router"
 import play from "../../../assets/play-button.png"
 
-export const Section_InnerContainer = ({title,path}) => {
+export const SectionTitle = ({title,path}) => {
     const navigate = useNavigate()
   return (
     <div className="max-w-[95%] flex justify-between max-[600px]:flex-col max-[600px]:items-center">

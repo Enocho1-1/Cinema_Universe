@@ -3,7 +3,7 @@
 export const Footer = () => {
   return (
     
-    <footer className="absolute min-w-full  shadow m-4 bg-primary-black">
+    <footer className="absolute min-w-full  shadow m-4 mt-[50px] bg-primary-black">
         <div className="w-full mx-auto  py-4 px-8 md:flex md:items-center md:justify-between">
         <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" className="hover:underline">Cinema Universe™</a>. All Rights Reserved.
         </span>

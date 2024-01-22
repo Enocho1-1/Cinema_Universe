@@ -21,7 +21,7 @@ export const CarouselSlide = ({item,type}) => {
             {!imgloaded?(< BlurEffect css="h-[85vh] w-[100]"/>):(<img  className="mainImg" src={backdropImage} loading="lazy" alt="movie-poster"/>)}
         </Link>
         <figcaption className="carouselCaption font-sans ">
-            <h1 className="max-w-6xl font-semibold text-gray-200 text-5xl max-lg:text-3xl ">{title}</h1>
+            <h1 className="max-w-6xl font-semibold text-gray-200 text-5xl mobileLg:max-lg:text-3xl max-mobileLg:text-2xl max-mobileLg:line-clamp-2 ">{title}</h1>
             <aside className="text-md mt-6 max-w-6xl flex max-tablet:justify-center">
                 <div className="font-semibold text-sm px-2 rounded-lg bg-primary-blue">HD</div>
                 <div className="font-semibold text-sm ml-3 px-2 rounded-lg border border-gray-200 text-gray-200">{ adult ? "R" : "PG-13"}</div>
