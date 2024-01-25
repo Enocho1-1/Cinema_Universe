@@ -12,11 +12,8 @@ export const TrendingBtn = ({item,type}) => {
     const {imgloaded} = useBlurImg(backdropImage)
 
   return (
-    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className=" relative min-h-[250px] min-w-[400px] max-mobile:min-h-[150px] max-mobile:min-w-[250px]  rounded-xl max-tablet: mt-2">
-      {!imgloaded ? 
-        (
-        <BlurEffect css="min-h-[100%] w-[100%] rounded-xl" />
-        ):
+    <Link to={`/${id}`} onClick={() => saveMovie_TV_type(type)} className={!imgloaded ? "relative hover:cursor-none min-h-[250px] min-w-[400px] max-mobile:min-h-[150px] max-mobile:min-w-[250px]  rounded-xl max-tablet: mt-2" :"relative trendingBtn min-h-[250px] min-w-[400px] max-mobile:min-h-[150px] max-mobile:min-w-[250px]  rounded-xl max-tablet: mt-2"}>
+      {!imgloaded ? (<BlurEffect css="min-h-[100%] w-[100%] rounded-xl" />):
         (
           <>
             <div id="trending_overlay"></div>

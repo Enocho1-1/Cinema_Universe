@@ -107,7 +107,7 @@ figcaption{
   z-index: 20;
 }
 
-.trendingBtn a:hover::after{
+.trendingBtn:hover::after{
   content: url("./assets/play-button-arrowhead.png");
   position: absolute;
   display: flex;

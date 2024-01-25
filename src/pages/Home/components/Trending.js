@@ -35,7 +35,7 @@ export const Trending = () => {
             :
             ( 
                 <>
-                    <div className="trendingBtn my-[0.625rem] p-[0.5rem] relative  flex gap-x-8 overflow-x-hidden overflow-y-hidden max-mobile:overflow-x-scroll" id="slider">
+                    <div className="my-[0.625rem] p-[0.5rem] relative  flex gap-x-8 overflow-x-hidden overflow-y-hidden max-mobile:overflow-x-scroll" id="slider">
                         { data.map( (item,index) => (
                             <TrendingBtn key={index} item={item} type="movie"/>
                         ))}

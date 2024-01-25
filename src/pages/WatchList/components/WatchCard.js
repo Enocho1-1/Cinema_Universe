@@ -16,17 +16,23 @@ export const WatchCard = ({item}) => {
     const {imgloaded} = useBlurImg(posterImage)
     
   return (
-    <span className="MovieCard relative max-w-[200px] mx-4">
+    <>
+        {!imgloaded ?(<BlurEffect css="h-[300px] w-[200px]  rounded-xl"/>) : 
+        ( 
+        <span className="MovieCard relative max-w-[200px] mx-4">
         <Link to={`/${id}`} onClick={() => saveType(`${type}`)} className="h-[250px] w-[170px] rounded-xl">
-            {!imgloaded ?(<BlurEffect css="h-[250px] w-[170px] rounded-xl"/> ):(  <img className="rounded-xl" src={posterImage} alt="movie-poster" />)}
+          <img className="rounded-xl" src={posterImage} alt="movie-poster" />
         </Link>
-        <aside className="mt-2 flex max-lg:flex-col">
-            <div className="max-w-md flex">
-                <p className=" px-2 text-sm rounded-xl border border-gray-300  text-gray-300">{type}</p>
-                <h1 className="max-w-[120px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title}>{title}</h1>
-            </div>
-            <button onClick={() => removeFromWatchlist(item)} className="ml-2 text-red-600"><i className="bi bi-trash3-fill"></i></button>
-        </aside>
-    </span>
+            <aside className="mt-2 flex max-lg:flex-col">
+                <div className="max-w-md flex">
+                    <p className=" px-2 text-sm rounded-xl border border-gray-300  text-gray-300">{type}</p>
+                    <h1 className="max-w-[120px] ml-2 text-md text-gray-300 hover:cursor-pointer truncate overflow-hidden ..." title={title}>{title}</h1>
+                </div>
+                <button onClick={() => removeFromWatchlist(item)} className="ml-2 text-red-600"><i className="bi bi-trash3-fill"></i></button>
+            </aside>
+        </span>
+        )}
+    </>
+   
   )
 }
